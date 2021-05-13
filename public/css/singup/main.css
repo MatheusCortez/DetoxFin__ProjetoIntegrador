@@ -1,0 +1,16 @@
+.mainContainer{
+    background-color: #33cc33;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    align-content: center;
+}
+.mainContainer__containerform__title{
+    color: white;
+    font-weight:lighter;
+    text-align: center;
+
+}
+
+

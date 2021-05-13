@@ -1,0 +1,18 @@
+input {
+    border: none;
+    border-bottom: 1px solid;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 150%;
+}
+input::placeholder{
+    color: white;
+}
+
+input:focus{
+    border-bottom: 1px solid white;
+    outline: none;
+}

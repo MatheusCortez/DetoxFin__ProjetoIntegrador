@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DetoxFin</title>
+    <link rel="stylesheet" href="/css/auth.css">
+  </head>
+  <body class="app">
+    <%- include ../partials/header.ejs  %>
+    <main class="mainContainer">
+      
+
+     <form action="/users/index" method="GET" class="mainContainer__containerLogin">
+
+      <h1 class="mainContainer__title">Olá,</h1>
+      <p class="mainContainer__description">insira seu email e senha para acessar sua conta</p>
+
+      <input class="mainContainer__containerLogin__field" placeholder="E-mail" onfocus="this.placeholder=''"  onblur="this.placeholder='E-mail'"  type="email" name="email" >
+      <input class="mainContainer__containerLogin__field" placeholder="Senha"  onfocus="this.placeholder=''" onblur="this.placeholder='Senha'" type="password" name="password" >
+
+
+      <a href="" class="mainContainer__containerLogin__passwordRecovery"><span>Esqueceu a Senha?</span></a>
+     </form>
+     <a href="/users/user/index"><button class="btn"  >  Entrar</button></a>
+
+     <section class="mainContainer__triangule">
+       triangulo
+     </section>
+
+    </main>
+  
+  </body>
+  
+  <script src="../js/addedClass.js"></script>
+</html>
