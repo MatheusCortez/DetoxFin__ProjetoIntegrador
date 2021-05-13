@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <!--CSS Imports -->
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/partials/graficos/graficos.css">
+        <!--Font Awsome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+        
+     
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body class="app">
+
+        <%- include ../../partials/headerinterno.ejs %>
+
+        <main class="mainContainer">
+            <%- include  ../../partials/menuLateral.ejs %>
+
+            <section class="mainContainer__cardPrincipal">
+            
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                
+              </div>
+              <h1 class="cardPrincipalh1">Minha Carteira</h1>
+               <section class='imgGrafico' >
+                
+                    <img class="grafico1" src="/images/grafico1.PNG"/>
+                    <img class="grafico2" src="/images/grafico2.PNG">
+                </section>
+               
+            
+        </section>
+        </main>
+<footer>
+
+ <p class="copyright"> Copyright © 2021 DetoxFin</p>  
+</footer>
+
+      
+    </body>
+</html>

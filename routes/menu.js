@@ -9,10 +9,10 @@ router.get('/minhaCarteira',function(req,res,next){
     res.render('users/meusInvestimentos');
   });
   router.get('/graficos',function(req,res,next){
-    res.render('users/graficos')
+    res.render('users/user/graficos')
   })
   router.get('/perfilInvestidor',function(req,res,next){
-    res.render('users/perfilInvestidor')
+    res.render('user/perfilInvestidor')
   })
   router.get('/cursos', function(req, res, next) {
     res.render('users/cursos');
@@ -22,5 +22,6 @@ router.get('/minhaCarteira',function(req,res,next){
   })
   router.get('/sair',function(req,res,next){
     res.render('index')
-  })
+  });
+
 module.exports=router;
