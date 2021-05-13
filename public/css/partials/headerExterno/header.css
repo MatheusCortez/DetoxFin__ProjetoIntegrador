@@ -37,10 +37,20 @@
     border-bottom: 1px solid white;
 
 }
-@media screen and(min-width:0) {
-    
-}
+@media screen and (min-width: 660px) {
+    .menu-desktop{
+        display: block;
+    }
+    .menu-mobile{
+        display:none ;
+    }
 
-@media screen and(min-width:768) {
-    
+  .cabecalho {
+    background-color: #3ccc33;
+    grid-template-columns: 1fr auto;
+  }
+  .cabecalho__logo {
+ 
+  }
+
 }
