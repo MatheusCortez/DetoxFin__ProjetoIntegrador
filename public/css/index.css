@@ -1,3 +1,7 @@
+
+@import url(./partials/headerExterno/header.css);
+
+
 .mainContainer{
     position: relative;
     background-color: #ffff;

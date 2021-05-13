@@ -1,0 +1,37 @@
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+
+   
+}
+ 
+ .mainContainer__menuLateral{
+     background:  rgb(218, 211, 211);
+     width:15%;
+     height: 100%;
+    padding: 2px;
+    }
+
+ .mainContainer__menuLateral__menuItem{
+    border-bottom: 1px solid gray;
+    padding-left:10px;
+    height: 60px;
+}
+.mainContainer__menuLateral__menuItem:last-child{
+    border: none;
+}
+
+.mainContainer__menuLateral__menuLink{
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top:10px;
+    
+}
+
+.mainContainer__menuLateral__menuIcon{
+    width: 30px;
+    margin: 3px;  
+}
