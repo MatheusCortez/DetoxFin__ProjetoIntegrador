@@ -30,13 +30,14 @@
    }
    #divBusca{
     background-color:#b8b8b8;
-    border:solid 1px;
+    border:none;
     border-radius:15px;
     width:200px;
     height: 30px;
-    position: relative;
-    left: 100px;
-    margin-top: 20px;
+    display:flex;
+    justify-content: left;
+    margin-top: 10px;
+    margin-left: 10px;
   }
   
   #txtBusca{
@@ -50,11 +51,19 @@
     width:260px;
   }
 
+h1{
+  display:flex;
+  justify-content: center;
+
+}
 
 .imgGrafico{
     display: flex;
-   
     justify-content:space-around;
+  
 }
-   
 
+.grafico1{
+  width:20vw;
+  height:60vh
+  }   
