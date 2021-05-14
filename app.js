@@ -8,10 +8,10 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const menuRouter = require('./routes/menu')
 const app = express();
+const port =3030
 
-
-app.listen(3000, () => {
-  console.log('Listening on 3030')
+app.listen(port, () => {
+  console.log(`rodando na porta  ${port}`)
 })
 
 // view engine setup

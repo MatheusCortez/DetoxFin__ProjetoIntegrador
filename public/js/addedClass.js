@@ -1,20 +1,15 @@
- const menu = document.querySelectorAll('.cabecalho__butons_btn');
+const url = window.location.pathname;
+const btn_login = document.querySelector('.btn_login');
+const btn_cadastrar = document.querySelector('.btn_cadastrar');
 
 
+function addedClass(){
+   if(url== '/users/auth'){
+      btn_login.classList.add('ativo')
+      
+   }else if(url =='/users/new'){
+      btn_cadastrar.classList.add('ativo')
+   }
+}
 
-
- menu.forEach((btn)=>{
-    btn.addEventListener('click',addedclass)  
- })
-
-
- function addedclass(event){
-
-    menu.forEach((btn)=>{
-        btn.classList.remove('ativo')
-    })
-
-    
-    event.currentTarget.classList.add('ativo')
-    console.log(menu)
- }
+addedClass();
