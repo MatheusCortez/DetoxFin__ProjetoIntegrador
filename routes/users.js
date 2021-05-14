@@ -16,5 +16,9 @@ router.get('/user/index',function(req,res,next){
   res.render('users/user/index')
 })
 
+router.get('/user/perfilInvestidor',function(req,res,next){
+  res.render('users/user/perfilInvestidor')
+})
+
 
 module.exports = router;

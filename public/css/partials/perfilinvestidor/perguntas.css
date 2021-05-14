@@ -1,0 +1,62 @@
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+/* Card Principal*/
+.mainContainer__cardPrincipal{
+    background-color: white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+    align-content: center;
+    position: relative;
+    bottom: 10vh;
+    }
+.logoPI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+.logoPI img {
+    width: 75px; 
+}
+.logoPI p {
+    font-weight: 600;
+    font-size: 30px; 
+}
+.perguntaPI p {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 20px;     
+}
+.resposta {
+    margin-top: 2%;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+    padding: 8px 20px;
+    border: 2px solid #33CC33;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.resposta:hover {
+    color: white;
+    background-color: #33CC33;
+}
+.botaoPerfil {
+    font-size: 30px;
+    width: 25%;
+    background-color: #33CC33 ;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 3% 37.5%;
+    color: white;
+    border: none; 
+   
+}
