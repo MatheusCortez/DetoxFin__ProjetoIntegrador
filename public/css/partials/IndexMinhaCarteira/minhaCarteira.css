@@ -1,0 +1,22 @@
+.mainContainer__cardPrincipal{
+    background-color: white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+    align-content: center;
+    position: relative;
+    bottom: 10vh;
+    }
+.mainContainer__cardPrincipal__h1{
+    display:flex;
+    justify-content: center;
+}
+.mainContainer__cardPrincipal__carteira{
+    display: flex;
+    justify-content:space-around;
+    padding-top: 20px;
+}
+.mainContainer__cardPrincipal__carteira__img{
+    width:20vw;
+    height:60vh
+}

@@ -1,7 +1,74 @@
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
-@import url('../../reset.css');
-@import url('../headerInterno/header.css');
-@import url('../menuLateral/menuLateral.css');
 
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    
+
+}
+
+.mainContainer__cardPrincipal{
+    background-color:white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+
+    position: relative;
+    bottom: 10vh;
+
+   
+}
+
+   
+
+
+.mainContainer__cardPrincipal___cardPrincipalAside {
+    
+ padding-top: 10px;
+ padding-left: 10px;
+ background-color:white
+ width: 15vw;
+   
+} 
+
+.mainContainer__cardPrincipal___cardPrincipalAside__grafico{
+
+}
+.mainContainer__cardPrincipal___cardPrincipalAside__menuLateral{
+    grid-column: 1/ span 2;
+    border-left: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(216, 210, 210); 
+    width: 10vw;
+}
+.itens{
+    
+    border: 1px solid rgb(78, 75, 75);
+    height: 6vh;
+    align-items: center;
+}
+
+
+.cursos{
+    display: flex;
+    justify-content:space-around;
+
+}
+.cursos h2{
+    font-size: 40px;
+    font-weight: 300;
+    padding-left: 50px;
+}
+.galery{
+
+
+}
+.cursos-img{
+
+}
