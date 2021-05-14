@@ -6,19 +6,19 @@ router.get('/minhaCarteira',function(req,res,next){
     res.render('users/user/index')
   })
   router.get('/meusInvestimentos', function(req, res, next) {
-    res.render('users/user/meusInvestimentos');
+    res.render('users/user/meusInvestimentos/main');
   });
   router.get('/graficos',function(req,res,next){
-    res.render('users/user/graficos')
+    res.render('users/user/graficos/main')
   })
   router.get('/perfilInvestidor',function(req,res,next){
-    res.render('users/user/perfilInvestidor')
+    res.render('users/user/perfilInvestidor/main')
   })
   router.get('/cursos', function(req, res, next) {
-    res.render('users/user/cursos');
+    res.render('users/user/cursos/main');
   });
   router.get('/dadosDaConta',function(req,res,next){
-    res.render('users/user/dadosDaConta')
+    res.render('users/user/dadosDaConta/main')
   })
   router.get('/sair',function(req,res,next){
     res.render('index')

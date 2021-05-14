@@ -7,6 +7,9 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const menuRouter = require('./routes/menu')
+
+const investmentsRouter = require('./routes/investments')
+
 const app = express();
 const port =3030
 
@@ -27,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/users/user',menuRouter);
+app.use('/users/user/meusInvestimentos',investmentsRouter);
 
 
 // catch 404 and forward to error handler
