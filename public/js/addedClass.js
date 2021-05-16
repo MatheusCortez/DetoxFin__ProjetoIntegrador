@@ -13,3 +13,9 @@ function addedClass(){
 }
 
 addedClass();
+
+
+
+function alerta(){
+   alert('testteste')
+}
