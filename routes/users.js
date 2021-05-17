@@ -14,9 +14,10 @@ router.get('/new',function(req,res,next){
   res.render('users/new')
 })
 //rota nova post com confirmacao de senha
-router.post('/new',(req,res,next)=>{
-    const dados =req.body    
+router.post('/new',function  (req,res,next){
+   const dados =req.body    
     const {senha,senhaConfirmada }= req.body
+  
     if(senha === senhaConfirmada){ 
       const criptosenha =criptografarsenha(senha)
       console.log(criptosenha)
@@ -39,19 +40,40 @@ router.get('/auth',function(req,res,next){
   res.render('users/auth')
 })
 
+router.post('/auth',function(req,res,next){
+  res.render('/users/index',{usuarios:require('../arquivo.json')})
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 router.get('/user/index',function(req,res,next){
   res.render('users/user/index')
 })
 
+router.get('/recoverypass',function(req,res,next){
+  res.render('users/recoverypass')
+})
+
 //FUNCAO PARA SALVAR OBJETO
-function salvarObjeto(objeto){
+async function salvarObjeto(objeto){
 
   const usuariosSalvos = fs.readFileSync('arquivo.json')
   const obj = JSON.parse(usuariosSalvos)
   
   obj.push(objeto)
   const str =JSON.stringify(obj) 
-  fs.writeFileSync('arquivo.json',str)
+  await fs.writeFileSync('arquivo.json',str)
 }
 // FUNCAO PARA CRIPTOGRAFAR A SENHA 
 function criptografarsenha(senha){

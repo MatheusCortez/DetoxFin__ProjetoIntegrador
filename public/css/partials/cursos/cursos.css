@@ -1,6 +1,10 @@
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
+@import url('../../reset.css');
+@import url('../headerInterno/header.css');
+@import url('../menuLateral/menuLateral.css');
+
 
 
 .mainContainer{
@@ -28,15 +32,13 @@
     
  padding-top: 10px;
  padding-left: 10px;
+
  border-radius: 20px;
  background-color:white;
  width: 15vw;
    
 } 
 
-.mainContainer__cardPrincipal___cardPrincipalAside__grafico{
-
-}
 .mainContainer__cardPrincipal___cardPrincipalAside__menuLateral{
     grid-column: 1/ span 2;
     border-left: 1px solid;
@@ -54,10 +56,7 @@
 }
 
 
-.cursos{
 
-
-}
 .mainContainer__cardPrincipal__cursos__title{
     font-size: 40px;
     font-weight: 300;
