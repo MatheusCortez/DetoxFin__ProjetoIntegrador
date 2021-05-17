@@ -1,6 +1,10 @@
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
+@import url('../../reset.css');
+@import url('../headerInterno/header.css');
+@import url('../menuLateral/menuLateral.css');
+
 
 
 .mainContainer{
@@ -30,7 +34,7 @@
     
  padding-top: 10px;
  padding-left: 10px;
- background-color:white
+ background-color:white;
  width: 15vw;
    
 } 

@@ -3,3 +3,11 @@
 @import url(./reset.css);
 @import url(./auth/main.css);
 @import url(./components/inputs.css);
+
+
+
+.mainContainer__containerLogin__passwordRecovery{
+    display: block;
+    padding-top: 20px;
+    text-decoration: underline;
+}
