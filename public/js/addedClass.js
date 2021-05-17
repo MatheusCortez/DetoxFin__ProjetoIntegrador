@@ -1,21 +1,20 @@
 const url = window.location.pathname;
-const btn_login = document.querySelector('.btn_login');
-const btn_cadastrar = document.querySelector('.btn_cadastrar');
+const ItemMenu= document.querySelectorAll('.link a ')
 
 
 function addedClass(){
-   if(url== '/users/auth'){
-      btn_login.classList.add('ativo')
-      
-   }else if(url =='/users/new'){
-      btn_cadastrar.classList.add('ativo')
-   }
+
+   ItemMenu.forEach((item)=>{
+      const paiItem = item.parentElement
+     if(url== item.getAttribute('href')){
+        paiItem.classList.add('ativo')
+    
+     
+     }
+  
+  })
+  
+  
 }
 
 addedClass();
-
-
-
-function alerta(){
-   alert('testteste')
-}
