@@ -1,0 +1,51 @@
+@import url('../../reset.css');
+@import url('../headerInterno/header.css');
+@import url('../menuLateral/menuLateral.css');
+
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+/* Card Principal*/
+.mainContainer__cardPrincipal{
+    background-color: white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+    align-content: center;
+    position: relative;
+    bottom: 10vh;
+}
+.logoPI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+.logoPI img {
+    width: 75px; 
+}
+.logoPI p {
+    font-weight: 600;
+    font-size: 30px; 
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5%;
+}
+.botaoPerfil {
+    font-size: 30px;
+    width: 40%;
+    background-color: #33CC33 ;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 3% 30%;
+    color: white;
+    border: none; 
+   
+}
