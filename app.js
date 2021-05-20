@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const menuRouter = require('./routes/menu')
 const bodyparser = require('body-parser')
 const investmentsRouter = require('./routes/investments')
+const investorsProfileRouter = require('./routes/investorsprofile')
 
 const app = express();
 const port =3030
@@ -30,7 +31,8 @@ app.use(bodyparser())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/user',menuRouter);
-app.use('/users/user/meusInvestimentos',investmentsRouter);
+app.use('/user/meusInvestimentos',investmentsRouter);
+app.use('/user/perfilInvestidor',investorsProfileRouter);
 
 
 // catch 404 and forward to error handler
