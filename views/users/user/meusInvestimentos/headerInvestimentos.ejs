@@ -1,0 +1,53 @@
+<style>
+    header {
+        display: flex;
+    }
+    h1 {
+        font-size: 30px;
+        width: 50%;
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+    .menuInvestiment{
+        width: 50%;
+        margin-left: 40%;
+        margin-top: 3%;
+    
+    }
+    .menuInvestiment img {
+        width: 30px;
+        height: 30px;
+    }
+    .menuInvestiment li {
+        display: inline;
+    }
+    .menuInvestiment li a {
+        border-bottom: 3px solid black;
+    }
+    .menuInvestiment li a:hover{
+        border-bottom: 3px solid #33cc33;
+    }
+</style>
+
+<header>
+    <h1>Meus Investimentos</h1>
+    <div class="menuInvestiment">
+        <ul>
+            <li>
+                <a class="" href="/user/meusInvestimentos">
+                    <img class="icon" src="/images/iconGrafico,headerInvestment.jpg"/>
+                </a>
+            </li>
+            <li>
+                <a class="" href="/user/meusInvestimentos/listInvestment">
+                    <img class="icon" src="/images/iconLista,headerInvestment.png"/>
+                </a>
+            </li>
+            <li>
+                <a style="width: 15px; height: 15px;" href="/user/meusInvestimentos/addInvestiment">
+                    <img class="icon" src="/images/iconAdd,headerInvestment.png"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>

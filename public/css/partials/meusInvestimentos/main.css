@@ -19,23 +19,3 @@
     bottom: 10vh;
 }
 
-
-h1 {
-    color: black;
-    font-size: 30px;
-    margin-top: 3%;
-    margin-left: 5%;
-}
-
-.botaoAdd {
-    font-size: 20px;
-    margin-top: 1%;
-    margin-left: 80%;
-    background-color: #33CC33 ;
-    border-radius: 20px;
-    padding: 10px 15px;
-    text-align: center;
-    cursor: pointer;
-    color: white;
-    border: none;   
-}
