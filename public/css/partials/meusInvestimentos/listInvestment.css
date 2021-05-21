@@ -31,6 +31,21 @@
 .box_subtitle {
     font-size: 20px;
     color: black;
-
-
+}
+.descricao {
+    
+    
+}
+.descricao_link {
+    display: inline;
+    font-size: 20px;
+    padding-right: 1%;
+    padding-left: 1%;
+    border-right: 1px solid black;
+}
+.descricao_link_borda {
+    display: inline;
+    font-size: 20px;
+    padding-right: 1%;
+    padding-left: 1%;
 }

@@ -18,7 +18,13 @@
                 
                <% for (const investimento of investimentos) { %>
                     <li class="box">
-                        <p class="box_title"><%= investimento.nome %></p> <p class="box_subtitle">Valor: R$<%= investimento.valor %>; Renda: <%= investimento.renda %> Tipo de Investimento:<%= investimento.tipo %></p>
+                        <p class="box_title"><%= investimento.nome %></p> 
+                        <ul class="descricao">
+                            <li class="descricao_link">Valor: R$<%= investimento.valor %></li>
+                            <li class="descricao_link">Renda <%= investimento.renda %></li>
+                            <li class="descricao_link"><%= investimento.tipo %></li>
+                            <li class="descricao_link_borda"><%= investimento.tempo %></li>
+                        </ul>
                     </li>
                 <% } %>
             </section>

@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/minhaCarteira',function(req,res,next){
-    res.render('users/user/index')
+    res.render('users/user/minhaCarteira/index')
   })
   router.get('/meusInvestimentos', function(req, res, next) {
     res.render('users/user/meusInvestimentos/main');

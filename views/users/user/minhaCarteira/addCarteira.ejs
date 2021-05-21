@@ -13,17 +13,14 @@
                 <title>Document</title>
             </head>
             <body>
-                <%- include ../../partials/headerinterno.ejs%>
+                <%- include ../../../partials/headerinterno.ejs%>
                 <main class="mainContainer">
-                    <%- include  ../../partials/menuLateral.ejs %>
+                    <%- include  ../../../partials/menuLateral.ejs %>
         
                     <section class="mainContainer__cardPrincipal">
-                        <h1 class="mainContainer__cardPrincipal__h1">Minha Carteira</h1>
-                        <section class="mainContainer__cardPrincipal__carteira">
-                            
-                             <img src="/images/carteira1.png"/>
-                             <img src="/images/carteira2.png"/>
-                        </section>
+                        
+                        <%- include headerMinhaCarteira %>
+                        
 
                  </section>
                  </main>
