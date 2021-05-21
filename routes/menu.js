@@ -1,27 +1,26 @@
 var express = require('express');
 var router = express.Router();
-
+const {showMinhaCarteira,
+      showInvestimentos,
+      showGraficos,
+      showPerfilInvestidor,
+      showCursos,
+      showDadosConta,
+      logout
+      } = require('../controllers/menuLateral.controlle')
 /* GET users listing. */
-router.get('/minhaCarteira',function(req,res,next){
-    res.render('users/user/index')
-  })
-  router.get('/meusInvestimentos', function(req, res, next) {
-    res.render('users/user/meusInvestimentos/main');
-  });
-  router.get('/graficos',function(req,res,next){
-    res.render('users/user/graficos/main')
-  })
-  router.get('/perfilInvestidor',function(req,res,next){
-    res.render('users/user/perfilInvestidor/main')
-  })
-  router.get('/cursos', function(req, res, next) {
-    res.render('users/user/cursos/main');
-  });
-  router.get('/dadosDaConta',function(req,res,next){
-    res.render('users/user/dadosDaConta/main')
-  })
-  router.get('/sair',function(req,res,next){
-    res.render('index')
-  });
+  router.get('/minhaCarteira',showMinhaCarteira)
+
+  router.get('/meusInvestimentos',showInvestimentos);
+
+  router.get('/graficos',showGraficos)
+
+  router.get('/perfilInvestidor',showPerfilInvestidor)
+
+  router.get('/cursos',showCursos);
+
+  router.get('/dadosDaConta',showDadosConta)
+
+  router.get('/sair',logout);
 
 module.exports=router;
