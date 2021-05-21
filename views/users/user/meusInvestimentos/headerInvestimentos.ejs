@@ -18,7 +18,7 @@
         width: 30px;
         height: 30px;
     }
-    .menuInvestiment li {
+    .menuInvestiment__item {
         display: inline;
     }
     .menuInvestiment li a {
@@ -31,23 +31,23 @@
 
 <header>
     <h1>Meus Investimentos</h1>
-    <div class="menuInvestiment">
+    <nav class="menuInvestiment">
         <ul>
-            <li>
-                <a class="" href="/user/meusInvestimentos">
+            <li class="menuInvestiment__item">
+                <a class="menuInvestiment__item__link" href="/user/meusInvestimentos">
                     <img class="icon" src="/images/iconGrafico,headerInvestment.jpg"/>
                 </a>
             </li>
-            <li>
-                <a class="" href="/user/meusInvestimentos/listInvestment">
+            <li class="menuInvestiment__item">
+                <a class="menuInvestiment__item__link" href="/user/meusInvestimentos/listInvestment">
                     <img class="icon" src="/images/iconLista,headerInvestment.png"/>
                 </a>
             </li>
-            <li>
-                <a style="width: 15px; height: 15px;" href="/user/meusInvestimentos/addInvestiment">
+            <li class="menuInvestiment__item">
+                <a class="menuInvestiment__item__link"  href="/user/meusInvestimentos/addInvestiment">
                     <img class="icon" src="/images/iconAdd,headerInvestment.png"/>
                 </a>
             </li>
         </ul>
-    </div>
+    </nav>
 </header>

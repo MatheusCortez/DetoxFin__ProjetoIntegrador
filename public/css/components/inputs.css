@@ -16,3 +16,16 @@ input:focus{
     border-bottom: 1px solid white;
     outline: none;
 }
+
+.mainContainer__containerLogin__field--invalid,.containerform__form_field--invalid
+{
+    border-color: red;
+}
+
+
+.mainContainer__containerLogin__field__error,.containerform__form_field__error{
+    color: red;
+    display: block;
+    font-size: 15px;
+}
+
