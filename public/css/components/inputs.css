@@ -23,7 +23,7 @@ input:focus{
 }
 
 
-.mainContainer__containerLogin__field__error,.containerform__form_field__error{
+.mainContainer__containerLogin__field__error,.containerform__form_field__errorMessage{
     color: red;
     display: block;
     font-size: 15px;

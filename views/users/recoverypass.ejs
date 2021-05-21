@@ -19,7 +19,8 @@
         <h1 class="mainContainer__formRecovery__title"> Altere a sua senha em 1 minuto.</h1> 
 
         
-        <input type="text" name="email" placeholder="E-mail"onfocus="this.placeholder ='' "  onblur="this.placeholder='Email'" autocomplete="off" >
+        <input type="text" name="email"class="mainContainer__containerLogin__field"  placeholder="E-mail"onfocus="this.placeholder ='' "  onblur="this.placeholder='Email'" autocomplete="off" >
+        <span class="containerform__form_field__errorMessage"></span>
         <button class="btn" type="submit">Enviar Email</button>
         <a href="/users/auth"><span class="mainContainer__formRecovery__span">Voltar ao login</span></a>
 
@@ -28,6 +29,8 @@
                 Triangulo
             </section>
         </main>
+          <script src="../js/validateFields.js"></script>
+
         <footer class="copyright"></footer>
     </body>
 </html>

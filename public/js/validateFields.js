@@ -3,7 +3,7 @@ console.log(form)
 const button = document.querySelector('.btn')
 
 function validateFields(event){
-    event.preventDefault();
+   
     const target = event.target;
     if(!target.checkValidity()|| target.validity.valueMissing ||target.value.length < 3){
         let classElemento= target.getAttribute("class")
