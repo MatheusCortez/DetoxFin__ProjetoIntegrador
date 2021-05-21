@@ -1,5 +1,5 @@
 module.exports.showMinhaCarteira =function(req,res,next){
-    res.render('users/user/index')
+    res.render('users/user/minhaCarteira/index')
   }
 
   module.exports.showInvestimentos =function(req, res, next) {
