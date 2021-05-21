@@ -12,17 +12,63 @@
         <main class="mainContainer">
             <%- include  ../../../partials/menuLateral.ejs %>
             
-        <section class="mainContainer__cardPrincipal">
+            <section class="mainContainer__cardPrincipal">
             
             <%-include headerInvestimentos.ejs %>
+
+            <h2 class="title">Formulario para adicionar Investimento</h2>
+
+            <form class="formInvestment" action="/user/meusInvestimentos/addInvestment" method="POST">
+                <div class="field">
+                    <label class="formInvestment_field_label" for="nome">Investimento</label>
+                    <div class="control">
+                        <input class="input" type="text" name="nome" autocomplete="off" required/>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                    <div class="control">
+                        <input class="input" type="number" name="valor" autocomplete="off" required/>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="formInvestment_field_label" >Renda:</p>
+                    <input type="radio" name="renda" value="Fixa">
+                    <label for="Fixa">Fixa</label><br>
+                    <input type="radio" name="renda" value="Variavel">
+                    <label for="Variavel">Variavel</label><br>
+                </div>
+
+                <div class="field">
+                    <p class="formInvestment_field_label">Tipo de Investimento:</p>
+                    <input type="radio" name="tipo" value="Tesouro Direto">
+                    <label for="Tesouro Direto">Tesouro Direto</label><br>
+                    <input type="radio" name="tipo" value="CDB">
+                    <label for="CDB">CDB</label><br>
+                    <input type="radio" name="tipo" value="LCI ou LCA">
+                    <label for="LCI ou LCA">LCI ou LCA</label><br>
+                    <input type="radio" name="tipo" value="Ações de empresas">
+                    <label for="Ações de empresas">Ações de empresas</label><br>
+                    <input type="radio" name="tipo" value="Fundo de Investimento">
+                    <label for="Fundo de Investimento">Fundo de Investimento</label><br>
+                    <input type="radio" name="tipo" value="Previdência Privada">
+                    <label for="Previdência Privada">Previdência Privada</label><br>
+                    <label for="Outro">Outro</label><br>
+                    <input type="text" name="tipo">
+                    
+                </div>
+
               
-            <div>
-                <p>Formulario para preencher investimento</p>
-            </div>
+
+
+                <input class="button" type="submit" value="Criar">
+            </form>
+
         </main> 
         
         <footer>
-
             <p class="copyright"> Copyright © 2021 DetoxFin</p>  
         </footer>
            

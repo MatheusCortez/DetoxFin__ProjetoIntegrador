@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="/css/partials/meusInvestimentos/main.css">
+        <link rel="stylesheet" href="/css/partials/meusInvestimentos/listInvestment.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,12 @@
             <section class="mainContainer__cardPrincipal">
                     
                 <%-include headerInvestimentos.ejs %>
-                <div>
-                    <p>lista de Investimentos</p>
-                </div>
+                
+               <% for (const investimento of investimentos) { %>
+                    <li class="box">
+                        <p class="box_title"><%= investimento.nome %></p> <p class="box_subtitle">Valor: R$<%= investimento.valor %>; Renda: <%= investimento.renda %> Tipo de Investimento:<%= investimento.tipo %></p>
+                    </li>
+                <% } %>
             </section>
         </main>
  

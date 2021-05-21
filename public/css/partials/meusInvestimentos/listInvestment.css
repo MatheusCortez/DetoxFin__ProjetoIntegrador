@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 60vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -18,20 +18,19 @@
     position: relative;
     bottom: 10vh;
 }
-.title {
-    margin-top: 2%;
-    text-align: center;
+.box {
+    margin: 1% 10%;
+
 }
-.formInvestment {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
+.box_title {
     font-size: 20px;
+    color: black;
+    font-weight: 600;
 }
-.button {
-    background-color: #3ccc33;
-    color: white;
-}
-.formInvestment_field_label {
+
+.box_subtitle {
     font-size: 20px;
+    color: black;
+
+
 }

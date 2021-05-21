@@ -1,0 +1,28 @@
+header {
+    display: flex;
+}
+.titleDoHeader {
+    font-size: 30px;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.menuInvestiment{
+    width: 50%;
+    margin-left: 45%;
+    margin-top: 3%;
+
+}
+.menuInvestiment img {
+    width: 30px;
+    height: 30px;
+}
+.menuInvestiment_link {
+    display: inline;
+}
+.menuInvestiment_link_a {
+    border-bottom: 3px solid black;
+}
+.menuInvestiment_link_a:hover{
+    border-bottom: 3px solid #33cc33;
+}
