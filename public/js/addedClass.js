@@ -1,7 +1,6 @@
 const url = window.location.pathname;
 const ItemMenu= document.querySelectorAll('.link a ')
 
-
 function addedClass(){
 
 

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>DetoxFin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -12,18 +13,19 @@
     <main class="mainContainer">
       
 
-     <form action="/users/index" method="POST" class="mainContainer__containerLogin">
+     <form action="#"  class="mainContainer__containerLogin" >
 
       <h1 class="mainContainer__title">Olá,</h1>
       <p class="mainContainer__description">insira seu email e senha para acessar sua conta</p>
 
       <input class="mainContainer__containerLogin__field" placeholder="E-mail" onfocus="this.placeholder=''"  onblur="this.placeholder='E-mail'"  type="email" name="email" >
+      <span class="mainContainer__containerLogin__field__error"></span>
       <input class="mainContainer__containerLogin__field" placeholder="Senha"  onfocus="this.placeholder=''" onblur="this.placeholder='Senha'" type="password" name="password" >
-
+      <span class="mainContainer__containerLogin__field__error"></span>
       <a href="/users/recoverypass"  ><span class="mainContainer__containerLogin__passwordRecovery">Esqueceu a Senha?</span></a>
      </form>
      
-     <a href="/users/user/index"><button class="btn"  >  Entrar</button></a>
+     <a href="#"><button class="btn" type="submit"  >  Entrar</button></a>
 
      <section class="mainContainer__triangule">
        triangulo
@@ -34,4 +36,5 @@
   </body>
   
   <script src="../js/addedClass.js"></script>
+  <script src="../js/validateFields.js"></script>
 </html>
