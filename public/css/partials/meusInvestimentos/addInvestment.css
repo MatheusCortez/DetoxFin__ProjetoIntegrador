@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 110vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -18,20 +18,46 @@
     position: relative;
     bottom: 10vh;
 }
+.formInvestment {
+    border: 2px solid #33CC33 ;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 2% 5%;
+}
 .title {
     margin-top: 2%;
     text-align: center;
+    font-weight: initial;
 }
-.formInvestment {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
-    font-size: 20px;
-}
+
 .button {
-    background-color: #3ccc33;
+   font-size: 30px;
+    width: 15%;
+    background-color: #33CC33 ;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 3% 42.5%;        
     color: white;
+    border: none;   
 }
 .formInvestment_field_label {
     font-size: 20px;
+}
+.control_opcao {
+    margin-left: 10%;
+}
+.divisor {
+    display: flex;
+}
+.first {
+    width: 40%;
+    margin-left: 5%;
+}
+.second {
+    width: 40%;
+    margin-left: 10%;
+    
 }

@@ -1,6 +1,7 @@
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 
 .mainContainer{

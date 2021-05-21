@@ -16,48 +16,63 @@
             
             <%-include headerInvestimentos.ejs %>
 
-            <h2 class="title">Formulario para adicionar Investimento</h2>
+            <h1 class="title">Formulario para adicionar Investimento</h1>
 
             <form class="formInvestment" action="/user/meusInvestimentos/addInvestment" method="POST">
-                <div class="field">
-                    <label class="formInvestment_field_label" for="nome">Investimento</label>
-                    <div class="control">
-                        <input class="input" type="text" name="nome" autocomplete="off" required/>
+                <div class="divisor">
+                    <div class="first">
+                        <div class="field">
+                            <label class="formInvestment_field_label" for="nome">Nome do Investimento</label>
+                            <div class="control">
+                                <input class="input" type="text" name="nome" autocomplete="off" required/>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                            <div class="control">
+                                <input class="input" type="number" name="valor" autocomplete="off" required/>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <p class="formInvestment_field_label" >Renda:</p>
+                            <input type="radio" name="renda" value="Fixa">
+                            <label for="Fixa">Fixa</label><br>
+                            <input type="radio" name="renda" value="Variavel">
+                            <label for="Variavel">Variavel</label><br>
+                        </div>
+
+                        <div class="field">
+                            <p class="formInvestment_field_label">Tipo de Investimento:</p>
+                            <input type="radio" name="tipo" value="Tesouro Direto">
+                            <label for="Tesouro Direto">Tesouro Direto</label><br>
+                            <input type="radio" name="tipo" value="CDB">
+                            <label for="CDB">CDB</label><br>
+                            <input type="radio" name="tipo" value="LCI ou LCA">
+                            <label for="LCI ou LCA">LCI ou LCA</label><br>
+                            <input type="radio" name="tipo" value="Ações de empresas">
+                            <label for="Ações de empresas">Ações de empresas</label><br>
+                            <input type="radio" name="tipo" value="Fundo de Investimento">
+                            <label for="Fundo de Investimento">Fundo de Investimento</label><br>
+                            <input type="radio" name="tipo" value="Previdência Privada">
+                            <label for="Previdência Privada">Previdência Privada</label><br>
+                            <label for="Outro">Outro</label><br>
+                            <input type="text" name="tipo" autocomplete="off">
+                        </div>
                     </div>
-                </div>
+                    <div class="second">
+                        <div class="field">
+                            <p class="formInvestment_field_label" >Tempo:</p>
+                            <input type="radio" name="renda" value="Curto prazo">
+                            <label for="Curto prazo">Curto prazo (0 a 2 anos)</label><br>
+                            <input type="radio" name="renda" value="Medio prazo">
+                            <label for="Medio prazo">Medio prazo (2 a 5 anos</label><br>
+                            <input type="radio" name="renda" value="Longo prazo">
+                            <label for="Longo prazo">Longo prazo (5+ anos)</label><br>
+                        </div>
 
-                <div class="field">
-                    <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
-                    <div class="control">
-                        <input class="input" type="number" name="valor" autocomplete="off" required/>
                     </div>
-                </div>
-
-                <div class="field">
-                    <p class="formInvestment_field_label" >Renda:</p>
-                    <input type="radio" name="renda" value="Fixa">
-                    <label for="Fixa">Fixa</label><br>
-                    <input type="radio" name="renda" value="Variavel">
-                    <label for="Variavel">Variavel</label><br>
-                </div>
-
-                <div class="field">
-                    <p class="formInvestment_field_label">Tipo de Investimento:</p>
-                    <input type="radio" name="tipo" value="Tesouro Direto">
-                    <label for="Tesouro Direto">Tesouro Direto</label><br>
-                    <input type="radio" name="tipo" value="CDB">
-                    <label for="CDB">CDB</label><br>
-                    <input type="radio" name="tipo" value="LCI ou LCA">
-                    <label for="LCI ou LCA">LCI ou LCA</label><br>
-                    <input type="radio" name="tipo" value="Ações de empresas">
-                    <label for="Ações de empresas">Ações de empresas</label><br>
-                    <input type="radio" name="tipo" value="Fundo de Investimento">
-                    <label for="Fundo de Investimento">Fundo de Investimento</label><br>
-                    <input type="radio" name="tipo" value="Previdência Privada">
-                    <label for="Previdência Privada">Previdência Privada</label><br>
-                    <label for="Outro">Outro</label><br>
-                    <input type="text" name="tipo">
-                    
                 </div>
 
               
