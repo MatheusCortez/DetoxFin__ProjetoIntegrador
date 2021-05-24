@@ -11,3 +11,12 @@
     padding-top: 20px;
     text-decoration: underline;
 }
+
+.mainContainer__triangule{
+    
+    border: 1px solid transparent;
+    opacity: 1;
+
+left: 898px;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

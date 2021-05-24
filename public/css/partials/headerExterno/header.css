@@ -1,4 +1,6 @@
 .cabecalho {
+
+  background-color: #3ccc33;
   display: grid;
   grid-template-columns: 1fr auto;
   padding-top: 30px;
@@ -35,30 +37,3 @@
   border-bottom: 1px solid white;
 }
 
-@media screen and (min-width: 0px) {
-  .menu-desktop {
-    display: none;
-  }
-  .menu-mobile {
-    display: block;
-  }
-
-  .cabecalho {
-    background-color: red;
-    grid-template-columns: auto;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .menu-desktop {
-    display: block;
-  }
-  .menu-mobile {
-    display: none;
-  }
-
-  .cabecalho {
-    background-color: #3ccc33;
-    grid-template-columns: 1fr auto;
-  }
-}

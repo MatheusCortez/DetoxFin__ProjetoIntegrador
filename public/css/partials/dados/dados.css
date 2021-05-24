@@ -5,3 +5,72 @@
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
 
+
+.mainContainer__dadosContainer{
+  
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 100px;
+    place-items: center;
+    padding-top: 30px;
+}
+
+.box{
+    height: auto;
+    width: 400px;
+}
+.dados__titles{
+    color: #8888;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.mainContainer__dadosContainer__minhaOrganização__descricao{
+    display: block;
+    padding-bottom: 5px;
+}
+.mainContainer__dadosContainer__minhaOrganização__title{
+    font-size: 16px;
+
+}
+
+
+
+.mainContainer__dadosContainer__foto{
+justify-self: flex-end;
+}
+.mainContainer__dadosContainer__foto__img{
+    border-radius: 50px;
+    width: 100px;
+}    
+
+
+.settingsBtns{
+    width: 400px;
+position: relative;
+display: flex;
+justify-content: space-around;
+    top: -100px;
+    grid-column: 2/span 1;
+}
+
+.settingsBtns_btn{
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    color: #ffff;
+}
+
+.password__btn{
+    background-color: #ED2929;
+}
+
+.fa-user-lock{
+    padding-right: 5px;
+}
+.btn__save{
+    background-color: #6CC352;
+}

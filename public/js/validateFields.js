@@ -6,6 +6,7 @@ function validateFields(event){
    
     const target = event.target;
     if(!target.checkValidity()|| target.validity.valueMissing ||target.value.length < 3){
+        console.log(target.getAttribute('name'))
         let classElemento= target.getAttribute("class")
         let elementName = target.getAttribute("name")
         target.className=`${classElemento}--invalid`
