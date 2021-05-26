@@ -14,13 +14,23 @@
     width: 85vw;
     height: 70vh;
     border-radius: 20px;
-    position: relative;
-    bottom: 10vh;
-    
+
     
 }
-
+h5{
+    color: black;
+}
+p{
+    color: black;
+}
    
+
+.imgCarousel{
+ 
+    width: 100vw;
+    height: 50vh;
+    
+}
 
 /* 
 .mainContainer__cardPrincipal___cardPrincipalAside {
