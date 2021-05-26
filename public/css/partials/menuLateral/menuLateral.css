@@ -36,6 +36,7 @@
     
     }.mainContainer__menuLateral{
         overflow-x: auto;
+        width: 100%;
     }
     .mainContainer__menuLateral__lista{
         display: flex;
@@ -62,7 +63,7 @@
  
     .mainContainer__menuLateral{
         background:  rgb(218, 211, 211);
-        width:100%;
+        width:30%;
         height: 100%;
        padding: 2px;
        }      
