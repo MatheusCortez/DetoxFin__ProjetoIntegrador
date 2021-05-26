@@ -6,10 +6,10 @@
   </head>
   <body class="app">
     <%- include ../partials/header.ejs  %>
-    <main class="mainContainer">
-        <section class="mainContainer__containerform">
+    <main class="mainContainer row align-items-center">
+        <section class="mainContainer__containerform ">
             <h1 class="mainContainer__containerform__title"> Cadastre-se</h1>
-            <form action="/users/new" method="post" name="newUserForm" class="containerform__form" >
+            <form action="/users/new" method="post" name="newUserForm" class="containerform__form " >
                 <input class="containerform__form_field" type="text" name="Nome"  placeholder="Nome Completo" onfocus="this.placeholder =''" onblur="this.placeholder='Nome Completo'"   autocomplete="off" >
                 <span class="containerform__form_field__errorMessage"></span>
                 <input class="containerform__form_field" type="email" name="Email" placeholder="E-mail" onfocus="this.placeholder =''" onblur="this.placeholder='E-mail'"  autocomplete="off" >
@@ -18,17 +18,10 @@
                 <span class="containerform__form_field__errorMessage"></span>
                 <input class="containerform__form_field" type="password" name="SenhaConfirmada" placeholder="Confirmação de Senha" onfocus="this.placeholder ='' "  onblur="this.placeholder='Confirmação de Senha'"  >
                 <span class="containerform__form_field__errorMessage"></span>
-                <button class="btn" type="submit">Cadastrar Agora</button>
+                <button class="btn btn" type="submit">Cadastrar Agora</button>
             </form>
         </section>
-        <section class="">
-triangulo
-
-        </section>
     </main>
-    <footer class="copyright">
-      copurh
-    </footer>
     <script src="/js/validaSenha.js"></script>
     
   <script src="../js/validateFields.js"></script>

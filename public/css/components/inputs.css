@@ -6,7 +6,7 @@ input {
     margin: 0 auto;
     margin-top: 10px;
     text-align: center;
-    width: 150%;
+    width: 80%;
 }
 input::placeholder{
     color: white;
