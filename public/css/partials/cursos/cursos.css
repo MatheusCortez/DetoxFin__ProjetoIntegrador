@@ -7,12 +7,7 @@
 
 
 
-.mainContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 60vh;
- 
-}
+
 
 .mainContainer__cardPrincipal{
     background-color:white;
@@ -21,13 +16,13 @@
     border-radius: 20px;
     position: relative;
     bottom: 10vh;
-    display: flex;
+    
     
 }
 
    
 
-
+/* 
 .mainContainer__cardPrincipal___cardPrincipalAside {
     
  padding-top: 10px;
@@ -72,4 +67,4 @@
   
  width: 20%;
 
-}
+} */
