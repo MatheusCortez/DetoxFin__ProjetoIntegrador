@@ -20,93 +20,52 @@
         <main class="mainContainer">
             <%- include ../../../partials/menuLateral.ejs %>
 
-                <section class="mainContainer__cardPrincipal container row ml-4">
-<!--                     
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="/images/mitoseVerdadesimg.png" class="d-block w-50 " alt="Curso mitos e Verdade">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Curso Mitos e Verdades</h5>
-                              <p>Entenda mais sobre como investir em ações no exterior.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="/images/crisesMercadoFinanceiroImg.png" class="d-block w-50" alt="Crises Mercado Financeiro">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Crises no Mercado Financeiro</h5>
-                              <p>Histórico de Crises do Mercado Financeiro.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="/images/guiaB3.png" class="d-block w-50" alt="Guia b3">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>Guia B3 sobre ações</h5>
-                              <p>O mercado de ações brasileiro é centenário,transparente,bem regulado e oferece boa liquidez.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                          
-                        </button>
-                      </div>
-                    
-                </section> -->
-
-                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                      <img src="/images/mitoseVerdadesimg.png" class="d-block " class="imgCarousel" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Curso Mitos e Verdades</h5>
-                        <p>Entenda mais sobre como investir em ações no exterior.</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                      <img src="/images/crisesMercadoFinanceiroImg.png" class="d-block " class="imgCarousel" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Crises no Mercado Financeiro</h5>
-                        <p>Histórico de Crises do Mercado Financeiro.</p>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/images/guiaB3.png" class="d-block " class="imgCarousel" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>Guia B3 sobre ações</h5>
-                        <p>O mercado de ações brasileiro é centenário,transparente,bem regulado e oferece boa liquidez.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+          <section class="mainContainer__cardPrincipal">
+            <div class="container mt-5">
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-              </section>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="/images/mitoseVerdadesimg.png" class="d-block carousel-img " alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5 class="carousel-caption__title">First slide label</h5>
+                      <p class="carousel-caption__description">Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/guiaB3.png" class="d-block carousel-img " alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5 class="carousel-caption__title">Second slide label</h5>
+                      <p class="carousel-caption__description">Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/images/crisesMercadoFinanceiroImg.png" class="d-block carousel-img" alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5 class="carousel-caption__title">Third slide label</h5>
+                      <p class="carousel-caption__description">Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+                  
+          </section>
+
         </main>
-        <footer>
-            <p class="copyright"> Copyright © 2021 DetoxFin</p>
-        </footer>
+      
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>
