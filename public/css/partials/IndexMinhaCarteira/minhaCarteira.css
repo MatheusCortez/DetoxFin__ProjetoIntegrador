@@ -4,19 +4,11 @@
     height: 70vh;
     border-radius: 20px;
     align-content: center;
-    position: relative;
-    bottom: 10vh;
+    /* position: relative;
+    bottom: 15vh; */
     }
-.mainContainer__cardPrincipal__h1{
+     .mainContainer__cardPrincipal__h1{
     display:flex;
     justify-content: center;
 }
-.mainContainer__cardPrincipal__carteira{
-    display: flex;
-    justify-content:space-around;
-    padding-top: 20px;
-}
-.mainContainer__cardPrincipal__carteira__img{
-    width:20vw;
-    height:60vh
-}
+

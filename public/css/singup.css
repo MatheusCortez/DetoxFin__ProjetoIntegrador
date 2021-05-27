@@ -3,13 +3,3 @@
 @import url(./reset.css);
 @import url(./singup/main.css);
 @import url(./components/inputs.css);
-
-
-.mainContainer{
-    background-color: #33cc33;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 70vh;
-    align-content: center;
-}

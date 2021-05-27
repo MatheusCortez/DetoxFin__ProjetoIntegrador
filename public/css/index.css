@@ -15,7 +15,7 @@
 }
 
 
-.mainContainer__fraseTriangulo {
+.mainContainer__frase {
     padding-top: 10%;
     display: flex;
     justify-content: space-between;
@@ -23,12 +23,12 @@
    
   }
   /*****SESSAO DE FRASE E BOTAO*****/
-  .mainContainer__fraseTriangulo__fraseButton {
+  .mainContainer__frase__fraseButton {
     width: 60%;
     padding-left: 10%;
   }
   
-  .mainContainer__fraseTriangulo__fraseButton__phrase  {
+  .mainContainer__frase__fraseButton__phrase  {
     font-weight: 700;
     margin-bottom: 10%;
   }
@@ -40,7 +40,7 @@
     text-align: center;
   }
   
-  .mainContainer__fraseTriangulo__fraseButton__btn{
+  .mainContainer__frase__fraseButton__btn{
     
     color: white;
     background: #33cc33;
@@ -48,16 +48,10 @@
     height: 50px;
     border: none;
     border-radius: 10px;
-    left: 50px;
     font-size: 15px;
     font-weight: 700;
   }
-  /***********triangulo********************/
-  .mainContainer__fraseTriangulo__containerTriangulo{
-      position: relative;
   
-   
-  }
   /********PERFIL INVESTIDOR*************/
   
   .mainContainer__perfilInvestidor {

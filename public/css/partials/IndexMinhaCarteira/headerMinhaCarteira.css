@@ -1,0 +1,33 @@
+header {
+    display: flex;
+}
+.titleDoHeader {
+    font-size: 30px;
+    display: flex;
+    margin-left: 10%;
+    font-weight: initial;
+}
+.container{
+  
+display: flex;
+justify-content: space-around;
+}
+
+.teste{  
+    display: flex;
+    
+}
+
+.menuInvestiment img {
+    width: 30px;
+    height: 30px;
+}
+.menuInvestiment_link {
+    display:flex;
+}
+.menuInvestiment_link_a {
+    border-bottom: 3px solid black;
+}
+.menuInvestiment_link_a:hover{
+    border-bottom: 3px solid #33cc33;
+}

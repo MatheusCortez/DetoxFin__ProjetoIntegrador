@@ -9,7 +9,6 @@ router.get('/addInvestiment', function(req, res, next) {
 
 });
 router.post('/addInvestment', (req,res) => {
-  console.log(req.body)
   array.push(req.body)
   res.redirect('/user/meusInvestimentos/listInvestment')
 });
