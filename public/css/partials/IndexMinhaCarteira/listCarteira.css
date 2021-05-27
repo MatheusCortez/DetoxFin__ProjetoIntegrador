@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 60vh;
+    height: 120vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -44,4 +44,19 @@
     font-size: 20px;
     padding-right: 1%;
     padding-left: 1%;
+}
+.divisor {
+    display: flex;
+}
+.gasto {
+    width: 40%;
+    border-left: 5px solid green;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.despesa {
+    width: 40%;
+    border-left: 5px solid red;
+    margin-left: 10%;
+    margin-top: 3%;
 }

@@ -7,7 +7,7 @@
               <link rel="stylesheet" href="/css/partials/menuLateral"> 
               <link rel="stylesheet" href="/css/partials/headerInterno/header.css">
               <link rel="stylesheet" href= "/css/reset.css">
-              <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/minhaCarteira.css">
+              <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/addCarteira.css">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
@@ -20,7 +20,77 @@
                     <section class="mainContainer__cardPrincipal">
                         
                         <%- include headerMinhaCarteira %>
-                        
+                    
+                        <div class="formulario">
+
+                            <div class="divisor">
+                                
+                                <div class="first">
+                                    <h1 class="title">Adicionar Gastos</h1>
+                                    <form class="formInvestment" name="gasto" action="/user/minhaCarteira/addCarteira" method="POST">
+                                        
+                                        <div class="field">
+                                            <label class="formInvestment_field_label" for="nome">Nome</label>
+                                            <div class="control">
+                                                <input class="input" type="text" name="nome" autocomplete="off" required/>
+                                            </div>
+                                        </div>
+            
+                                        <div class="field">
+                                            <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                                                <div class="control">
+                                                    <input class="input" type="number" name="valor" autocomplete="off" required/>
+                                                </div>
+                                        </div>
+            
+                                        <div class="field">
+                                            <p class="formInvestment_field_label" >Razão:</p>
+                                            <input type="radio" name="razao" value="Salario">
+                                            <label for="Salario">Salario</label><br>
+                                            <input type="radio" name="razao" value="Trampo extra">
+                                            <label for="Trampo extra">Trampo extra</label><br>
+                                            <label for="Outro">Outro</label><br>
+                                            <input type="text" name="tipo" autocomplete="off">
+                                        </div>
+
+                                        <input class="button" type="submit" value="Criar">
+                                    </form>
+                                </div>
+                            
+                            <div class="second">
+                                <h1 class="title">Adicionar Despesas</h1>
+                                <form class="formInvestment" name="despesa" action="/user/minhaCarteira/addCarteira" method="POST">
+                                
+                                    <div class="field">
+                                        <label class="formInvestment_field_label" for="nome">Nome</label>
+                                        <div class="control">
+                                            <input class="input" type="text" name="nome" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+        
+                                    <div class="field">
+                                        <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                                            <div class="control">
+                                                <input class="input" type="number" name="valor" autocomplete="off" required/>
+                                            </div>
+                                    </div>
+        
+                                    <div class="field">
+                                        <p class="formInvestment_field_label" >Razão:</p>
+                                        <input type="radio" name="renda" value="Restaurante">
+                                        <label for="Restaurante">Restaurante</label><br>
+                                        <input type="radio" name="renda" value="Beleza">
+                                        <label for="Beleza">Beleza</label><br>
+                                    </div>
+                                    
+                                    <input class="button" type="submit" value="Criar">
+                                </form>
+                            </div>
+                            
+            
+            
+                               
+                        </div>   
 
                  </section>
                  </main>
