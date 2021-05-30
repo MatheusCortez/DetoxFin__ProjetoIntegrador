@@ -1,5 +1,4 @@
 const form = document.forms[0]
-console.log(form)
 const button = document.querySelector('.btn')
 
 function validateFields(event){
@@ -12,7 +11,7 @@ function validateFields(event){
         target.className=`${classElemento}--invalid`
         target.nextElementSibling.innerText = `${elementName} está invalido`
 
-    }else{
+    }else if(target.checkValidity()){
         target.className=`${classElemento}`
         target.nextElementSibling.innerText = ""
     }

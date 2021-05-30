@@ -20,9 +20,6 @@ router.get('/new',showNew)
 //rota nova post com confirmacao de senha
 router.post('/new',newUser)
 
-router.get('/teste',(req,res,next)=>{
-  res.render('users/teste',{usuarios:require('../arquivo.json')})
-})
 
 router.get('/auth',showAuth)
 

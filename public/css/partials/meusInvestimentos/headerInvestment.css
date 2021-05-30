@@ -1,18 +1,10 @@
 header {
     display: flex;
+    
 }
 .titleDoHeader {
-    font-size: 30px;
-    width: 50%;
-    margin-left: 10%;
-    margin-top: 3%;
-    font-weight: initial;
-}
-.menuInvestiment{
-    width: 50%;
-    margin-left: 45%;
-    margin-top: 3%;
-
+    font-size: 30px; 
+    
 }
 .menuInvestiment img {
     width: 30px;
@@ -26,4 +18,34 @@ header {
 }
 .menuInvestiment_link_a:hover{
     border-bottom: 3px solid #33cc33;
+}
+
+@media screen  and (min-width:0){
+     header{
+         flex-direction: column;
+         justify-content: space-around;
+     }
+     .titleDoHeader{
+        font-size: 20px;
+        padding-left: 20%;
+        margin-top: 20px;
+     }
+     .menuInvestiment{
+            margin-top: 20px;
+            padding-left: 30px;
+     }
+}
+
+@media screen  and (min-width:700px){
+    header{
+        flex-direction: row;
+        justify-content: space-around;        
+    }
+    .titleDoHeader{
+        padding-top: 20px;
+
+    }
+    .menuInvestiment{
+        
+    }
 }
