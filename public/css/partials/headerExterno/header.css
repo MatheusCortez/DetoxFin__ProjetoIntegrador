@@ -9,6 +9,7 @@
 }
 .cabecalho__logo {
   text-transform: uppercase;
+  max-width: 200px;
 }
 .cabecalho__butons {
   padding-right: 50px;

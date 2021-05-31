@@ -25,6 +25,7 @@
         <input
           class="mainContainer__containerLogin__field"
           placeholder="E-mail"
+          value="<%= content.email?content.email:'' %>"
           onfocus="this.placeholder=''"
           onblur="this.placeholder='E-mail'"
           type="email"
@@ -39,7 +40,7 @@
           type="password"
           name="password"
         />
-        <span class="mainContainer__containerLogin__field__error"></span>
+        <span class="mainContainer__containerLogin__field__error"><%= error.email ? error.email : '' %></span>
         <a href="/users/recoverypass"
           ><span class="mainContainer__containerLogin__passwordRecovery"
             >Esqueceu a Senha?</span
