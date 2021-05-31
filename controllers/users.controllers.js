@@ -2,6 +2,37 @@ const bcrypt = require ('bcrypt');
 const fs= require('fs')
 const bancoFake= require('../database/bancoFake')
 
+/**POR FAVOR NAO MEXE NO CODIGO DE NEW USER PASSEI UMA SEMANA PRA FAZER RODA */
+
+
+
+module.exports.newUser =   async function (req,res){
+  const usuario = req.body
+  if(usuario.senha===usuario.senhaConfirmada){
+  hash =  await encriptarSenha(usuario.senha)
+  bancoFake.cadastrar({
+    nome:usuario.nome,
+    email:usuario.email,
+    hash
+  })
+    res.redirect('/users/auth')
+  
+  }else{
+    res.render('users/new',{
+      error:{
+        senha:'Senhas incompativeis',
+      },
+      content:req.body
+    })
+  }
+
+
+
+
+
+}
+
+
 module.exports.showIndex = function(req,res){
   res.render('index')
 }
@@ -37,23 +68,23 @@ module.exports.showInternalIndex =function(req,res,next){
 }
   
   module.exports.showNew = function(req,res,next){
-    res.render('users/new')
-
+    res.render('users/new',{
+      error:{},
+      content:{}
+    });
+    
   }
  
-  module.exports.newUser =   async function(req,res){
-    const usuario= req.body;  
-    console.log(usuario)
-   await bancoFake.cadastrar(usuario)
- 
-  res.render('users/auth')
-  }
-
+  
 
   async function encriptarSenha(senha) {
     const salt = await bcrypt.genSalt(10)
     return await bcrypt.hash(senha,salt)
   
   }
-    
+  async function validarSenha(senha,hash){
+    return await bcrypt.compare(senha,hash)
+ 
+ }
+ 
 
