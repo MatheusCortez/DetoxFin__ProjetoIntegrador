@@ -18,6 +18,10 @@
    
     }
 
+  .container ml-2{
+    justify-content: space-between;
+  }
+
     
 
 .card-principal-h1{
