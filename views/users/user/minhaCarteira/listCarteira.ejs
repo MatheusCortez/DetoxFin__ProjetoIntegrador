@@ -4,10 +4,8 @@
             <head>
                 <meta charset="UTF-8">
               <link rel="stylesheet" href="/css/partials/indexInterno/index.css">
-              <link rel="stylesheet" href="/css/partials/menuLateral"> 
-              <link rel="stylesheet" href="/css/partials/headerInterno/header.css">
-              <link rel="stylesheet" href= "/css/reset.css">
               <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/listCarteira.css">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-v4-rtl/4.6.0-2/js/bootstrap.min.js">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
@@ -18,45 +16,48 @@
                     <%- include  ../../../partials/menuLateral.ejs %>
         
                     <section class="mainContainer__cardPrincipal">
-                        
+
                         <%- include headerMinhaCarteira %>
-                        <div class="divisor">
+                        <div class="divisor ">
+                            <div class="container_entrada ">
+                                <% for (const entrada of entradas) { %>
+                                    <div class="entrada row ">
+                                        <li class="box  offset-2 col-9">
+                                            <p class="box_title"><%= entrada.nome %></p> 
+                                            <ul class="descricao">
+                                                <li class="descricao_link_borda">
+                                                    Valor: R$<%= entrada.valor %>
+                                                    <form method="POST" action="/user/minhaCarteira/deletarEntrada/<%= entrada.id %>">
+                                                        <input class="button is-danger" type="submit" value="Deletar"/>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>    
+                                    </div>
+                                <% }  %>
+                            </div>
+                        
+                            <div class="container_saida">
+                                <% for (const saida of saidas) { %>
 
-                            <% for (const entrada of entradas) { %>
-                                <div class="entrada">
-                                    <li class="box">
-                                        <p class="box_title"><%= entrada.nome %></p> 
-                                        <ul class="descricao">
-                                            <li class="descricao_link_borda">
-                                                Valor: R$<%= entrada.valor %>
-                                                <form method="POST" action="/user/minhaCarteira/deletarEntrada/<%= entrada.id %>">
-                                                    <input class="button is-danger" type="submit" value="Deletar"/>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    </li>    
-                                </div>
-                            <% }  %>
-
-                            <% for (const saida of saidas) { %>
-
-                                <div class="saida">
-                                    <li class="box">
-                                        <p class="box_title"><%= saida.nome %></p> 
-                                        <ul class="descricao">
-                                            <li class="descricao_link_borda">
-                                                Valor: R$<%= saida.valor %>
-                                                <form method="POST" action="/user/minhaCarteira/deletarSaida/<%= saida.id %>">
-                                                    <input class="button is-danger" type="submit" value="Deletar"/>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    </li>    
-                                </div>
-                                
-                            <% } %> 
-                           
-                           
+                                    <div class="saida row ">
+                                        <li class="box offset-2 col-9">
+                                            <p class="box_title"><%= saida.nome %></p> 
+                                            <ul class="descricao">
+                                                <li class="descricao_link_borda">
+                                                    Valor: R$<%= saida.valor %>
+                                                    <form method="POST" action="/user/minhaCarteira/deletarSaida/<%= saida.id %>">
+                                                        <input class="button is-danger" type="submit" value="Deletar"/>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>    
+                                    </div>
+                                    
+                                <% } %> 
+                               
+                            </div>
+                         
                         </div>
                         
                         
