@@ -25,6 +25,9 @@
                             <li class="descricao_link"><%= investimento.tipo %></li>
                             <li class="descricao_link_borda"><%= investimento.tempo %></li>
                         </ul>
+                        <form method="POST" action="/user/meusInvestimentos/deletar/<%= investimento.id %>">
+                            <input class="button is-danger" type="submit" value="Deletar"/>
+                        </form>
                     </li>
                 <% } %>
             </section>

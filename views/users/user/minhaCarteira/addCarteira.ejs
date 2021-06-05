@@ -27,7 +27,7 @@
                                 
                                 <div class="first">
                                     <h1 class="title">Adicionar Gastos</h1>
-                                    <form class="formInvestment" name="gasto" action="/user/minhaCarteira/addCarteira" method="POST">
+                                    <form class="formInvestment" name="gasto" action="/user/minhaCarteira/addCarteiraEntrada" method="POST">
                                         
                                         <div class="field">
                                             <label class="formInvestment_field_label" for="nome">Nome</label>
@@ -50,7 +50,7 @@
                                             <input type="radio" name="razao" value="Trampo extra">
                                             <label for="Trampo extra">Trampo extra</label><br>
                                             <label for="Outro">Outro</label><br>
-                                            <input type="text" name="tipo" autocomplete="off">
+                                            <input type="text" name="razao" autocomplete="off">
                                         </div>
 
                                         <input class="button" type="submit" value="Criar">
@@ -59,7 +59,7 @@
                             
                             <div class="second">
                                 <h1 class="title">Adicionar Despesas</h1>
-                                <form class="formInvestment" name="despesa" action="/user/minhaCarteira/addCarteira" method="POST">
+                                <form class="formInvestment" name="despesa" action="/user/minhaCarteira/addCarteiraSaida" method="POST">
                                 
                                     <div class="field">
                                         <label class="formInvestment_field_label" for="nome">Nome</label>
