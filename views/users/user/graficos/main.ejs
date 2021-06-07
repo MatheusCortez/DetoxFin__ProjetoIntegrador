@@ -23,31 +23,31 @@
             <%- include  ../../../partials/menuLateral.ejs %>
 
             <section class="mainContainer__cardPrincipal">
-                <section class="mainContainer__cardPrincipal__carteira ">
-                                               
-            <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-            </div>
+          
+
+
+            <section class="mainContainer__cardPrincipal__carteira ">
+                  
               <h1 class="cardPrincipalh1">Minha Carteira</h1>
-              <section class="container ml-2">
-                <section class="row ">     
+              <div class="input-group rounded row mr-3"></div>
+                    <input type="search" class="form-control rounded offset-2 col-4" placeholder="Buscar..." aria-label="Buscar..."
+                            aria-describedby="search-addon" />
+                    <span class="input-group-text border-0 col-1 offset-1" id="search-addon">
+                            <i class="fas fa-search"></i>
+                    </span>            
+                </div>
+                <section class="row container__imagem ">     
                     <section class="mainContainer__dadosContainer col-md-2  col-sm-4">
                         <img class= "mainContainer__dadosContainer__img1" src="/images/grafico1.PNG"/>
                     </section>
 
-                    <section class="mainContainer__dadosContainer col-md-2 col-sm-4">
+                    <section class="mainContainer__dadosContainer col-md-2 offset-2 col-sm-4">
                         <img class= "mainContainer__dadosContainer__img1" src="/images/grafico2.PNG"/>
                     </section>
- </section>
-      
-    </section>
-</section>
-</section>
-  </main>
-<footer>
-
- <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-</footer>
+                </section>
+            </section>
+        </section>
+    </main>
 
       
     </body>

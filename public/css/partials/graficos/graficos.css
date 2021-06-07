@@ -68,3 +68,7 @@ h1{
   width:20vw;
   height:60vh
   }   
+.container__imagem{
+  display: flex;
+  justify-content: space-around;
+}
