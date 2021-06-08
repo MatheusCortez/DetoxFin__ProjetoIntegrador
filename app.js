@@ -23,6 +23,10 @@ app.listen(port, () => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+  secret:'BF5ACA04FB2668640E6EC4E6278A142088676CC5263F600007F725066FC661CE'
+}))
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -35,10 +39,7 @@ app.use('/users', usersRouter);
 app.use('/user',menuRouter);
 app.use('/user/meusInvestimentos',investmentsRouter);
 app.use('/user/perfilInvestidor',investorsProfileRouter);
-app.use('/user/minhaCarteira',walletRouter);
-app.use(session({
-  secret:'BF5ACA04FB2668640E6EC4E6278A142088676CC5263F600007F725066FC661CE'
-}))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

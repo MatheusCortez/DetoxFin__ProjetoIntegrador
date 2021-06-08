@@ -1,5 +1,10 @@
 module.exports.showMinhaCarteira =function(req,res,next){
-    res.render('users/user/minhaCarteira/index')
+  const usuario = req.session.usuario
+  
+    res.render('users/user/minhaCarteira/index',{usuario})
+    
+
+    
   }
 
   module.exports.showInvestimentos =function(req, res, next) {

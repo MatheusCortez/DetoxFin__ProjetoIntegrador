@@ -22,6 +22,7 @@ module.exports.showAuth = function(req,res,next){
     const login = req.body;
     const usuario = await bancoFake.buscarUsuario(login.email)
     
+    req.session.usuario = usuario
     if(!usuario){
       res.render('users/auth',{
         error:{
@@ -31,8 +32,7 @@ module.exports.showAuth = function(req,res,next){
       })
     
     }else{
-    
-      console.log('localizou')
+     
       res.redirect('/user/minhaCarteira')
     }
       
@@ -83,8 +83,7 @@ module.exports.showRecoveryPass =function(req,res,next){
 
 
   module.exports.showInternalIndex =function(req,res,next){
-    res.render('/user/minhaCarteira', {
-      user:usuarioJS
-    })
-    res.send(user.nome)
+   console.log('entrou  na retorra index')
+    res.render('/user/minhaCarteira')
+   
 }
