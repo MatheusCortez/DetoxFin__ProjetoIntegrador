@@ -18,11 +18,23 @@
                     <section class="mainContainer__cardPrincipal">
 
                         <%- include headerMinhaCarteira %>
+                        
+                        <div class="titleList">
+                            <h1>Entrada</h1>
+                            <h1>Saida</h1>
+                        </div>
+
+                     
                         <div class="divisor ">
                             <div class="container_entrada ">
+                                
                                 <% for (const entrada of entradas) { %>
                                     <div class="entrada row ">
+<<<<<<< HEAD
                                         <li class="box  offset-sm-2 col-sm-8 offset-sm-2">
+=======
+                                        <li class="box  offset-sm-2 col-sm-9">
+>>>>>>> 922bab9ae4235d06fcc8cf79a007ebc92c4f3770
                                             <p class="box_title"><%= entrada.nome %></p> 
                                             <ul class="descricao">
                                                 <li class="descricao_link_borda">
@@ -39,9 +51,13 @@
                         
                             <div class="container_saida">
                                 <% for (const saida of saidas) { %>
-
+                                    
                                     <div class="saida row ">
+<<<<<<< HEAD
                                         <li class="box offset-sm-2 col-sm-8 offset-sm-2 ">
+=======
+                                        <li class="box offset-sm-2 col-sm-9">
+>>>>>>> 922bab9ae4235d06fcc8cf79a007ebc92c4f3770
                                             <p class="box_title"><%= saida.nome %></p> 
                                             <ul class="descricao">
                                                 <li class="descricao_link_borda">
