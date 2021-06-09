@@ -1,6 +1,6 @@
 const {v4:uuidV4} = require('uuid')
 const {createHash,compareHash} = require('./crypFunctions/hash')
-const bcrypt = require ('bcrypt');
+
 const fs= require('fs')
 const bancoFake= require('../database/bancoFake')
 const usuarioJS = require('../database/usuarios.json')

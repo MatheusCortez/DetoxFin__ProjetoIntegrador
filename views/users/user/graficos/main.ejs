@@ -16,9 +16,9 @@
         <title>Graficos | DetoxFin</title>
     </head>
     <body class="app">
-
-        <%- include ../../../partials/headerinterno.ejs %>
-
+        <%- include("../../../partials/headerinterno.ejs",{
+            usuario
+        })%>
         <main class="mainContainer">
             <%- include  ../../../partials/menuLateral.ejs %>
 
