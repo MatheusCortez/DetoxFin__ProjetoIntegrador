@@ -2,14 +2,20 @@
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" href="/css/partials/meusInvestimentos/addInvestment.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DetoxFin | Investimentos</title>
     </head>
     <body>
-        <%- include ../../../partials/headerinterno.ejs %>
+        <%- include("../../../partials/headerinterno.ejs",{
+            usuario
+        })%>
+
         <main class="mainContainer">
+
             <%- include  ../../../partials/menuLateral.ejs %>
             
             <section class="mainContainer__cardPrincipal">
@@ -22,73 +28,51 @@
                 <form class="formInvestment" action="/user/meusInvestimentos/addInvestment" method="POST">
                     <div class="divisor">
                         <div class="first">
+                            <!--Pergunta nome do Investimento-->
                             <div class="field">
                                 <label class="formInvestment_field_label" for="nome">Nome do Investimento</label>
                                 <div class="control">
                                     <input class="input" type="text" name="nome" autocomplete="off" required/>
                                 </div>
                             </div>
-
+                            <!--Pergunta tipo de investimento-->
+                            <select name="cars" id="cars">
+                                <option >Selecione Aqui</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="second">
+                            <!--Pergunta Valor-->
                             <div class="field">
                                 <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
                                 <div class="control">
                                     <input class="input" type="number" name="valor" autocomplete="off" required/>
                                 </div>
                             </div>
-
+                            <!--Pergunta data inicial-->
                             <div class="field">
-                                <p class="formInvestment_field_label" >Renda:</p>
-                                <input type="radio" name="renda" value="Fixa">
-                                <label for="Fixa">Fixa</label><br>
-                                <input type="radio" name="renda" value="Variavel">
-                                <label for="Variavel">Variavel</label><br>
+                                <label class="formInvestment_field_label" for="date">Data Inicial do Investimento</label>
+                                <div class="control">
+                                    <input class="input" type="date" name="inicialDate" autocomplete="off" required/>
+                                </div>
                             </div>
-
-                            <div class="field">
-                                <p class="formInvestment_field_label">Tipo de Investimento:</p>
-                                <input type="radio" name="tipo" value="Tesouro Direto">
-                                <label for="Tesouro Direto">Tesouro Direto</label><br>
-                                <input type="radio" name="tipo" value="CDB">
-                                <label for="CDB">CDB</label><br>
-                                <input type="radio" name="tipo" value="LCI ou LCA">
-                                <label for="LCI ou LCA">LCI ou LCA</label><br>
-                                <input type="radio" name="tipo" value="Ações de empresas">
-                                <label for="Ações de empresas">Ações de empresas</label><br>
-                                <input type="radio" name="tipo" value="Fundo de Investimento">
-                                <label for="Fundo de Investimento">Fundo de Investimento</label><br>
-                                <input type="radio" name="tipo" value="Previdência Privada">
-                                <label for="Previdência Privada">Previdência Privada</label><br>
-                                <label for="Outro">Outro</label><br>
-                                <input type="text" name="tipo" autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="second">
-                            <div class="field">
-                                <p class="formInvestment_field_label" >Meta de tempo:</p>
-                                <input type="radio" name="tempo" value="Curto prazo">
-                                <label for="Curto prazo">Curto prazo (0 a 2 anos)</label><br>
-                                <input type="radio" name="tempo" value="Medio prazo">
-                                <label for="Medio prazo">Medio prazo (2 a 5 anos)</label><br>
-                                <input type="radio" name="tempo" value="Longo prazo">
-                                <label for="Longo prazo">Longo prazo (5+ anos)</label><br>
-                            </div>
+            
 
                         </div>
                     </div>
-
-                
-
 
                     <input class="button" type="submit" value="Criar">
                 </form>
             </div>   
         </main> 
         
-        <footer>
-            <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-        </footer>
-           
+       
+     <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>      
     </body>
-
+ 
   <script src="../js/addedClass.js"></script>
 </html>

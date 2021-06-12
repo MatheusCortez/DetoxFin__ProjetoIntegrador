@@ -8,7 +8,9 @@
         <title>DetoxFin | Investimentos</title>
     </head>
     <body>
-        <%- include ../../../partials/headerinterno.ejs %>
+        <%- include("../../../partials/headerinterno.ejs",{
+            usuario
+        })%>
         <main class="mainContainer">
             <%- include  ../../../partials/menuLateral.ejs %>
             
@@ -33,10 +35,7 @@
             </section>
         </main>
  
-        <footer>
-
-            <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-        </footer>
+      
            
     </body>
 </html>

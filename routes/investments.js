@@ -3,26 +3,31 @@ const router = express.Router();
 
 const array = [];
 
+
 /* GET users listing. */
 router.get('/addInvestiment', function(req, res, next) {
-  res.render('users/user/meusInvestimentos/addInvestment')
+  const usuario = req.session.usuario
+  res.render('users/user/meusInvestimentos/addInvestment',{usuario})
 
 });
 router.post('/addInvestment', (req,res) => {
+  const usuario = req.session.usuario
   const investmentNovo = {
     id:array.length + 1,
     ...req.body
 
   }
   array.push(investmentNovo)
-  res.redirect('/user/meusInvestimentos/listInvestment')
+  res.redirect('/user/meusInvestimentos/listInvestment', {usuario})
 });
 
 router.get('/listInvestment', (req,res) =>{
-    res.render('users/user/meusInvestimentos/listInvestment', {investimentos: array})
+  const usuario = req.session.usuario
+  res.render('users/user/meusInvestimentos/listInvestment', {investimentos: array, usuario})
 });
 
 router.post('/deletar/:id', (req, res) => {
+  const usuario = req.session.usuario
   const id = parseInt(req.params.id)
 
   for (let i = array.length - 1; i >= 0; i--) {
@@ -34,7 +39,7 @@ router.post('/deletar/:id', (req, res) => {
       }
   }
 
-  res.redirect('/user/meusInvestimentos/listInvestment')
+  res.redirect('/user/meusInvestimentos/listInvestment', {usuario})
 })
 
 
