@@ -1,6 +1,7 @@
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
+
 .mainContainer{
     display: flex;
     justify-content: space-between;
@@ -25,11 +26,12 @@
     
 
 .card-principal-h1{
-       font-size: 40px;
-       padding-top: 50px;
-       padding-left: 40px;
-   }
-   #divBusca{
+  font-size: 40px;
+  padding-top: 50px;
+  padding-left: 40px;
+  }
+
+  #divBusca {
     background-color:#b8b8b8;
     border:none;
     border-radius:15px;

@@ -1,14 +1,20 @@
+@import url('../../reset.css');
+@import url('../headerInterno/header.css');
+@import url('../menuLateral/menuLateral.css');
+
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+/* Card Principal*/
 .mainContainer__cardPrincipal{
     background-color: white;
     width: 85vw;
     height: 70vh;
     border-radius: 20px;
     align-content: center;
-    /* position: relative;
-    bottom: 15vh; */
-    }
-     .mainContainer__cardPrincipal__h1{
-    display:flex;
-    justify-content: center;
+
 }
 

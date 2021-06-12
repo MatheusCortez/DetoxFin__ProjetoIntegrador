@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/pergunta1', function(req, res, next) {
-  res.render('users/user/perfilInvestidor/pergunta')
+  const usuario = req.session.usuario
+  res.render('users/user/perfilInvestidor/pergunta', {usuario})
 
 })
 

@@ -12,7 +12,7 @@
     align-items: center;
     padding-bottom: 10px;
     padding-top:10px;
-    
+    text-decoration: none;
 }
 
 .mainContainer__menuLateral__lista__menuItem:last-child{

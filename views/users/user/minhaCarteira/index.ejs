@@ -3,7 +3,7 @@
         <html lang="pt-br">
             <head>
                 <meta charset="UTF-8">
-              <link rel="stylesheet" href="/css/partials/indexInterno/index.css">
+              
               <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
               <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/minhaCarteira.css">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,11 @@
             </head>
             <body>
                 <%- include("../../../partials/headerinterno.ejs",{
-                    usuario:usuario
+                    usuario
                 })%>
                 <main class="mainContainer">
                     <%- include  ../../../partials/menuLateral.ejs %>
-        
+                    
                     <section class="mainContainer__cardPrincipal">
                         
                         <%- include headerMinhaCarteira %>
@@ -35,10 +35,7 @@
                     
                     
                     
-                 </main>
+                </main>
                 
-                <footer>
-                    <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-                </footer>
     </body>
 </html>

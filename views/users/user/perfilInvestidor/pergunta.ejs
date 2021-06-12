@@ -15,8 +15,10 @@
         <title>Document</title>
     </head>
     <body class="app">
-
-        <%- include ../../../partials/headerinterno.ejs %>
+        
+        <%- include("../../../partials/headerinterno.ejs",{
+            usuario
+        })%>
 
         <main class="mainContainer">
             <%- include  ../../../partials/menuLateral.ejs %>
@@ -47,7 +49,7 @@
                             <p> Maximizar o potencial de ganho assumindo um maior risco  </p>
                     </div>
             
-                <a href="/"><button class="botaoPerfil">Próximo</button></a>
+                <a href="#"><button class="botaoPerfil">Próximo</button></a>
               
             </section>
             

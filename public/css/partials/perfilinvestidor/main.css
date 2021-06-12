@@ -15,9 +15,9 @@
     height: 70vh;
     border-radius: 20px;
     align-content: center;
-    position: relative;
-    bottom: 10vh;
+
 }
+
 .logoPI {
     display: flex;
     flex-direction: column;
