@@ -15,6 +15,7 @@
     color: white;
     font-size: 30px;
     margin-right: 10%;
+    font-weight: 600;
 }
 .title_logo:hover {
     color: white;
@@ -23,6 +24,7 @@
     width: 100px;
     margin: 0 auto;
     margin-top: -25px;
+    vertical-align: middle;
 }
 
 .usuarioDados{
@@ -33,9 +35,7 @@
 }
 .cabecalho__usuarioDados__imgPerfil{
     width: 70px;
-    
-
-    
+  
 }
 .cabecalho__usuarioDados__nomeCliente{
     display: block;

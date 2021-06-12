@@ -6,6 +6,20 @@
 @import url('../menuLateral/menuLateral.css');
 
 
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+}
+/* Card Principal*/
+.mainContainer__cardPrincipal{
+    background-color: white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+    align-content: center;
+
+}
 .mainContainer__dadosContainer{
     padding-top: 30px;
 }
