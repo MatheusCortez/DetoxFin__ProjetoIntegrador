@@ -48,15 +48,18 @@
     height: 50px;
     border: none;
     border-radius: 10px;
+    ;
+  }
+  .mainContainer__frase__fraseButton__btn__link{
+    color :white;
     font-size: 15px;
     font-weight: 700;
+    text-decoration: none;
   }
-  
   /********PERFIL INVESTIDOR*************/
   
   .mainContainer__perfilInvestidor {
-    display: flex;
-    justify-content: space-around;
+  
     margin: 50px;
   }
   .mainContainer__perfilInvestidor__img {
@@ -93,9 +96,6 @@
       display: flex;
       justify-content: space-between; 
       padding-top: 50px;
-  }
-  .gerenciamento1{
-      margin-left: 30px;
   }
   .gerenciamento img {
       max-width: 400px;

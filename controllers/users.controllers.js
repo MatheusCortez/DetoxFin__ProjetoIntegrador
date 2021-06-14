@@ -50,6 +50,7 @@ module.exports.showRecoveryPass =function(req,res,next){
 
   
   module.exports.showNew = function(req,res,next){
+    
     res.render('users/new',{
       error:{},
       content:{}
@@ -59,25 +60,41 @@ module.exports.showRecoveryPass =function(req,res,next){
  
   module.exports.newUser =   async function (req,res){
     const usuario = req.body
-    if(usuario.senha===usuario.senhaConfirmada){
-    bancoFake.cadastrar({
-      id:uuidV4(),
-      nome:usuario.nome,
-      email:usuario.email,
-      hash: await createHash(usuario.senha)
-    })
-      res.redirect('/users/auth')
-    
-    }else{
+    const usuarioCadastrado = await bancoFake.buscarUsuario(usuario.email)
+   
+    if(usuarioCadastrado && usuario.senha!=usuario.senhaConfirmada){
+      console.log('passou')
+      res.render('users/new',{
+      error:{
+        email:'Email já cadastrado',
+        senha:'Senhas não conferem'
+
+      },
+      content:usuario
+     })
+      
+    }else if(usuario.senha!=usuario.senhaConfirmada){
       res.render('users/new',{
         error:{
-          senha:'Senhas incompativeis',
+          senha:'Senhas não conferem',
         },
         content:req.body
       })
-    }  
+    }
+    else{
+      bancoFake.cadastrar({
+        id:uuidV4(),
+        nome:usuario.nome,
+        email:usuario.email,
+        hash: await createHash(usuario.senha)
+      })
+        res.redirect('/users/auth')
+         
   
   }
+
+    }
+    
     
  
 
