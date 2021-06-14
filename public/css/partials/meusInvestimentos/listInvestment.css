@@ -51,6 +51,6 @@
     color: #4f4f4f;
 }
 
-.fas .fas-search {
-    align-content: center;
+#search-addon{
+    align-self: center;
 }
