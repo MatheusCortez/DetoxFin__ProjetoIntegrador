@@ -26,8 +26,8 @@
                 <h1 class="title">Formulario para adicionar Investimento</h1>
 
                 <form class="formInvestment" action="/user/meusInvestimentos/addInvestment" method="POST">
-                    <div class="divisor">
-                        <div class="first">
+                    <div class="row">
+                        <div class=" col-md-5 offset-md-1 col-sm-12" >
                             <!--Pergunta nome do Investimento-->
                             <div class="field">
                                 <label class="formInvestment_field_label" for="nome">Nome do Investimento</label>
@@ -36,15 +36,22 @@
                                 </div>
                             </div>
                             <!--Pergunta tipo de investimento-->
-                            <select name="cars" id="cars">
-                                <option >Selecione Aqui</option>
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
+                            <select name="TipoInvestimentos" class=" col-sm-12 tipoInvestimento" >
+                                <option class="options" 
+                                >Selecione Aqui</option>
+                                <option class="options" 
+                                value="volvo">Tesouro Selic</option>
+                                <option class="options"
+                                 value="saab"
+                                 >LCI</option>
+                                <option class="options"
+                                 value="opel">LCA</option>
+                                <option class="options"
+                                 value="audi">Bolsa</option>
                             </select>
+                            
                         </div>
-                        <div class="second">
+                        <div class=" col-md-5 offset-md-1 col-sm-12">
                             <!--Pergunta Valor-->
                             <div class="field">
                                 <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
@@ -63,8 +70,9 @@
 
                         </div>
                     </div>
-
-                    <input class="button" type="submit" value="Criar">
+                    <div class="container-button row">
+                    <input class="button  offset-4 col-md-2 col-sm-5"  type="submit" value="Criar">
+                    </div>
                 </form>
             </div>   
         </main> 

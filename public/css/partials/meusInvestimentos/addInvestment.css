@@ -31,6 +31,9 @@
     font-weight: initial;
     
 }
+.container-button{
+padding-top: 30%;
+}
 
 .button {
    font-size: 30px;
@@ -40,7 +43,6 @@
     padding: 10px 15px;
     text-align: center;
     cursor: pointer;
-    margin: 25% 42.5%;        
     color: white;
     border: none;   
 }
@@ -53,12 +55,12 @@
 .divisor {
     display: flex;
 }
-.first {
-    width: 40%;
-    margin-left: 5%;
-}
-.second {
-    width: 40%;
-    margin-left: 10%;
-    
+
+
+.tipoInvestimento{
+    min-height: 30px;
+    border: thin solid ;
+    background-color:transparent;
+    text-align: center;
+    padding-top: 2px;
 }
