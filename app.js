@@ -39,6 +39,7 @@ app.use('/users', usersRouter);
 app.use('/user',menuRouter);
 app.use('/user/meusInvestimentos',investmentsRouter);
 app.use('/user/perfilInvestidor',investorsProfileRouter);
+app.use('/user/minhaCarteira',walletRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
