@@ -53,12 +53,19 @@
 .divisor {
     display: flex;
 }
-.first {
-    width: 40%;
-    margin-left: 5%;
-}
-.second {
-    width: 40%;
-    margin-left: 10%;
+
+
+@media (max-width: 600px) {
+    .mainContainer{
+        height: 80vh;
+    }
+    .formulario {
+        width: 100%;
+    }
     
+    .button {
+        border-radius: 100px;
+        width: 45%;
+        margin: 15% 30.5%;
+    }
 }
