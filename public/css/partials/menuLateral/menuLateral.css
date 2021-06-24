@@ -9,6 +9,7 @@
     padding-left: 0px;
 }
 
+
 .mainContainer__menuLateral__lista__menuLink{
     color: black;
     display: flex;
@@ -17,6 +18,9 @@
     padding-top:10px;
     text-decoration: none;
     
+}
+.mainContainer__menuLateral__lista__menuLink:hover {
+    color: #33cc33;
 }
 
 .mainContainer__menuLateral__lista__menuItem:last-child{

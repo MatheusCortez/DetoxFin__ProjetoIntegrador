@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="/css/partials/perfilinvestidor/resultado.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DetoxFin | Investimentos</title>
+    </head>
+    <body>
+        <%- include ../../../partials/headerinterno.ejs  %>
+
+        <main class="mainContainer">
+            
+            <%- include  ../../../partials/menuLateral.ejs %>
+            
+            <section class="mainContainer__cardPrincipal">
+                    
+                <h3 class="resultado_h3">
+                    Parabéns <%= usuario.nome %> você completou o questionario de perfil investidor!
+                </h3>
+
+                <h1 class="resultado_h1">
+                    Seu perfil é Agressivo!
+                </h1>
+
+                <h4 class="resultado_h4">
+                    Sobre seu perfil:
+                </h4>
+
+                <p class="resultado_p">Você preza pelo dinheiro que tem e por isso gosta de aproveitar as oportunidades do mercado para fazê-lo render ainda mais. É importante que você busque conhecer as mais diversas modalidades de investimento, mas não se esqueça de manter segura a maior parte do seu patrimônio. A orientação é que você estabeleça os sonhos que deseja realizar com seu dinheiro. Não perca de vista a principal vantagem que você pode obter com a sua performance na administração de seus recursos: realizar sonhos constantemente. Tenha sempre em mente quais irá realizar em curto prazo (até um ano), em médio prazo (entre um e 10 anos) e em longo prazo (a partir de dez anos). Não se esqueça de garantir a sua aposentadoria sustentável.</p>
+            </section>
+        </main>
+ 
+      
+           
+    </body>
+</html>

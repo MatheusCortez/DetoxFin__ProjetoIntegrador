@@ -19,20 +19,19 @@
     <main class="mainContainer">
         <%- include  ../../../partials/menuLateral.ejs %>
 
-
-        <section class="container ml-3">
+        <section class="container m-auto">
             <section class="row ">     
                 <section class=" mainContainer__dadosContainer__minhasInformacoes box col-md-4  offset-2 col-8">
                     <h1 class="dados__titles">Nome:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">Fulana de tal</span>
+                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.nome%></span>
                     <h1 class="dados__titles">Email:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">Fulana@email.com</span>
+                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.email%></span>
                     <h1 class="dados__titles">CPF:</h1>
                     <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">123.456.789-00</span>
                     <h1 class="dados__titles">Telefone:</h1>
                     <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">(11)123456789</span>
                 </section>
-                <section class="box mainContainer__dadosContainer__minhaOrganização offset-md-2 col-md-4  offset-2 col-8 ">
+                <section class="box mainContainer__dadosContainer__minhaOrganização offset-md-1 col-md-4  offset-2 col-8 mb-4">
                     <h1 class= "mainContainer__dadosContainer__minhaOrganização__title dados__titles">Razão Social:</h1>
                          <span class= "mainContainer__dadosContainer__minhaOrganização__descricao"> Patreze Corretora de Seguros</span>                   
                         <h1 class="dados__titles"> tipo:</h1>
@@ -43,37 +42,12 @@
                 
                 
             </section>
-            <section class="row  mt-4">     
-                <section class=" mainContainer__dadosContainer__minhasInformacoes box col-md-4  offset-2 col-8">
-                    <h1 class="dados__titles">Nome:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">Fulana de tal</span>
-                    <h1 class="dados__titles">Email:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">Fulana@email.com</span>
-                    <h1 class="dados__titles">CPF:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">123.456.789-00</span>
-                    <h1 class="dados__titles">Telefone:</h1>
-                    <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao">(11)123456789</span>
-                </section>
-                <section class="box mainContainer__dadosContainer__minhaOrganização offset-md-2 col-md-4  offset-2 col-8 ">
-                    <h1 class= "mainContainer__dadosContainer__minhaOrganização__title dados__titles">Razão Social:</h1>
-                         <span class= "mainContainer__dadosContainer__minhaOrganização__descricao"> Patreze Corretora de Seguros</span>                   
-                        <h1 class="dados__titles"> tipo:</h1>
-                        <span class= "mainContainer__dadosContainer__minhaOrganização__descricao">Corretora de Seguros</span>
-                        <h1 class="dados__titles">CNPJ:</h1>
-                        <span class= "mainContainer__dadosContainer__minhaOrganização__descricao">12.000.678/0001-00</span>
-                </section>
-                
-                
-            </section>
+     
         </section>
 
 
 
 
     </main>
-    <footer>
-
-        <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-    </footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family:menu;
     src: url(/fonte/TitilliumWeb-Light.ttf);
@@ -26,7 +27,6 @@ a{
     grid-template-columns: repeat(12,1fr);
     grid-template-areas: 'header'
                             'conteudo'
-                            'footer';
     
 }
 
@@ -37,14 +37,4 @@ header{
 main{
     grid-area: conteudo;
     grid-column: 1/ span 12;
-}
-footer{
-    grid-area: footer;
-    grid-column: 1/ span 12;
-    background-color: #33cc33;
-    
-    }
-.copyright{
-    color: white;
-  
 }
