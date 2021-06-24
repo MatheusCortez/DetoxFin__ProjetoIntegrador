@@ -16,3 +16,27 @@
     border-radius: 20px;
     align-content: center;
 }
+
+.resultado_h3 {
+    font-size: 25px;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.resultado_h1 {
+    font-size: 30px;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.resultado_h4 {
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.resultado_p {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
