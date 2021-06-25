@@ -13,7 +13,9 @@
                 <title>Document</title>
             </head>
             <body>
-                <%- include ../../../partials/headerinterno.ejs%>
+                <%- include("../../../partials/headerinterno.ejs",{
+                    usuario
+                })%>
                 <main class="mainContainer">
                     <%- include  ../../../partials/menuLateral.ejs %>
         

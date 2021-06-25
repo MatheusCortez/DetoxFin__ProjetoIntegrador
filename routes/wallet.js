@@ -6,32 +6,37 @@ const arraySaida =[];
 
 /* GET users listing. */
 router.get('/addCarteira', function(req, res, next) {
-  res.render('users/user/minhaCarteira/addCarteira')
+  const usuario = req.session.usuario
+  res.render('users/user/minhaCarteira/addCarteira', {usuario})
 
 });
 router.post('/addCarteiraEntrada', (req,res) => {
+  const usuario = req.session.usuario
   const entradaNova = {
     id:arrayEntrada.length +1,
     ...req.body
   }
   arrayEntrada.push(entradaNova)
-  res.redirect('/user/minhaCarteira/listCarteira')  
+  res.redirect('/user/minhaCarteira/listCarteira', {usuario})  
 });
 
 router.post('/addCarteiraSaida', (req,res) => {
+  const usuario = req.session.usuario
   const saidaNova = {
     id:arraySaida.length +1,
     ...req.body
   }
   arraySaida.push(saidaNova)
-  res.redirect('/user/minhaCarteira/listCarteira')
+  res.redirect('/user/minhaCarteira/listCarteira', {usuario})
 });
 
 router.get('/listCarteira', (req,res) =>{
-  res.render('users/user/minhaCarteira/listCarteira', {entradas: arrayEntrada, saidas: arraySaida})
+  const usuario = req.session.usuario
+  res.render('users/user/minhaCarteira/listCarteira', {entradas: arrayEntrada, saidas: arraySaida, usuario})
 });
 
 router.post('/deletarEntrada/:id', (req, res) => {
+  const usuario = req.session.usuario
   const idEntrada = parseInt(req.params.id)
 
   for (let i = arrayEntrada.length - 1; i >= 0; i--) {
@@ -43,10 +48,11 @@ router.post('/deletarEntrada/:id', (req, res) => {
       }
   }
 
-  res.redirect('/user/minhaCarteira/listCarteira')
+  res.redirect('/user/minhaCarteira/listCarteira', {usuario})
 })
 
 router.post('/deletarSaida/:id', (req, res) => {
+  const usuario = req.session.usuario
   const idSaida = parseInt(req.params.id)
 
   for (let i = arraySaida.length - 1; i >= 0; i--) {
@@ -58,7 +64,7 @@ router.post('/deletarSaida/:id', (req, res) => {
       }
   }
 
-  res.redirect('/user/minhaCarteira/listCarteira')
+  res.redirect('/user/minhaCarteira/listCarteira', {usuario})
 })
 
 module.exports = router;

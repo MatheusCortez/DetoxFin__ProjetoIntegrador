@@ -2,7 +2,6 @@
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
 
-
 .mainContainer{
     display: flex;
     justify-content: space-between;
@@ -26,11 +25,11 @@
 .logoPI img {
     width: 75px; 
 }
-.logoPI p {
+.logoPI_h1 {
     font-weight: 600;
     font-size: 30px; 
 }
-.perguntaPI p {
+.perguntaPI_p {
     margin-top: 3%;
     text-align: center;
     font-size: 20px;     
@@ -51,16 +50,30 @@
     color: white;
     background-color: #33CC33;
 }
-.botaoPerfil {
-    font-size: 30px;
-    width: 25%;
-    background-color: #33CC33 ;
-    border-radius: 20px;
-    padding: 10px 15px;
-    text-align: center;
-    cursor: pointer;
-    margin: 3% 37.5%;
-    color: white;
-    border: none; 
-   
+
+
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+
+button.next-btn, button.previous-btn, button.submit-btn {
+  float: right;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 10px 30px;
+  color: white;
+  border: 2px solid #33CC33;
+  border-radius: 5px ;
+  outline: none;
+  background-color: #33CC33;
+  font-size: 20px;
+  cursor: pointer;
+  /* text-align: right; */
+}
+button.previous-btn {
+  float: left;
 }

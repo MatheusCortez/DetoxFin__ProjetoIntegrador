@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="/css/partials/perfilinvestidor/resultado.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DetoxFin | Investimentos</title>
+    </head>
+    <body>
+        <%- include ../../../partials/headerinterno.ejs  %>
+
+        <main class="mainContainer">
+            
+            <%- include  ../../../partials/menuLateral.ejs %>
+            
+            <section class="mainContainer__cardPrincipal">
+                    
+                <h3 class="resultado_h3">
+                    Parabéns <%= usuario.nome %> você completou o questionario de perfil investidor!
+                </h3>
+
+                <h1 class="resultado_h1">
+                    Seu perfil é Conservador!
+                </h1>
+
+                <h4 class="resultado_h4">
+                    Sobre seu perfil:
+                </h4>
+
+                <p class="resultado_p">Você preza pela segurança do seu patrimônio e prefere não correr riscos quando o assunto é a sua estabilidade financeira. Por isso, invista seu dinheiro na Poupança, no LCI e no LCA, que são modalidades de baixo risco e isentas de retenção de Imposto de Renda. É importante que uma pessoa conservadora diversifique seus investimentos. Resgate seus sonhos e poupe todos os meses para torná-los realidade. Para sonhos de curto prazo (até um ano), invista na poupança. Para sonhos de médio (entre um e 10 anos), utilize o CDB, fundos de investimentos, títulos do tesouro ou mesmo consórcios. Já para sonhos de longo prazo (acima de 10 anos), como a aposentadoria, procure investir na previdência privada.
+
+                </p>
+            </section>
+        </main>
+ 
+      
+           
+    </body>
+</html>

@@ -35,25 +35,8 @@
                                     <input class="input" type="text" name="nome" autocomplete="off" required/>
                                 </div>
                             </div>
-                            <!--Pergunta tipo de investimento-->
-                            <select name="TipoInvestimentos" class=" col-sm-12 tipoInvestimento" >
-                                <option class="options" 
-                                >Selecione Aqui</option>
-                                <option class="options" 
-                                value="volvo">Tesouro Selic</option>
-                                <option class="options"
-                                 value="saab"
-                                 >LCI</option>
-                                <option class="options"
-                                 value="opel">LCA</option>
-                                <option class="options"
-                                 value="audi">Bolsa</option>
-                            </select>
-                            
-                        </div>
-                        <div class=" col-md-5 offset-md-1 col-sm-12">
-                            <!--Pergunta Valor-->
-                            <div class="field">
+                             <!--Pergunta Valor-->
+                             <div class="field">
                                 <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
                                 <div class="control">
                                     <input class="input" type="number" name="valor" autocomplete="off" required/>
@@ -66,7 +49,25 @@
                                     <input class="input" type="date" name="inicialDate" autocomplete="off" required/>
                                 </div>
                             </div>
-            
+                            
+                            <!--Pergunta Renda Fixa ou Variavel-->
+                            <label class="formInvestment_field_label">Renda</label>
+                        
+                            <select id="renda" class=" col-sm-12 tipoInvestimento" onchange="gerarTipos(this.value)" >
+                                <option></option>
+                                <option value="fixa">Renda Fixa</option>
+                                <option value="variavel">Renda Variavel</option>
+                            </select>
+                            
+                            <!--Pergunta tipo de investimento-->
+                            <label class="formInvestment_field_label">Tipo de Investimento</label>
+                            <select id="tipo" class=" col-sm-12 tipoInvestimento">
+                            </select>
+                            
+                        </div>
+                        <div class=" col-md-5 offset-md-1 col-sm-12">
+                            
+                            
 
                         </div>
                     </div>
@@ -79,8 +80,10 @@
         
        
      <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>      
+    
     </body>
  
-  <script src="../js/addedClass.js"></script>
+    <script src="../js/addedClass.js"></script>
+    <script type="text/javascript" src="/js/addInvestmentRenda.js"></script>
 </html>
