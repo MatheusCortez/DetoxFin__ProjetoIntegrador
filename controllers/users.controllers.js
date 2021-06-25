@@ -1,7 +1,7 @@
 
 const {mydb} = require('../database/models')
 const fs= require('fs')
-const bancoFake= require('../database/bancoFake')
+const db= require('../database/db')
 
 
 module.exports.showIndex = function(req,res){
@@ -18,7 +18,7 @@ module.exports.showAuth = function(req,res,next){
   } 
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
-    const usuario = await bancoFake.buscarUsuario(login.email)
+    const usuario = await db.buscarUsuario(login.email)
     
     req.session.usuario = usuario
     if(!usuario){
@@ -59,14 +59,21 @@ module.exports.showRecoveryPass =function(req,res,next){
   module.exports.newUser =   async function (req,res){
     const usuario = req.body
     console.log(usuario)
-    const usuarioCadastrado = await bancoFake.buscarUsuario(usuario)
-   console.log('entrou aqui')
-    if(usuarioCadastrado && usuario.senha!=usuario.senhaConfirmada){
-      console.log('passou')
+    const usuarioCadastrado = await db.buscarUsuario(usuario);
+    const CPFcadastrado = await db.buscarCPF(usuario); 
+    if(CPFcadastrado){
+      res.render('users/new',{
+        error:{
+          cpf:'CPF já cadastrado'
+        },
+        content:usuario
+      })
+    } else
+    if(usuarioCadastrado){
       res.render('users/new',{
       error:{
         email:'Email já cadastrado',
-        senha:'Senhas não conferem'
+  
 
       },
       content:usuario
@@ -81,7 +88,7 @@ module.exports.showRecoveryPass =function(req,res,next){
       })
     }
     else{
-      bancoFake.cadastrar(usuario)
+      db.cadastrar(usuario)
         res.redirect('/users/auth')
          
   
@@ -90,7 +97,7 @@ module.exports.showRecoveryPass =function(req,res,next){
     }
     
   module.exports.showInternalIndex =function(req,res,next){
-   console.log('entrou  na retorra index')
+   
     res.render('/user/minhaCarteira')
    
 }

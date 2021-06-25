@@ -30,16 +30,16 @@
                 <span class="containerform__form_field__errorMessage"><%= error.email ? error.email : '' %></span>
                 <input
                 class="containerform__form_field" 
-                type="text" name="cpf" 
-                value="<%= content.email?content.email:'' %>"
+                value="<%= content.cpf?content.cpf:'' %>"
+                type="text" name="cpf"  
                 placeholder="CPF:(XXX.XXX.XXX-XX)" onfocus="this.placeholder =''" 
                 onblur="this.placeholder='CPF'"  
                 autocomplete="off"
                 >
+                <span class="containerform__form_field__errorMessage"><%= error.cpf ? error.cpf : '' %></span>
                 <input
                 class="containerform__form_field" 
                 type="text" name="telefone" 
-                value="<%= content.email?content.email:'' %>"
                 placeholder="Telefone:  (XX)XXXX-XXXXX" onfocus="this.placeholder =''" 
                 onblur="this.placeholder='(xx)xxxx-xxxxx'"  
                 autocomplete="off"
