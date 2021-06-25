@@ -1,9 +1,7 @@
-const {v4:uuidV4} = require('uuid')
-const {createHash,compareHash} = require('./crypFunctions/hash')
 
+const {mydb} = require('../database/models')
 const fs= require('fs')
 const bancoFake= require('../database/bancoFake')
-const usuarioJS = require('../database/usuarios.json')
 
 
 module.exports.showIndex = function(req,res){
@@ -60,8 +58,9 @@ module.exports.showRecoveryPass =function(req,res,next){
  
   module.exports.newUser =   async function (req,res){
     const usuario = req.body
-    const usuarioCadastrado = await bancoFake.buscarUsuario(usuario.email)
-   
+    console.log(usuario)
+    const usuarioCadastrado = await bancoFake.buscarUsuario(usuario)
+   console.log('entrou aqui')
     if(usuarioCadastrado && usuario.senha!=usuario.senhaConfirmada){
       console.log('passou')
       res.render('users/new',{
@@ -82,12 +81,7 @@ module.exports.showRecoveryPass =function(req,res,next){
       })
     }
     else{
-      bancoFake.cadastrar({
-        id:uuidV4(),
-        nome:usuario.nome,
-        email:usuario.email,
-        hash: await createHash(usuario.senha)
-      })
+      bancoFake.cadastrar(usuario)
         res.redirect('/users/auth')
          
   
@@ -95,12 +89,11 @@ module.exports.showRecoveryPass =function(req,res,next){
 
     }
     
-    
- 
-
-
   module.exports.showInternalIndex =function(req,res,next){
    console.log('entrou  na retorra index')
     res.render('/user/minhaCarteira')
    
 }
+
+
+

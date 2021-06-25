@@ -28,6 +28,25 @@
                 autocomplete="off"
                  >
                 <span class="containerform__form_field__errorMessage"><%= error.email ? error.email : '' %></span>
+                <input
+                class="containerform__form_field" 
+                type="text" name="cpf" 
+                value="<%= content.email?content.email:'' %>"
+                placeholder="CPF:(XXX.XXX.XXX-XX)" onfocus="this.placeholder =''" 
+                onblur="this.placeholder='CPF'"  
+                autocomplete="off"
+                >
+                <input
+                class="containerform__form_field" 
+                type="text" name="telefone" 
+                value="<%= content.email?content.email:'' %>"
+                placeholder="Telefone:  (XX)XXXX-XXXXX" onfocus="this.placeholder =''" 
+                onblur="this.placeholder='(xx)xxxx-xxxxx'"  
+                autocomplete="off"
+                >
+              
+
+              
                 <input class="containerform__form_field" type="password" name="senha" placeholder="Senha" onfocus="this.placeholder ='' "  onblur="this.placeholder='Senha'">
                 <span class="containerform__form_field__errorMessage"></span>
                 <input class="containerform__form_field" type="password" name="senhaConfirmada" placeholder="Confirmação de Senha" onfocus="this.placeholder ='' "  onblur="this.placeholder='Confirmação de Senha'"  >
