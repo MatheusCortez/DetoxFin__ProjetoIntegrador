@@ -77,3 +77,13 @@ button.next-btn, button.previous-btn, button.submit-btn {
 button.previous-btn {
   float: left;
 }
+
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: none;
+}

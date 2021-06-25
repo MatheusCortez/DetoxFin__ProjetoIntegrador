@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 110vh;
+    height: 120vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -15,13 +15,14 @@
     height: 70vh;
     border-radius: 20px;
     align-content: center;
-    position: relative;
-    bottom: 10vh;
+
 }
+
 .formulario {
     margin-top: 3%;;
     
 }
+
 .title {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -42,28 +43,21 @@
     color: white;
     border: none;   
 }
-.formInvestment_field_label {
+.field-label, .field-option  {
     font-size: 20px;
 }
-.control_opcao {
-    margin-left: 10%;
-}
+
 .divisor {
     display: flex;
 }
 .first {
     width: 40%;
-    margin-left: 5%;
-    border: 2px solid #33CC33;
-    border-radius: 15px;
-    padding: 2% 5%;
+    margin-left: 7.5%;
 }
 
 .second {
     width: 40%;
-    margin-left: 10%;
-    border: 2px solid #33CC33;
-    border-radius: 15px;
-    padding: 2% 5%;
+    margin-left: 5%;
+    
 }
     

@@ -25,85 +25,57 @@
                     
                         <div class="formulario">
 
-                            <div class="divisor">
-                                
-                                <div class="first">
-                                    <h1 class="title">Adicionar Entrada</h1>
-                                    <form class="formInvestment" name="gasto" action="/user/minhaCarteira/addCarteiraEntrada" method="POST">
-                                        
+                            <h1 class="title">Adicionar na wallet</h1>
+
+                            <form class="formInvestment" name="gasto/ganho" action="/user/minhaCarteira/addCarteira" method="POST">
+                                <div class="divisor">
+                                    <div class="first">
+                                        <!--Nome-->
                                         <div class="field">
-                                            <label class="formInvestment_field_label" for="nome">Nome</label>
+                                            <label class="field-label" for="nome">Nome</label>
                                             <div class="control">
                                                 <input class="input" type="text" name="nome" autocomplete="off" required/>
                                             </div>
                                         </div>
-            
+                                        <!--Data-->
                                         <div class="field">
-                                            <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
-                                                <div class="control">
-                                                    <input class="input" type="number" name="valor" autocomplete="off" required/>
-                                                </div>
-                                        </div>
-            
-                                        <div class="field">
-                                            <p class="formInvestment_field_label" >Razão:</p>
-                                            <input type="radio" name="razao" value="Salario">
-                                            <label for="Salario">Salario</label><br>
-                                            <input type="radio" name="razao" value="Trampo extra">
-                                            <label for="Trampo extra">Trampo extra</label><br>
-                                            <label for="Outro">Outro</label><br>
-                                            <input type="text" name="razao" autocomplete="off">
-                                        </div>
-
-                                        <input class="button" type="submit" value="Criar">
-                                    </form>
-                                </div>
-                            
-                            <div class="second">
-                                <h1 class="title">Adicionar Saida</h1>
-                                <form class="formInvestment" name="despesa" action="/user/minhaCarteira/addCarteiraSaida" method="POST">
-                                
-                                    <div class="field">
-                                        <label class="formInvestment_field_label" for="nome">Nome</label>
-                                        <div class="control">
-                                            <input class="input" type="text" name="nome" autocomplete="off" required/>
+                                            <label class="field-label" for="date">Data</label>
+                                            <div class="control">
+                                                <input class="input" type="date" name="date" autocomplete="off" required/>
+                                            </div>
                                         </div>
                                     </div>
-        
-                                    <div class="field">
-                                        <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                                    <div class="second">
+                                        <!--Valor-->
+                                        <div class="field">
+                                            <label class="field-label" for="valor">Valor(R$)</label>
                                             <div class="control">
                                                 <input class="input" type="number" name="valor" autocomplete="off" required/>
                                             </div>
+                                        </div>
+                                        <!--Ganho ou Gasto-->
+                                        <div class="field">
+                                            <label class="field-label">Tipo</label>
+                                            <div class="control">
+                                                <select id="tipo" class="input" onchange="gerarTipos(this.value)" >
+                                                    <option></option>
+                                                    <option  value="ganho">Ganho</option>
+                                                    <option  value="gasto">Gasto</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-        
-                                    <div class="field">
-                                        <p class="formInvestment_field_label" >Razão:</p>
-                                        <input type="radio" name="renda" value="Restaurante">
-                                        <label for="Restaurante">Restaurante</label><br>
-                                        <input type="radio" name="renda" value="Beleza">
-                                        <label for="Beleza">Beleza</label><br>
-                                    </div>
-                                    
-                                    <input class="button" type="submit" value="Criar">
-                                </form>
-                            </div>
-                            
+                                </div>
+                                <input class="button" type="submit" value="Adicionar">
+                            </form>
+                              
             
             
                                
-                        </div>   
+                       
 
                  </section>
                  </main>
                 
-                <footer>
-                    <p class="copyright"> Copyright © 2021 DetoxFin</p>  
-               
-       
-           
-
-
-        <footer class="footer">footer</footer>
     </body>
 </html>
