@@ -18,10 +18,6 @@
 
 }
 
-.formulario {
-    margin-top: 3%;;
-    
-}
 
 .title {
     margin-top: 2%;
@@ -49,15 +45,41 @@
 
 .divisor {
     display: flex;
+    margin-top: 3%;
 }
 .first {
-    width: 40%;
-    margin-left: 7.5%;
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 2.5%;
 }
 
 .second {
-    width: 40%;
-    margin-left: 5%;
+    width: 50%;
+    margin-left: 2.5%;
+    margin-right: 5%;
     
 }
-    
+
+.no-display {
+    display: none;
+}
+
+.ganho , .gasto {
+    font-size: 20px;
+}
+.form-check {
+    font-size: 20px;
+    padding: 5px;
+    align-content: center;
+}
+
+.outro {
+    margin: 1% 35%;
+}
+.primeiro , .segundo {
+    width: 50%; 
+   
+
+}
+
+

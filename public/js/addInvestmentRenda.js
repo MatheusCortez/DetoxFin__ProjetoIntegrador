@@ -55,26 +55,6 @@ function gerarTipos(value) {
         option.value = 'etfVariavel'
         option.text = 'ETF de Renda Variável'
         tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'fundoImobiliario'
-        option.text = 'Fundo Imobilario'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'acoes'
-        option.text = 'Ações'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'bdrs'
-        option.text = 'BDRs'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'derivativos'
-        option.text = 'Derivativos'
-        tipo.add(option)
     }
 }
 

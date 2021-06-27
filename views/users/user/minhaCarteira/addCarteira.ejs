@@ -57,15 +57,159 @@
                                         <div class="field">
                                             <label class="field-label">Tipo</label>
                                             <div class="control">
-                                                <select id="tipo" class="input" onchange="gerarTipos(this.value)" >
+                                                <select id="tipo" class="input" >
                                                     <option></option>
-                                                    <option  value="ganho">Ganho</option>
-                                                    <option  value="gasto">Gasto</option>
+                                                    <option  id="ganho" class="ganho" value="ganho">Ganho</option>
+                                                    <option  id="gasto" class="gasto" value="gasto">Gasto</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div id="questionarioGanho" class="step step-1 no-display">
+                                    <div class="divisor">
+                                        <div class="primeiro">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="salario">
+                                                <label class="form-check-label" for="salario">
+                                                    Salario
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="bonificaçao">
+                                                <label class="form-check-label" for="bonificaçao">
+                                                    Bonificação
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="comissao" >
+                                                <label class="form-check-label" for="comissao">
+                                                    Comissão
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="decimoterceiro" >
+                                                <label class="form-check-label" for="decimoterceiro">
+                                                    Décimo terceiro
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="segundo">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="freelance" >
+                                                <label class="form-check-label" for="freelance">
+                                                    Freelance
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="beneficio" >
+                                                <label class="form-check-label" for="beneficio">
+                                                    Beneficio
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="previdencia" >
+                                                <label class="form-check-label" for="previdencia">
+                                                    Previdencia
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="rendapassiva">
+                                                <label class="form-check-label" for="rendapassiva">
+                                                    Renda Passiva
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check outro">
+                                        <label class="form-text" for="outro">
+                                            Outro
+                                         </label>
+                                        <input class="form-control" type="text" name="descrição" id="outro">
+                                    </div>
+                                    
+                                </div>
+                            
+                                <div id="questionarioGasto" class="step step-2 no-display">
+                                    
+                                    <div class="divisor">
+                                        <div class="primeiro">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="aluguel">
+                                                <label class="form-check-label" for="aluguel">
+                                                    Aluguel
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="academia">
+                                                <label class="form-check-label" for="academia">
+                                                    Academia
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="planocelular" >
+                                                <label class="form-check-label" for="planocelular">
+                                                    Plano de Celular
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="prestação" >
+                                                <label class="form-check-label" for="prestação">
+                                                    Prestação
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="conta">
+                                                <label class="form-check-label" for="conta">
+                                                    Conta
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="segundo">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="combustivel" >
+                                                <label class="form-check-label" for="combustivel">
+                                                    Combustivel
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="restaurante" >
+                                                <label class="form-check-label" for="restaurante">
+                                                    Restaurante
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="mercado" >
+                                                <label class="form-check-label" for="mercado">
+                                                    Mercado
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="beleza">
+                                                <label class="form-check-label" for="beleza">
+                                                    Beleza
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="descrição" id="lazer">
+                                                <label class="form-check-label" for="lazer">
+                                                    Lazer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check outro">
+                                        <label class="form-text" for="outro">
+                                            Outro
+                                         </label>
+                                        <input class="form-control" type="text" name="descrição" id="outro">
+                                    </div>
+                                </div>
+
+
+
+
                                 <input class="button" type="submit" value="Adicionar">
                             </form>
                               
@@ -78,4 +222,5 @@
                  </main>
                 
     </body>
+    <script type="text/javascript" src="/js/addCarteira.js"></script>
 </html>
