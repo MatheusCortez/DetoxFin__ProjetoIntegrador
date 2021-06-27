@@ -19,21 +19,19 @@ function gerarTipos(value) {
         option = document.createElement('option');
         option.value = 'tesouroDireto'
         option.text = 'Tesouro Direto'
+        option.id ='tesouroDireto'
         tipo.add(option)
 
         option = document.createElement('option');
         option.value = 'titulosPrivados'
         option.text = 'Titulos Privados'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'etfFixa'
-        option.text = 'ETF de Renda Fixa'
+        option.id = 'titulosPrivados'
         tipo.add(option)
 
         option = document.createElement('option');
         option.value = 'fundoInvestimentoFixa'
         option.text = 'Fundo de Investimento'
+        option.id = 'fundoInvestimentoFixa'
         tipo.add(option)
 
 
@@ -49,12 +47,9 @@ function gerarTipos(value) {
         option = document.createElement('option');
         option.value = 'fundoInvestimentoVariavel'
         option.text = 'Fundo de Investimento'
+        option.vid = 'fundoInvestimentoVariavel'
         tipo.add(option)
 
-        option = document.createElement('option');
-        option.value = 'etfVariavel'
-        option.text = 'ETF de Renda Variável'
-        tipo.add(option)
     }
 }
 

@@ -28,16 +28,17 @@
 }
 
 .button {
-   font-size: 30px;
-    width: 15%;
-    background-color: #33CC33 ;
-    border-radius: 20px;
-    padding: 10px 15px;
-    text-align: center;
-    cursor: pointer;
-    margin: 3% 42.5%;        
+    margin-top: 5%;
+    margin-left: 45%;
+    margin-right: 45%;
+    padding: 10px 30px;
     color: white;
-    border: none;   
+    border: 2px solid #33CC33;
+    border-radius: 5px ;
+    outline: none;
+    background-color: #33CC33;
+    font-size: 20px;
+    cursor: pointer;
 }
 .field-label, .field-option  {
     font-size: 20px;
@@ -70,7 +71,7 @@
 .form-check {
     font-size: 20px;
     padding: 5px;
-    align-content: center;
+    
 }
 
 .outro {
@@ -78,8 +79,11 @@
 }
 .primeiro , .segundo {
     width: 50%; 
+    margin-left: 20%;
    
 
 }
-
+.segundo {
+    margin-left: 5%;
+}
 

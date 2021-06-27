@@ -23,56 +23,283 @@
             <%-include headerInvestimentos.ejs %>
             <div class="formulario">
 
-                <h1 class="title">Formulario para adicionar Investimento</h1>
+                <h1 class="title">Adicionar Investimento</h1>
 
                 <form class="formInvestment" action="/user/meusInvestimentos/addInvestment" method="POST">
                     <div class="row">
-                        <div class=" col-md-5 offset-md-1 col-sm-12" >
-                            <!--Pergunta nome do Investimento-->
-                            <div class="field">
-                                <label class="formInvestment_field_label" for="nome">Nome do Investimento</label>
-                                <div class="control">
-                                    <input class="input" type="text" name="nome" autocomplete="off" required/>
+                       
+                            <div class="divisor">
+                                <div class="primeiro">
+                                    <!--Pergunta nome do Investimento-->
+                                    <div class="field">
+                                        <label class="formInvestment_field_label" for="nome">Nome do Investimento</label>
+                                        <div class="control">
+                                            <input class="input" type="text" name="nome" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    <!--Pergunta Valor-->
+                                    <div class="field">
+                                        <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="valor" autocomplete="off" required/>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="segundo">
+                                    <!--Pergunta data inicial-->
+                                    <div class="field">
+                                        <label class="formInvestment_field_label" for="date">Data Inicial do Investimento</label>
+                                        <div class="control">
+                                            <input class="input" type="date" name="inicialDate" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Pergunta Renda Fixa ou Variavel-->
+                                    <div class="field">
+                                        <label class="formInvestment_field_label">Renda</label>
+                                        <div class="control">
+                                            <select id="renda" class="input" onchange="gerarTipos(this.value)" >
+                                                <option></option>
+                                                <option  value="fixa">Renda Fixa</option>
+                                                <option  value="variavel">Renda Variavel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
                             </div>
-                             <!--Pergunta Valor-->
-                             <div class="field">
-                                <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
-                                <div class="control">
-                                    <input class="input" type="number" name="valor" autocomplete="off" required/>
-                                </div>
-                            </div>
-                            <!--Pergunta data inicial-->
-                            <div class="field">
-                                <label class="formInvestment_field_label" for="date">Data Inicial do Investimento</label>
-                                <div class="control">
-                                    <input class="input" type="date" name="inicialDate" autocomplete="off" required/>
-                                </div>
-                            </div>
-                            
-                            <!--Pergunta Renda Fixa ou Variavel-->
-                            <label class="formInvestment_field_label">Renda</label>
-                        
-                            <select id="renda" class=" col-sm-12 tipoInvestimento" onchange="gerarTipos(this.value)" >
-                                <option></option>
-                                <option value="fixa">Renda Fixa</option>
-                                <option value="variavel">Renda Variavel</option>
-                            </select>
                             
                             <!--Pergunta tipo de investimento-->
-                            <label class="formInvestment_field_label">Tipo de Investimento</label>
-                            <select id="tipo" class=" col-sm-12 tipoInvestimento">
-                            </select>
+                            <div class="field">
+                                <label class="formInvestment_field_label">Tipo de Investimento</label>
+                                <div class="control">
+                                    <select id="tipo" class="input " >
+                                    </select>
+                                </div>
+                            </div>
                             
-                        </div>
-                        <div class=" col-md-5 offset-md-1 col-sm-12">
-                            
-                            
+                            <!--formulario muda depende da opção tipo-->
 
-                        </div>
+                            <div id="QtesouroDireto" class="step step-1 no-display">
+                                <div class="divisor">
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="prefixado">
+                                            <label class="form-check-label" for="prefixado">
+                                                Titulo PreFixado
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="selic">
+                                            <label class="form-check-label" for="selic">
+                                                Tesouro Selic(pós-fixado)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="ipca" >
+                                            <label class="form-check-label" for="ipca">
+                                                Tesouro IPCA+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="semjuros">
+                                            <label class="form-check-label" for="semjuros">
+                                                Sem pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="comjuros" >
+                                            <label class="form-check-label" for="comjuros">
+                                                Com pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <label class="formInvestment_field_label" for="number">Ano de Vencimento</label>
+                                            <div class="control">
+                                                <input class="input" type="number" name="vencimento" autocomplete="off" required/>
+                                            </div>
+                                    </div>
+    
+                                </div>
+
+
+                            </div>
+                            <div id="QtitulosPrivados" class="step step-2 no-display">
+                                <div class="divisor">
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="cdb">
+                                            <label class="form-check-label" for="cdb">
+                                                CDB
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="lc">
+                                            <label class="form-check-label" for="lc">
+                                                LC
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="lca" >
+                                            <label class="form-check-label" for="lca">
+                                                LCA
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="lf">
+                                            <label class="form-check-label" for="lf">
+                                                LF
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="lci" >
+                                            <label class="form-check-label" for="lci">
+                                                LCI
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="cri">
+                                            <label class="form-check-label" for="cri">
+                                                CRI
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="cra" >
+                                            <label class="form-check-label" for="cra">
+                                                CRA
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="nome" id="debentures" >
+                                            <label class="form-check-label" for="debentures">
+                                                Debêntures
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="semjuros">
+                                            <label class="form-check-label" for="semjuros">
+                                                Sem pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="comjuros" >
+                                            <label class="form-check-label" for="comjuros">
+                                                Com pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                       
+                                        <label class="formInvestment_field_label" for="text">Orgão Emissor</label>
+                                            <div class="control">
+                                                <input class="input" type="text" name="emissor" autocomplete="off" required/>
+                                            </div>
+                                        
+                                        <label class="formInvestment_field_label" for="number">Ano de Vencimento</label>
+                                            <div class="control">
+                                                <input class="input" type="number" name="vencimento" autocomplete="off" required/>
+                                            </div>
+                                    </div>
+    
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+
+                            <div id="QfundoInvestimentoFixa" class="step step-2 no-display">
+                                <div class="divisor">
+                                    <div class="w33">
+                                        <label class="formInvestment_field_label" for="text">Orgão Emissor</label>
+                                        <div class="control">
+                                            <input class="input" type="text" name="emissor" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <label class="formInvestment_field_label" for="number">CNPJ do Fundo</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="cnpj" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="semjuros">
+                                            <label class="form-check-label" for="semjuros">
+                                                Sem pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="comjuros" >
+                                            <label class="form-check-label" for="comjuros">
+                                                Com pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+                            <div id="QfundoInvestimentoVariavel" class="step step-2 no-display">
+                                <div class="divisor">
+                                    <div class="w33">
+                                        <label class="formInvestment_field_label" for="text">Orgão Emissor</label>
+                                        <div class="control">
+                                            <input class="input" type="text" name="emissor" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <label class="formInvestment_field_label" for="number">CNPJ do Fundo</label>
+                                        <div class="control">
+                                            <input class="input" type="number" name="cnpj" autocomplete="off" required/>
+                                        </div>
+                                    </div>
+                                    <div class="w33">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="semjuros">
+                                            <label class="form-check-label" for="semjuros">
+                                                Sem pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="juros" id="comjuros" >
+                                            <label class="form-check-label" for="comjuros">
+                                                Com pagamento de juros semestrais
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                               
+
+
+
+
+
+
+                            </div>
+                            
+                                    
+                                    
+                        
+                        
                     </div>
                     <div class="container-button row">
-                    <input class="button  offset-4 col-md-2 col-sm-5"  type="submit" value="Criar">
+                        <input class="button  offset-4 col-md-2 col-sm-5"  type="submit" value="Criar">
                     </div>
                 </form>
             </div>   
