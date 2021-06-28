@@ -1,35 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const {showIndex,
-        showNew,
-        newUser,
-        showAuth,
-        Auth,
-        showInternalIndex,
-        showRecoveryPass
-        } = require('../controllers/users.controllers')
-const fs = require('fs')
-const bcrypt = require('bcrypt');
 
+const showpages = require('../controllers/showPages/showPagesController')
+const {newUser,Auth} = require('../controllers/users.controllers')
 
-//rota index
-router.get('/',showIndex)
-//rota nova get
-router.get('/new',showNew)
+router.get('/',showpages.showIndex)
 
-//rota nova post com confirmacao de senha
+router.get('/user/index',showpages.showInternalIndex)
+
+router.get('/recoverypass',showpages.showRecoveryPass)
+
+router.get('/new',showpages.showNew)
+
 router.post('/new',newUser)
 
-
-router.get('/auth',showAuth)
+router.get('/auth',showpages.showAuth)
 
 router.post('/auth',Auth)
 
-
-
-router.get('/user/index',showInternalIndex)
-
-router.get('/recoverypass',showRecoveryPass)
 
 
 

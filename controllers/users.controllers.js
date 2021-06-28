@@ -1,27 +1,14 @@
-
-const {mydb} = require('../database/models')
-const fs= require('fs')
+const hash = require ('../controllers/crypFunctions/hash')
 const db= require('../database/db')
 
 
-module.exports.showIndex = function(req,res){
-  res.render('index')
-}
 
-
-module.exports.showAuth = function(req,res,next){
-    res.render('users/auth',{
-      error:{},
-      content:{}
-    })
-
-  } 
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
-    const usuario = await db.buscarUsuario(login.email)
+    const usuarioCadastrado = await db.buscarUsuario(login)
+    const resultadoSenha = await hash.compareHash(login.password,usuarioCadastrado.senha)
     
-    req.session.usuario = usuario
-    if(!usuario){
+    if(!usuarioCadastrado || !resultadoSenha){
       res.render('users/auth',{
         error:{
           email:'email ou senha invalido'
@@ -30,36 +17,20 @@ module.exports.showAuth = function(req,res,next){
       })
     
     }else{
-     
+      req.session.usuario = usuarioCadastrado
+ 
       res.redirect('/user/minhaCarteira')
     }
       
     }
 
-
-
-
-module.exports.showRecoveryPass =function(req,res,next){
-  res.render('users/recoverypass',)
-}
-
-
-
-
   
-  module.exports.showNew = function(req,res,next){
-    
-    res.render('users/new',{
-      error:{},
-      content:{}
-    });
-    
-  }
- 
+  
   module.exports.newUser =   async function (req,res){
     const usuario = req.body
-    console.log(usuario)
+    
     const usuarioCadastrado = await db.buscarUsuario(usuario);
+    console.log(usuarioCadastrado)
     const CPFcadastrado = await db.buscarCPF(usuario); 
     if(CPFcadastrado){
       res.render('users/new',{
@@ -96,11 +67,7 @@ module.exports.showRecoveryPass =function(req,res,next){
 
     }
     
-  module.exports.showInternalIndex =function(req,res,next){
-   
-    res.render('/user/minhaCarteira')
-   
-}
+
 
 
 
