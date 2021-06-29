@@ -7,6 +7,8 @@ module.exports.getPergunta = (req,res) => {
 }
 
 module.exports.postPerfilInvestidor = async (req,res) => {
+    const usuario = req.session.usuario
+
     const questionario = req.body
     const array = Object.values(questionario)
     console.log(array)
@@ -49,26 +51,36 @@ module.exports.postPerfilInvestidor = async (req,res) => {
 
     console.log(perfilInvestidor)
 
-    
+    const atualização = models.User.update = async (req,res) => {
+        const perfilInvestidorUpdate =  await models.User.updateAttributes({
+            perfilInvestidor:perfilInvestidor,
+            resultadoPerfilInvestidor:array
+        });
 
+        
+    console.log(perfilInvestidorUpdate)
+    }
+    
+    console.log(atualização)
     
 
 }
 
 module.exports.resultadoConservador = (req,res) => {
-    /* const usuario = req.session.usuario */
+
+     const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/conservador', /*{usuario}*/)
+    res.render('users/user/perfilInvestidor/conservador', {usuario})
 }
 
 module.exports.resultadoModerado = (req,res) => {
-    /* const usuario = req.session.usuario */
+     const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/moderado', /* {usuario} */)
+    res.render('users/user/perfilInvestidor/moderado', {usuario} )
 }
 
 module.exports.resultadoAgressivo = (req,res) => {
-    /* const usuario = req.session.usuario */
+     const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/agressivo', /* {usuario} */)
+    res.render('users/user/perfilInvestidor/agressivo',  {usuario} )
 }

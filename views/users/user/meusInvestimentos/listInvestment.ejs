@@ -22,28 +22,7 @@
                     
                 <%-include headerInvestimentos.ejs %>
             
-            <div class="search-container row">
-                    <input type="search" class="search-container__input offset-2 col-8" placeholder="Buscar..." aria-label="Search"
-                      aria-describedby="search-addon"/>
-                <span class="col-2 " id="search-addon">
-                <i class="fas fa-search"></i>
-                </span>
-            </div>
-
-               <% for (const investimento of investimentos) { %>
-                    <li class="box">
-                        <p class="box_title"><%= investimento.nome %></p> 
-                        <ul class="descricao">
-                            <li class="descricao_link">Valor: R$<%= investimento.valor %></li>
-                            <li class="descricao_link">Renda <%= investimento.renda %></li>
-                            <li class="descricao_link"><%= investimento.tipo %></li>
-                            <li class="descricao_link_borda"><%= investimento.tempo %></li>
-                        </ul>
-                        <form method="POST" action="/user/meusInvestimentos/deletar/<%= investimento.id %>">
-                            <input class="button is-danger" type="submit" value="Deletar"/>
-                        </form>
-                    </li>
-                <% } %>
+            
             </section>
         </main>
  
