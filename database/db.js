@@ -1,5 +1,5 @@
 const {v4:uuidV4} = require('uuid')
-const {createHash,compareHash} = require('../controllers/crypFunctions/hash')
+const {createHash} = require('../controllers/crypFunctions/hash')
 const models = require('./models')
 
 
@@ -17,16 +17,12 @@ module.exports.cadastrar = async function(usuario){
             resultadoPerfilInvestidor:''
         });
 
-        console.log(novoUsuarioCriado)
-        return novoUsuarioCriado;
     }
 
 
 
 
  module.exports.buscarUsuario = async function(usuario) {
-     
-     console.log('dentro do buscar')
     const {email} = usuario;
 
     try {

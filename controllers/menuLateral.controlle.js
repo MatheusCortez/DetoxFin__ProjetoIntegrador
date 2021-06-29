@@ -34,5 +34,6 @@ module.exports.showMinhaCarteira =function(req,res,next){
     res.render('users/user/dadosDaConta/main',{usuario})
   }
   module.exports.logout =function(req,res,next){
+    
     res.render('index')
   }
