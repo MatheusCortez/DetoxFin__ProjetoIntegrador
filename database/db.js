@@ -5,7 +5,6 @@ const models = require('./models')
 
 module.exports.cadastrar = async function(usuario){
         const novoUsuario = usuario;
-
         const novoUsuarioCriado =  await models.User.create({
             id:uuidV4(),
             nome:novoUsuario.nome,
@@ -16,6 +15,17 @@ module.exports.cadastrar = async function(usuario){
             perfilInvestidor:'',
             resultadoPerfilInvestidor:''
         });
+
+        
+
+        const carteriaCriada = await models.carteira.create({
+            Usuario_idUsuario:novoUsuarioCriado.idUsuario,
+        })
+
+        const investimentoCriado = await models.carteirainvestimentos.create({
+            Usuario_idUsuario:novoUsuarioCriado.idUsuario,
+        })
+        
 
     }
 
@@ -56,3 +66,5 @@ module.exports.cadastrar = async function(usuario){
        console.log(error)
    }
 } 
+
+
