@@ -1,29 +1,14 @@
-const {v4:uuidV4} = require('uuid')
-const {createHash,compareHash} = require('./crypFunctions/hash')
-
-const fs= require('fs')
-const bancoFake= require('../database/bancoFake')
-const usuarioJS = require('../database/usuarios.json')
+const hash = require ('../controllers/crypFunctions/hash')
+const db= require('../database/db')
 
 
-module.exports.showIndex = function(req,res){
-  res.render('index')
-}
 
-
-module.exports.showAuth = function(req,res,next){
-    res.render('users/auth',{
-      error:{},
-      content:{}
-    })
-
-  } 
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
-    const usuario = await bancoFake.buscarUsuario(login.email)
+    const usuarioCadastrado = await db.buscarUsuario(login)
+    const resultadoSenha = await hash.compareHash(login.password,usuarioCadastrado.senha)
     
-    req.session.usuario = usuario
-    if(!usuario){
+    if(!usuarioCadastrado || !resultadoSenha){
       res.render('users/auth',{
         error:{
           email:'email ou senha invalido'
@@ -32,42 +17,34 @@ module.exports.showAuth = function(req,res,next){
       })
     
     }else{
-     
+      req.session.usuario = usuarioCadastrado
+ 
       res.redirect('/user/minhaCarteira')
     }
       
     }
 
-
-
-
-module.exports.showRecoveryPass =function(req,res,next){
-  res.render('users/recoverypass',)
-}
-
-
-
-
   
-  module.exports.showNew = function(req,res,next){
-    
-    res.render('users/new',{
-      error:{},
-      content:{}
-    });
-    
-  }
- 
+  
   module.exports.newUser =   async function (req,res){
     const usuario = req.body
-    const usuarioCadastrado = await bancoFake.buscarUsuario(usuario.email)
-   
-    if(usuarioCadastrado && usuario.senha!=usuario.senhaConfirmada){
-      console.log('passou')
+    
+    const usuarioCadastrado = await db.buscarUsuario(usuario);
+    console.log(usuarioCadastrado)
+    const CPFcadastrado = await db.buscarCPF(usuario); 
+    if(CPFcadastrado){
+      res.render('users/new',{
+        error:{
+          cpf:'CPF já cadastrado'
+        },
+        content:usuario
+      })
+    } else
+    if(usuarioCadastrado){
       res.render('users/new',{
       error:{
         email:'Email já cadastrado',
-        senha:'Senhas não conferem'
+  
 
       },
       content:usuario
@@ -82,12 +59,7 @@ module.exports.showRecoveryPass =function(req,res,next){
       })
     }
     else{
-      bancoFake.cadastrar({
-        id:uuidV4(),
-        nome:usuario.nome,
-        email:usuario.email,
-        hash: await createHash(usuario.senha)
-      })
+      db.cadastrar(usuario)
         res.redirect('/users/auth')
          
   
@@ -95,12 +67,7 @@ module.exports.showRecoveryPass =function(req,res,next){
 
     }
     
-    
- 
 
 
-  module.exports.showInternalIndex =function(req,res,next){
-   console.log('entrou  na retorra index')
-    res.render('/user/minhaCarteira')
-   
-}
+
+

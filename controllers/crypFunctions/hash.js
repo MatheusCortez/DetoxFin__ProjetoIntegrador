@@ -7,6 +7,6 @@ module.exports.createHash  = async function encriptarSenha(senha) {
   
   }
 
-  module.exports.compareHash = function (senha, hash) {
-    return bcrypt.compareSync(senha, hash);
+  module.exports.compareHash = async function (senha, hash) {
+    return resultadoSenha= await bcrypt.compare(senha, hash);
   };

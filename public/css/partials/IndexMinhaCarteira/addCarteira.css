@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 110vh;
+    height: 120vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -15,13 +15,10 @@
     height: 70vh;
     border-radius: 20px;
     align-content: center;
-    position: relative;
-    bottom: 10vh;
+
 }
-.formulario {
-    margin-top: 3%;;
-    
-}
+
+
 .title {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -31,39 +28,62 @@
 }
 
 .button {
-   font-size: 30px;
-    width: 15%;
-    background-color: #33CC33 ;
-    border-radius: 20px;
-    padding: 10px 15px;
-    text-align: center;
-    cursor: pointer;
-    margin: 3% 42.5%;        
+    margin-top: 5%;
+    margin-left: 45%;
+    margin-right: 45%;
+    padding: 10px 30px;
     color: white;
-    border: none;   
+    border: 2px solid #33CC33;
+    border-radius: 5px ;
+    outline: none;
+    background-color: #33CC33;
+    font-size: 20px;
+    cursor: pointer;
 }
-.formInvestment_field_label {
+.field-label, .field-option  {
     font-size: 20px;
 }
-.control_opcao {
-    margin-left: 10%;
-}
+
 .divisor {
     display: flex;
+    margin-top: 3%;
 }
 .first {
-    width: 40%;
+    width: 50%;
     margin-left: 5%;
-    border: 2px solid #33CC33;
-    border-radius: 15px;
-    padding: 2% 5%;
+    margin-right: 2.5%;
 }
 
 .second {
-    width: 40%;
-    margin-left: 10%;
-    border: 2px solid #33CC33;
-    border-radius: 15px;
-    padding: 2% 5%;
-}
+    width: 50%;
+    margin-left: 2.5%;
+    margin-right: 5%;
     
+}
+
+.no-display {
+    display: none;
+}
+
+.ganho , .gasto {
+    font-size: 20px;
+}
+.form-check {
+    font-size: 20px;
+    padding: 5px;
+    
+}
+
+.outro {
+    margin: 1% 35%;
+}
+.primeiro , .segundo {
+    width: 50%; 
+    margin-left: 20%;
+   
+
+}
+.segundo {
+    margin-left: 5%;
+}
+

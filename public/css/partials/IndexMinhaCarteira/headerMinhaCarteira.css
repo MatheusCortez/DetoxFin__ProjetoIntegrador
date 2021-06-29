@@ -1,10 +1,10 @@
-header {
-    display: flex;
+.container {
+    margin-top: 2%;
 }
 .titleDoHeader {
     font-size: 30px;
-    display: flex;
-    margin-left: 10%;
+    
+    
     font-weight: initial;
 }
 .container{

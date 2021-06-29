@@ -1,5 +1,6 @@
 function gerarTipos(value) {
     var tipo = document.getElementById('tipo')
+    
 
     var option = ''
 
@@ -19,21 +20,19 @@ function gerarTipos(value) {
         option = document.createElement('option');
         option.value = 'tesouroDireto'
         option.text = 'Tesouro Direto'
+        option.id ='tesouroDireto'
         tipo.add(option)
 
         option = document.createElement('option');
         option.value = 'titulosPrivados'
         option.text = 'Titulos Privados'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'etfFixa'
-        option.text = 'ETF de Renda Fixa'
+        option.id = 'titulosPrivados'
         tipo.add(option)
 
         option = document.createElement('option');
         option.value = 'fundoInvestimentoFixa'
         option.text = 'Fundo de Investimento'
+        option.id = 'fundoInvestimentoFixa'
         tipo.add(option)
 
 
@@ -49,32 +48,9 @@ function gerarTipos(value) {
         option = document.createElement('option');
         option.value = 'fundoInvestimentoVariavel'
         option.text = 'Fundo de Investimento'
+        option.vid = 'fundoInvestimentoVariavel'
         tipo.add(option)
 
-        option = document.createElement('option');
-        option.value = 'etfVariavel'
-        option.text = 'ETF de Renda Variável'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'fundoImobiliario'
-        option.text = 'Fundo Imobilario'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'acoes'
-        option.text = 'Ações'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'bdrs'
-        option.text = 'BDRs'
-        tipo.add(option)
-
-        option = document.createElement('option');
-        option.value = 'derivativos'
-        option.text = 'Derivativos'
-        tipo.add(option)
     }
 }
 
@@ -84,4 +60,8 @@ function limparOpcoes() {
     while ( opcoesTipos.length ) {
         opcoesTipos.remove(0)
     }
+    QtesouroDireto.classList.add('no-display')
+    QtitulosPrivados.classList.add('no-display')
+    QfundoInvestimentoFixa.classList.add('no-display')
+     QfundoInvestimentoVariavel.classList.add('no-display')
 }

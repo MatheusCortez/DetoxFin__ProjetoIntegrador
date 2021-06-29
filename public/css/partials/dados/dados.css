@@ -34,9 +34,10 @@
     font-size: 15px;
     text-transform: uppercase;
 }
-.mainContainer__dadosContainer__minhaOrganização__descricao{
-    display: block;
+.mainContainer__dadosContainer__minhasInformacoes__descricao{
     padding-bottom: 5px;
+    padding-right: 20%;
+ 
 }
 .mainContainer__dadosContainer__minhaOrganização__title{
     font-size: 16px;
@@ -45,9 +46,6 @@
 
 
 
-.mainContainer__dadosContainer__foto{
-justify-self: flex-end;
-}
 .mainContainer__dadosContainer__foto__img{
     border-radius: 50px;
     width: 100px;
