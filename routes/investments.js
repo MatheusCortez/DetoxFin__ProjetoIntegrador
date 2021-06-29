@@ -1,32 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
-const array = [];
+const investmentControler = require('../controllers/investmentcontroler')
 
 
 /* GET users listing. */
-router.get('/addInvestiment', function(req, res, next) {
-  const usuario = req.session.usuario
-  res.render('users/user/meusInvestimentos/addInvestment',{usuario})
+router.get('/addInvestimento', investmentControler.getaddInvestment);
 
-});
-router.post('/addInvestment', (req,res) => {
-  const usuario = req.session.usuario
-  const investmentNovo = {
-    id:array.length + 1,
-    ...req.body
+router.post('/addInvestimento', investmentControler.criarInvestment);
 
-  }
-  array.push(investmentNovo)
-  res.redirect('/user/meusInvestimentos/listInvestment', {usuario})
-});
+router.get('/listInvestimento', investmentControler.getlistInvestment);
 
-router.get('/listInvestment', (req,res) =>{
-  const usuario = req.session.usuario
-  res.render('users/user/meusInvestimentos/listInvestment', {investimentos: array, usuario})
-});
 
-router.post('/deletar/:id', (req, res) => {
+/* router.post('/deletar/:id', (req, res) => {
   const usuario = req.session.usuario
   const id = parseInt(req.params.id)
 
@@ -40,7 +26,7 @@ router.post('/deletar/:id', (req, res) => {
   }
 
   res.redirect('/user/meusInvestimentos/listInvestment', {usuario})
-})
+}) */
 
 
 module.exports = router;

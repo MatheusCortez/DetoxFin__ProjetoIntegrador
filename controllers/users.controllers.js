@@ -21,7 +21,7 @@ module.exports.showAuth = function(req,res,next){
     const usuario = await db.buscarUsuario(login.email)
     
     req.session.usuario = usuario
-    if(!usuario){
+    if(usuario == db.buscarUsuario){
       res.render('users/auth',{
         error:{
           email:'email ou senha invalido'

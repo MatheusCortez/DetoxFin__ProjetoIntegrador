@@ -55,6 +55,7 @@ option.onchange = function() {
 
 
     } else {
+        
         QtesouroDireto.classList.add('no-display')
         QtitulosPrivados.classList.add('no-display')
         QfundoInvestimentoFixa.classList.add('no-display')

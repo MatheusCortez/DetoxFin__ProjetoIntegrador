@@ -1,5 +1,6 @@
 function gerarTipos(value) {
     var tipo = document.getElementById('tipo')
+    
 
     var option = ''
 
@@ -59,4 +60,8 @@ function limparOpcoes() {
     while ( opcoesTipos.length ) {
         opcoesTipos.remove(0)
     }
+    QtesouroDireto.classList.add('no-display')
+    QtitulosPrivados.classList.add('no-display')
+    QfundoInvestimentoFixa.classList.add('no-display')
+     QfundoInvestimentoVariavel.classList.add('no-display')
 }
