@@ -2,7 +2,6 @@ const hash = require ('../controllers/crypFunctions/hash')
 const db= require('../database/db')
 
 
-
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
     const usuarioCadastrado = await db.buscarUsuario(login)
@@ -26,7 +25,7 @@ const db= require('../database/db')
 
   
   
-  module.exports.newUser =   async function (req,res){
+  module.exports.newUser =   async  (req,res)=>{
     const usuario = req.body
     
     const usuarioCadastrado = await db.buscarUsuario(usuario);
@@ -65,8 +64,20 @@ const db= require('../database/db')
   
   }
 
-    }
+  }
+  
+  
+
+  module.exports.update= async(req,res)=>{
+    const usuario = req.body;
     
+  }
+
+
+
+
+
+
 
 
 

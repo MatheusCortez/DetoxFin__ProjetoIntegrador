@@ -1,14 +1,16 @@
 const {v4:uuidV4} = require('uuid')
 const {createHash} = require('../controllers/crypFunctions/hash')
 const models = require('./models')
-
+const regex = require('../controllers/crypFunctions/regex')
 
 module.exports.cadastrar = async function(usuario){
         const novoUsuario = usuario;
+        const cpfcadastrado = regex.Formatarcpf(novoUsuario.cpf)
+        console.log(cpfcadastrado)
         const novoUsuarioCriado =  await models.User.create({
             id:uuidV4(),
             nome:novoUsuario.nome,
-            cpf:novoUsuario.cpf,
+            cpf:cpfcadastrado,
             telefone:parseInt(novoUsuario.telefone),
             email:novoUsuario.email,
             senha: await createHash(usuario.senha),
