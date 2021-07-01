@@ -21,11 +21,12 @@ module.exports.cadastrar = async function(usuario){
         const carteriaCriada = await models.carteira.create({
             Usuario_idUsuario:novoUsuarioCriado.idUsuario,
         })
+        console.log(carteriaCriada)
 
         const investimentoCriado = await models.carteirainvestimentos.create({
             Usuario_idUsuario:novoUsuarioCriado.idUsuario,
         })
-        
+        console.log(investimentoCriado)
 
     }
 
