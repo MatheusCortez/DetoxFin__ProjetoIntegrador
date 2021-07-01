@@ -1,5 +1,5 @@
 const models = require('../database/models')
-const {v4:uuidV4} = require('uuid')
+const {v4:uuidV4, stringify} = require('uuid')
 
 module.exports.getPergunta = (req,res) => {
     const usuario = req.session.usuario
@@ -32,36 +32,39 @@ module.exports.postPerfilInvestidor = async (req,res) => {
     console.log('respostas C:',respostasC)
 
     
+    var perfilInvestidor = 'Conservador' 
+    //if (respostasA > respostasB && respostasA > respostasC ){
 
-    if (respostasA > respostasB && respostasA > respostasC ){
+       // perfilInvestidor = 'Conservador'
+    
 
-        var perfilInvestidor = 'Conservador'
-        res.redirect('/user/perfilInvestidor/resultadoConservador')
+    //} else 
+    if (respostasB > respostasC && respostasB > respostasA) {
 
-    } else if (respostasB > respostasC && respostasB > respostasA) {
-
-        var perfilInvestidor = 'Moderado'
-        res.redirect('/user/perfilInvestidor/resultadoModerado')
+         perfilInvestidor = 'Moderado'
+        
 
     } else if (respostasC > respostasA && respostasC > respostasB ){
 
-        var perfilInvestidor = 'Agressivo'
-        res.redirect('/user/perfilInvestidor/resultadoAgressivo')
+       perfilInvestidor = 'Agressivo'
+        
     }
 
     console.log(perfilInvestidor)
+   
+    await models.User.update({
+        perfilInvestidor:perfilInvestidor,
+        resultadoPerfilInvestidor:String(array)
+    },{
+        where: {
+            idUsuario:usuario.idUsuario
+        }
+    });
 
-    const atualização = models.User.update = async (req,res) => {
-        const perfilInvestidorUpdate =  await models.User.updateAttributes({
-            perfilInvestidor:perfilInvestidor,
-            resultadoPerfilInvestidor:array
-        });
 
-        
-    console.log(perfilInvestidorUpdate)
-    }
-    
-    console.log(atualização)
+
+    res.redirect('/user/perfilInvestidor/resultado' + perfilInvestidor)
+
     
 
 }
