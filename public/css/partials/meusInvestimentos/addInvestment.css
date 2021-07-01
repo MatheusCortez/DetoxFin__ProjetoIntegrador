@@ -62,6 +62,29 @@
     margin-right: 2.5%;
 }
 
+<<<<<<< HEAD
+@media (max-width: 600px) {
+    .mainContainer{
+        height: 80vh;
+    }
+    .formulario {
+        width: 100%;
+    }
+    
+    .button {
+        border-radius: 100px;
+        width: 45%;
+        margin: 15% 30.5%;
+    }
+}
+.tipoInvestimento{
+    min-height: 30px;
+    border: thin solid ;
+    background-color:transparent;
+    text-align: center;
+    padding-top: 2px;
+}
+=======
 .segundo {
     margin-left: 2.5%;
     margin-right: 0%;
@@ -87,3 +110,4 @@ option {
     font-size: 20px;
     padding: 5px;
 }
+>>>>>>> f3ab5e0b28e137190f8dd25189be7f11a16e9478
