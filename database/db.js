@@ -5,12 +5,11 @@ const regex = require('../controllers/crypFunctions/regex')
 
 module.exports.cadastrar = async function(usuario){
         const novoUsuario = usuario;
-        const cpfcadastrado = regex.Formatarcpf(novoUsuario.cpf)
-        console.log(cpfcadastrado)
+       
         const novoUsuarioCriado =  await models.User.create({
             id:uuidV4(),
             nome:novoUsuario.nome,
-            cpf:cpfcadastrado,
+            cpf:novoUsuario.cpf,
             telefone:parseInt(novoUsuario.telefone),
             email:novoUsuario.email,
             senha: await createHash(usuario.senha),
@@ -55,7 +54,6 @@ module.exports.cadastrar = async function(usuario){
 
  module.exports.buscarCPF = async function(usuario) {
      
-    console.log('dentro do buscar cpf')
    const {cpf} = usuario;
 
    try {

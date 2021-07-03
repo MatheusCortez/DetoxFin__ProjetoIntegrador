@@ -17,8 +17,10 @@ const db= require('../database/db')
     
     }else{
       req.session.usuario = usuarioCadastrado
- 
-      res.redirect('/user/minhaCarteira')
+      req.session.id=usuarioCadastrado.id
+      
+      console.log(req.session.id)
+      res.redirect('/user/minhaCarteira/:')
     }
       
     }
@@ -72,6 +74,7 @@ const db= require('../database/db')
     const usuario = req.body;
     
   }
+
 
 
 
