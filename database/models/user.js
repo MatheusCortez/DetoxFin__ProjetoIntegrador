@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const { stringify } = require('uuid');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -10,7 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasOne(models.carteira, {
+        foreignKey:'Usuario_idUsuario', 
+        as:'carteira'
+      }) 
+      this.hasOne(models.carteirainvestimentos, {
+        foreignKey:'Usuario_idUsuario',
+        as:'carteirainvestimentos'
+      })
     }
   };
   User.init({
