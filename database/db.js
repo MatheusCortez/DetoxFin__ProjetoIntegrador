@@ -8,10 +8,10 @@ module.exports.cadastrar = async function(usuario){
        
         const novoUsuarioCriado =  await models.User.create({
             id:uuidV4(),
-            nome:novoUsuario.nome,
+            nome: novoUsuario.nome.toLocaleUpperCase(),
             cpf:novoUsuario.cpf,
             telefone:parseInt(novoUsuario.telefone),
-            email:novoUsuario.email,
+            email:novoUsuario.email.toLocaleUpperCase(),
             senha: await createHash(usuario.senha),
             perfilInvestidor:'',
             resultadoPerfilInvestidor:''
@@ -40,7 +40,7 @@ module.exports.cadastrar = async function(usuario){
     try {
         const emailEncontrado = await models.User.findOne({
             where:{
-                email:String(email)
+                email:String(email.toLocaleUpperCase())
             }
         }) 
         return  emailEncontrado

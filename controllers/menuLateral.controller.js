@@ -33,6 +33,16 @@ module.exports.showMinhaCarteira =function(req,res,next){
     const usuario = req.session.usuario
     res.render('users/user/dadosDaConta/main',{usuario})
   }
+
+  module.exports.showDadosContaForm= (req,res,next)=>{
+    const usuario = req.session.usuario
+   
+    res.render('users/user/dadosDaConta/dadosForm',{usuario})
+  }
+
+
+
+
   module.exports.logout =function(req,res,next){
     
     res.render('index')

@@ -18,9 +18,8 @@ const db= require('../database/db')
     }else{
       req.session.usuario = usuarioCadastrado
       req.session.id=usuarioCadastrado.id
-      
-      console.log(req.session.id)
-      res.redirect('/user/minhaCarteira/:')
+
+      res.redirect('/user/minhaCarteira/')
     }
       
     }
@@ -72,7 +71,7 @@ const db= require('../database/db')
 
   module.exports.update= async(req,res)=>{
     const usuario = req.body;
-    
+    const {id} = usuarioCadastrado
   }
 
 
