@@ -1,0 +1,22 @@
+
+@import url(./partials/headerExterno/header.css);
+
+.mainContainer{ 
+    background-color: #ffff;
+    border-radius: 20px;
+
+
+}
+
+@media screen  and (min-width:700px){
+  .mainContainer{
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    height: 80vh;
+    top: -100px;
+  }
+}
+
+
+

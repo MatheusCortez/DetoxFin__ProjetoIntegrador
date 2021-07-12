@@ -1,6 +1,6 @@
 
 module.exports.showIndex = function(req,res){
-    res.render('index')
+    res.render('/pages/extenas/index')
   }
   
 
@@ -9,7 +9,7 @@ module.exports.showIndex = function(req,res){
   }
   
   module.exports.showNew = function(req,res,next){
-    res.render('users/new',{
+    res.render('/pages/extenas/new',{
       error:{},
       content:{}
     });
