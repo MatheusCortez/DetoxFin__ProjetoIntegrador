@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.hasMany(models.ganhogastos), {
         foreignKey: 'Carteira_idCarteira',
-        targetKey: 'idCarteira'
+        as : 'ganhogastos'
       }
     }
   };

@@ -43,7 +43,40 @@ module.exports.criarGanhoGasto = async (req, res) => {
     res.redirect('/user/minhaCarteira/listCarteira', { usuario })
 }
 
-module.exports.getlistCarteira = function (req, res) {
+module.exports.getlistCarteira = async (req, res) => {
     const usuario = req.session.usuario
+
+
+    const carteira = await models.User.findOne({
+        where: {
+            idUsuario: usuario.idUsuario
+        },
+        include: [
+            'carteira'
+        ]
+    })
+    const puxarGanhoGasto = await models.carteira.findOne({
+        where: {
+            Carteira_idCarteira: carteira.idCarteira,
+        },
+        include: [
+            'ganhogastos'
+        ]
+    })
+
+    console.log(puxarGanhoGasto)
+    
+
+    const puxarGanhoGasto2 = await models.ganhogastos.findOne({
+        where: {
+            Carteira_idCarteira: ganhogastos.Carteira_idCarteira
+        },
+        include: [
+            'entradaSaida'
+        ]
+    })
+    console.log(puxarGanhoGasto)    
     res.render('users/user/minhaCarteira/listCarteira', { usuario })
 }
+
+
