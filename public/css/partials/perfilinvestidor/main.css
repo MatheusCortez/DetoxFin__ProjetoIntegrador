@@ -35,6 +35,12 @@
     font-size: 30px;
     margin-top: 5%;
 }
+
+.subTitle {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+}
 .botaoPerfil {
     font-size: 30px;
     width: 40%;
@@ -50,3 +56,17 @@
 }
 
 
+@media (max-width: 600px) {
+    .mainContainer {
+        height: 80vh;
+        align-items: center;
+    }
+    .mainContainer__cardPrincipal {
+    width: 100vw;
+    height: 80vh;
+    }
+    .botaoPerfil {
+        width: 50%;
+        margin: 10% 25%;
+    }
+}

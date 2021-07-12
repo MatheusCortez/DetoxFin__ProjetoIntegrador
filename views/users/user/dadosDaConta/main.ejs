@@ -20,6 +20,8 @@
         <%- include  ../../../partials/menuLateral.ejs %>
 
         <section class="container m-auto">
+
+            <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao "><%=usuario.id       %> </span>
             <section class="row ">     
                 <section class=" mainContainer__dadosContainer__minhasInformacoes box col-md-4  offset-2 col-8">
                     <h1 class="dados__titles">Nome:</h1>
@@ -30,6 +32,7 @@
                     <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.cpf%></span>
                     <h1 class="dados__titles">Telefone:</h1>
                     <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao "><%=usuario.telefone%> </span>
+
                     <i class=" mr-5 far fa-edit">Atualizar</i>
                 </section>
                 <section class="box mainContainer__dadosContainer__minhaOrganização offset-md-1 col-md-4  offset-2 col-8 mb-4">

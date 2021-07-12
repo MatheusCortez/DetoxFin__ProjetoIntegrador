@@ -40,18 +40,19 @@
     margin-left: 3%;
     margin-right: 3%;
 }
+@media (max-width: 600px) {
+    .mainContainer {
+        height: 80vh;
+        align-items: center;
+    }
+    .resultado_p {
+        text-align: justify;
+    }
+    .resultado_h1 {
+        font-weight: 600;
+    }
+    .resultado_h3 {
+        font-weight: 400;
+    }
 
-.button {
-    float: right;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 10px 30px;
-  color: white;
-  border: 2px solid #33CC33;
-  border-radius: 5px ;
-  outline: none;
-  background-color: #33CC33;
-  font-size: 20px;
-  cursor: pointer;
 }

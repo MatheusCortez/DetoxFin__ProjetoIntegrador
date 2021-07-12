@@ -87,3 +87,20 @@ button.previous-btn {
     appearance: none;
     display: none;
 }
+
+@media (max-width: 600px) {
+    .mainContainer {
+        height: 80vh;
+        align-items: center;
+    }
+    .form-check-label {
+        text-align: initial;
+    }
+    .resposta {
+        width: 100%;
+    }
+    button.next-btn, button.previous-btn, button.submit-btn {
+        float: none;
+        padding: 10px 8px;
+}
+}

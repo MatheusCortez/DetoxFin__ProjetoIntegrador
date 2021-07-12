@@ -1,10 +1,11 @@
 const {v4:uuidV4} = require('uuid')
 const {createHash} = require('../controllers/crypFunctions/hash')
 const models = require('./models')
-
+const regex = require('../controllers/crypFunctions/regex')
 
 module.exports.cadastrar = async function(usuario){
         const novoUsuario = usuario;
+       
         const novoUsuarioCriado =  await models.User.create({
             id:uuidV4(),
             nome:novoUsuario.nome,
@@ -53,7 +54,6 @@ module.exports.cadastrar = async function(usuario){
 
  module.exports.buscarCPF = async function(usuario) {
      
-    console.log('dentro do buscar cpf')
    const {cpf} = usuario;
 
    try {
