@@ -1,0 +1,45 @@
+   
+   <link rel="stylesheet" href="/css/pages/externas/auth/components/form.css">
+   
+   <form
+    action="/users/auth"
+    method="POST"
+    class="containerLogin"
+    >
+    <h1 class="containerLogin__title">Olá,</h1>
+    <p class="containerLogin__description">
+    insira seu email e senha para acessar sua conta
+    </p>
+
+    <input
+    class="containerLogin__field"
+    placeholder="E-mail"
+    value="<%= content.email?content.email:'' %>"
+    onfocus="this.placeholder=''"
+    onblur="this.placeholder='E-mail'"
+    type="email"
+    name="email"
+    />
+    <span class="containerLogin__field__error"></span>
+    <input
+    class="containerLogin__field"
+    placeholder="Senha"
+    onfocus="this.placeholder=''"
+    onblur="this.placeholder='Senha'"
+    type="password"
+    name="password"
+    />
+    <span class="containerLogin__field__error">
+        <%= error.email ? error.email : '' %>
+    </span>
+    
+    <a href="/users/recoverypass"
+    ><span class="containerLogin__passwordRecovery"
+        >Esqueceu a Senha?Clique aqui </span
+    ></a
+    >
+
+    <a>
+        <button class="btn" type="submit">Entrar</button>
+    </a>
+    </form>
