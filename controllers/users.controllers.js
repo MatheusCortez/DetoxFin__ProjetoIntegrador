@@ -8,7 +8,7 @@ const db= require('../database/db')
     const resultadoSenha = await hash.compareHash(login.password,usuarioCadastrado.senha)
     
     if(!usuarioCadastrado || !resultadoSenha){
-      res.render('users/auth',{
+      res.render('pages/externas/auth',{
         error:{
           email:'email ou senha invalido'
         },
@@ -33,7 +33,7 @@ const db= require('../database/db')
     console.log(usuarioCadastrado)
     const CPFcadastrado = await db.buscarCPF(usuario); 
     if(CPFcadastrado){
-      res.render('users/new',{
+      res.render('pages/externas/new/index',{
         error:{
           cpf:'CPF já cadastrado'
         },
@@ -41,7 +41,7 @@ const db= require('../database/db')
       })
     } else
     if(usuarioCadastrado){
-      res.render('users/new',{
+      res.render('pages/externas/new/index',{
       error:{
         email:'Email já cadastrado',
   
@@ -51,7 +51,7 @@ const db= require('../database/db')
      })
       
     }else if(usuario.senha!=usuario.senhaConfirmada){
-      res.render('users/new',{
+      res.render('pages/externas/new/index',{
         error:{
           senha:'Senhas não conferem',
         },
@@ -60,7 +60,7 @@ const db= require('../database/db')
     }
     else{
       db.cadastrar(usuario)
-        res.redirect('/users/auth')
+        res.redirect('pages/externas/auth')
          
   
   }

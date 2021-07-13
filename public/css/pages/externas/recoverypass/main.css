@@ -1,9 +1,9 @@
 
-
 .mainContainer{
     background-color: #33cc33;
     display: flex;
     justify-content: space-around;
+
     
 }
 
@@ -12,9 +12,6 @@
     .mainContainer {
         height: 100vh;
         width: 100%;
-    }   
-    .mainContainer__title{
-        color: #ffff;
-        text-align: center;
-    }
+    }  
+    
 }
