@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const hash = require ('../controllers/crypFunctions/hash')
 const db= require('../database/db')
 
@@ -86,4 +84,3 @@ const db= require('../database/db')
 
 
 
->>>>>>> feature/tela-alteracao-dados

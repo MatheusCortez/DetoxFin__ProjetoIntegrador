@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 var express = require('express');
 var router = express.Router();
 const {showMinhaCarteira,
@@ -30,4 +28,3 @@ const {showMinhaCarteira,
   router.get('/sair',logout);
 
 module.exports=router;
->>>>>>> feature/tela-alteracao-dados

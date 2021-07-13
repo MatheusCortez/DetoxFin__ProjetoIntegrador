@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 module.exports.showIndex = function(req,res){
     res.render('pages/externas/index')
@@ -44,4 +42,3 @@ module.exports.showIndex = function(req,res){
       res.render('/user/minhaCarteira')
      
   }
->>>>>>> feature/tela-alteracao-dados
