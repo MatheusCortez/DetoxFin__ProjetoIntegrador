@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.belongsTo(models.carteira), {
+        foreignKey: 'idCarteira',
+        as : 'carteira'
+      }
     }
   };
   ganhogastos.init({
@@ -38,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         model:'carteira'
       },
       allowNull:true,
+      
     },
     Carteira_Usuario_idUsuario: {
       type:DataTypes.INTEGER,

@@ -7,10 +7,10 @@ module.exports.getAddCarteira = function (req, res) {
 }
 module.exports.criarGanhoGasto = async (req, res) => {
     const usuario = req.session.usuario
-    // console.log(usuario)
+    console.log(usuario)
 
     const ganhogasto = req.body
-    // console.log(ganhogasto)
+    console.log(ganhogasto)
 
 
     const carteira = await models.User.findOne({
@@ -22,7 +22,7 @@ module.exports.criarGanhoGasto = async (req, res) => {
         ]
     })
 
-    // console.log(carteira.toJSON())
+    console.log(carteira.toJSON())
     
     await models.ganhogastos.create({
         data: ganhogasto.date,
@@ -55,7 +55,7 @@ module.exports.getlistCarteira = async (req, res) => {
             'carteira'
         ]
     })
-    // console.log(carteira)
+    console.log(carteira)
     const puxarGanhoGasto = await models.carteira.findOne({
         where: {
             idCarteira: carteira.carteira.idCarteira,
