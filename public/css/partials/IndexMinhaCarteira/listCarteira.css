@@ -18,6 +18,29 @@
 
 }
 
+.mainContainer__cardPrincipal_carteira_ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+.box {
+    display: flex;
+}
+.ganho {
+    border: solid 3px #33CC33;
+}
+.gasto {
+    border: solid 3px red;
+}
+.box_first {
+    width: 80%;
+}
+.box_second {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+}
 
 @media screen and (min-width:0px) {
 
@@ -35,11 +58,18 @@
     .box{
         margin-bottom: 20px;
         min-width:30vw;
+        margin: 3% 5%;
     }
     .mainContainer__cardPrincipal_carteiraNome{
       font-size:1.5rem;
     }
-    .mainContainer__cardPrincipal_carteiraValor{
-        font-size:0.85rem;
+    .mainContainer__cardPrincipal_carteira{
+        font-size:1rem;
+        padding-right: 20px;
     }
+    .form_padding {
+        margin-left: 5px;
+        color: lavenderblush;
+    }
+
 }

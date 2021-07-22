@@ -56,7 +56,7 @@ module.exports.getlistCarteira = async (req, res) => {
         },
     })
 
-    
+    console.log(carteira)
     
 
     res.render('users/user/minhaCarteira/listCarteira', { usuario, carteira })
