@@ -60,7 +60,7 @@ const db= require('../database/db')
     }
     else{
       db.cadastrar(usuario)
-        res.redirect('pages/externas/auth')
+        res.redirect('auth')
          
   
   }

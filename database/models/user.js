@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey:true,
       allowNull:true,
       unique:true,
-      autoIncrement:true
+
     },
     nome: {
       type:DataTypes.STRING(300),
@@ -61,7 +61,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
-    tableName:'Usuario',
+    tableName:'usuario',
     timeZone:'America/SaoPaulo'
   });
   return User;
