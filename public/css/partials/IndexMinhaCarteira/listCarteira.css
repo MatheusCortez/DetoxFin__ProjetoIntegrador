@@ -37,9 +37,9 @@
         min-width:30vw;
     }
     .mainContainer__cardPrincipal_carteiraNome{
-      font-size:1rem;
+      font-size:1.5rem;
     }
     .mainContainer__cardPrincipal_carteiraValor{
-        font-size:0.85.rem;
+        font-size:0.85rem;
     }
 }
