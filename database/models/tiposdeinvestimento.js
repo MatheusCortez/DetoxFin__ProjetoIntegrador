@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement:true
     },
     aplicacaoInicial: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     dateInicial: {
@@ -29,19 +29,19 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:true,
     },
     valorTotal: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     aporte: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     previsaoDeLucros: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     lucro: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     dataFinalPrevista: {
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:true,
     },
     CNPJ: {
-      type:DataTypes.STRING,
+      type:DataTypes.DECIMAL,
       allowNull:true,
     },
     carteiraInvestimentos_idInvestimentos: {

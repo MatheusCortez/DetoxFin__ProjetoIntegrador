@@ -21,8 +21,13 @@
             <section class="mainContainer__cardPrincipal">
                     
                 <%-include headerInvestimentos.ejs %>
-            
-            
+                
+                <% for (let i = 0; i < carteira.length; i++) { %>
+                    <h1><% console.log(carteira[i]) %></h1>
+                    <h1><%= carteira[i].nome %></h1>
+                <% } %>
+             
+                
             </section>
         </main>
  
