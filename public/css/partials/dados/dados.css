@@ -1,10 +1,11 @@
+<<<<<<< HEAD
+=======
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
 @import url('../../reset.css');
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
-
 
 .mainContainer{
     display: flex;
@@ -25,50 +26,36 @@
 }
 
 .box{
-    height: auto;
-    width: 400px;
+    height: 70vh;
+    width: 70vw;
 }
 .dados__titles{
     color: #8888;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .mainContainer__dadosContainer__minhasInformacoes__descricao{
+    font-size: 20px;
+    text-transform: uppercase;
     padding-bottom: 5px;
     padding-right: 20%;
  
 }
 .mainContainer__dadosContainer__minhaOrganização__title{
-    font-size: 16px;
+    font-size: 20px;
 
 }
 
+.link-dados{
+    font-size: 20px;
+    text-decoration: none;
+    color:blue
 
-
-.mainContainer__dadosContainer__foto__img{
-    border-radius: 50px;
-    width: 100px;
-}    
-
-
-.settingsBtns{
-    width: 400px;
-position: relative;
-display: flex;
-justify-content: space-around;
-    top: -100px;
-    grid-column: 2/span 1;
+}
+.link-dados:hover{
+    color: #33cc33;
 }
 
 
-.password__btn{
-    background-color: #ED2929;
-}
-
-.fa-user-lock{
-    padding-right: 5px;
-}
-.btn__save{
-    background-color: #6CC352;
-}
+>>>>>>> feature/tela-alteracao-dados

@@ -1,0 +1,29 @@
+
+
+.gerenciamento1_article{
+    margin-right: 100px;
+}
+
+@media screen and (min-width:0) {
+    .gerenciamento img {
+        max-width: 80vw;
+        max-height: 300px;
+      }
+    
+}
+
+@media screen and (min-width:700px) {
+    .gerenciamento{
+        padding-left: 10%;
+    }
+    .gerenciamento img {
+        max-width: 400px;
+        max-height: 300px;
+      }
+      .gerenciamento2_article_title{
+          font-size: 2rem;
+      }
+      .gerenciamento2_article_title{
+          margin-top: 40px;
+      }
+}

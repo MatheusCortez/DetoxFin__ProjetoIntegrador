@@ -1,0 +1,28 @@
+.perfilInvestidor {
+  padding-left: 5%;
+    margin: 50px;
+  }
+  .perfilInvestidor__img {
+      max-width: 400px;
+      max-height: 300px;
+      margin-right: 40px;
+    }
+
+  .perfilInvestidor span {
+    position: relative;
+    left: 10%;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .perfilInvestidor h2 {
+    margin-top: 10px;
+    color: #33cc33;
+    margin-bottom: 20px;
+  }
+  .perfilInvestidor p{
+      font-size: 14px;
+      font-weight: 700;
+      padding-top: 10px;
+  }
+  

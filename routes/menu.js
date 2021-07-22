@@ -6,8 +6,9 @@ const {showMinhaCarteira,
       showPerfilInvestidor,
       showCursos,
       showDadosConta,
+      showDadosContaForm,
       logout
-      } = require('../controllers/menuLateral.controlle')
+      } = require('../controllers/menuLateral.controller')
 /* GET users listing. */
   router.get('/minhaCarteira',showMinhaCarteira)
 
@@ -20,6 +21,9 @@ const {showMinhaCarteira,
   router.get('/cursos',showCursos);
 
   router.get('/dadosDaConta',showDadosConta)
+  
+  router.get('/dadosDaConta/form',showDadosContaForm)
+
 
   router.get('/sair',logout);
 

@@ -1,5 +1,4 @@
 .cabecalho {
-
   background-color: #3ccc33;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -44,3 +43,13 @@
   border-bottom: 1px solid white;
 }
 
+
+@media screen  and (min-width:0) {
+  .cabecalho__butons {
+    margin-left: 50px;
+  }
+  .cabecalho__butons_btn  + .cabecalho__butons_btn {
+    margin-top: 10px;
+   
+  }
+}

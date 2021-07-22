@@ -1,0 +1,17 @@
+@import url('../../../../components/buttons/buttons.css');
+@import url('../../../../components/inputs/inputs.css');
+
+.containerLogin__title{
+    color: white;
+    text-align: center;
+
+}
+.containerLogin__description{
+    color: #ffff;
+
+}
+
+.containerLogin__passwordRecovery{
+  margin-left: 30px;
+  
+}

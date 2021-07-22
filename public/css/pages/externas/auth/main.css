@@ -3,20 +3,10 @@
 .mainContainer{
     background-color: #33cc33;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     
 }
-.mainContainer__containerform__title{
-    color: white;
-    
-    text-align: center;
 
-}
-.mainContainer__description{
-    color: #ffff;
-
-}
 
 @media screen and (min-width:0) {
     .mainContainer {
