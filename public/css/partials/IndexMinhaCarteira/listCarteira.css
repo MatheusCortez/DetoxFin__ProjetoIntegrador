@@ -20,8 +20,8 @@
 
 
 @media screen and (min-width:0px) {
-    
-}  
+
+}
 
 
 @media screen and (min-width:700px) {
@@ -36,5 +36,10 @@
         margin-bottom: 20px;
         min-width:30vw;
     }
-        
-}  
+    .mainContainer__cardPrincipal_carteiraNome{
+      font-size:1rem;
+    }
+    .mainContainer__cardPrincipal_carteiraValor{
+        font-size:0.85.rem;
+    }
+}
