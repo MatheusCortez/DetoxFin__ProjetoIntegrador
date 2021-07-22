@@ -10,7 +10,6 @@ module.exports.criarGanhoGasto = async (req, res) => {
     console.log(usuario)
 
     const ganhogasto = req.body
-    console.log(ganhogasto)
 
 
     const carteira = await models.User.findOne({
@@ -21,8 +20,6 @@ module.exports.criarGanhoGasto = async (req, res) => {
             'carteira'
         ]
     })
-
-    console.log(carteira.toJSON())
     
     await models.ganhogastos.create({
         data: ganhogasto.date,

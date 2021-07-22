@@ -23,8 +23,14 @@
                 <%-include headerInvestimentos.ejs %>
                 
                 <% for (let i = 0; i < carteira.length; i++) { %>
-                    <h1><% console.log(carteira[i]) %></h1>
-                    <h1><%= carteira[i].nome %></h1>
+                    <li>
+                        <h1><% console.log(carteira[i]) %></h1>
+                        <h1><%= carteira[i].nome %></h1>
+
+                        <form method="POST" action="/listInvestimento/deletar/<%= carteira.idTipodeInvestimento %>">
+                            <input class="button is-danger" type="submit" value="Deletar"/>
+                        </form>
+                    </li>
                 <% } %>
              
                 

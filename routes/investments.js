@@ -11,6 +11,7 @@ router.post('/addInvestimento', investmentControler.criarInvestment);
 
 router.get('/listInvestimento', investmentControler.getlistInvestment);
 
+router.post('/listInvestimento/deletar/:id',investmentControler.deletelistInvestment)
 
 /* router.post('/deletar/:id', (req, res) => {
   const usuario = req.session.usuario

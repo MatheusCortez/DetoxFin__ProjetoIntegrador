@@ -67,8 +67,16 @@ module.exports.getlistInvestment = async (req,res) => {
             carteiraInvestimentos_idInvestimentos: user.idInvestimentos
         },
     })
-    console.log(carteira)
 
 
     res.render('users/user/meusInvestimentos/listInvestment',{usuario , carteira})
+}
+
+module.exports.deletelistInvestment = async (req,res) => {
+   
+
+    console.log('deletar')
+    
+
+    res.redirect('/user/meusInvestimentos/listInvestimento')
 }
