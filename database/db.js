@@ -6,7 +6,6 @@ module.exports.cadastrar = async function(usuario){
         const novoUsuario = usuario;
        
         const novoUsuarioCriado =  await models.User.create({
-            id:uuidV4(),
             nome: novoUsuario.nome.toLocaleUpperCase(),
             cpf:novoUsuario.cpf,
             telefone:parseInt(novoUsuario.telefone),
@@ -16,17 +15,22 @@ module.exports.cadastrar = async function(usuario){
             resultadoPerfilInvestidor:''
         });
 
-        
+        const user = await models.User.findOne({
+            where: {
+                cpf: novoUsuario.cpf
+            }
+        })
+        console.log(JSON.stringify(usuario))
 
         const carteriaCriada = await models.carteira.create({
-            Usuario_idUsuario:novoUsuarioCriado.idUsuario,
+            Usuario_idUsuario:user.idUsuario,
         })
-        console.log(carteriaCriada)
+        console.log(carteriaCriada, 'carteira')
 
         const investimentoCriado = await models.carteirainvestimentos.create({
-            Usuario_idUsuario:novoUsuarioCriado.idUsuario,
+            Usuario_idUsuario:user.idUsuario,
         })
-        console.log(investimentoCriado)
+        console.log(investimentoCriado, 'investimento')
 
     }
 

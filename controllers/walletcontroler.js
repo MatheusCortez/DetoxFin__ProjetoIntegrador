@@ -20,7 +20,7 @@ module.exports.criarGanhoGasto = async (req, res) => {
             'carteira'
         ]
     })
-    
+    console.log(carteira)
     await models.ganhogastos.create({
         data: ganhogasto.date,
         descricao: ganhogasto.descricao,
