@@ -28,15 +28,10 @@
 }
 
 .usuarioDados{
-    display: flex;
-    flex-direction: column;
     padding-top: 30px;
    
 }
-.cabecalho__usuarioDados__imgPerfil{
-    width: 70px;
-  
-}
+
 .cabecalho__usuarioDados__nomeCliente{
     display: block;
     padding-top: 10px;
@@ -47,6 +42,9 @@
 @media screen and (min-width:0) and (max-width:750px) {
     .usuarioDados{
         display: none;
+    }
+    .cabecalho__logo{
+        margin-right: 30%;
     }
 }
 

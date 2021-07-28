@@ -29,16 +29,13 @@ module.exports.showIndex = function(req,res){
   
      
 
-  module.exports.showInternalIndex =function(req,res){
-   
-    res.render('/user/minhaCarteira')
-   
-}
+
+
   
   
 
     module.exports.showInternalIndex =function(req,res,next){
    
-      res.render('/user/minhaCarteira')
+      res.render('pages/internas/index')
      
   }

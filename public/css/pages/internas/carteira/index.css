@@ -1,0 +1,16 @@
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+}
+/* Card Principal*/
+.mainContainer__cardPrincipal{
+    background-color: white;
+    width: 85vw;
+    height: 70vh;
+    border-radius: 20px;
+    align-content: center;
+
+}
+
