@@ -27,12 +27,23 @@
     display: none;
 }
 @media screen and (min-width:0px) {
-    #tipo{
+    #tipo,#date{
         width: 90%;
+        height: 30px;
+    }
+
+    .button{
+        width: 40%;
+    }
+
+}
+
+@media screen   and (min-width:750px) {
+    #tipo,#date{
+        width: 50%;
         height: 30px;
     }
     .button{
         width: 40%;
     }
-
 }
