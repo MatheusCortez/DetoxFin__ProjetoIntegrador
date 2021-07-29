@@ -13,15 +13,15 @@
                 <title>Document</title>
             </head>
             <body>
-                <%- include("../../../partials/headerinterno.ejs",{
+                <%- include("../../../components/headerInterno",{
                     usuario
                 })%>
                 <main class="mainContainer">
-                    <%- include  ../../../partials/menuLateral.ejs %>
+                    <%- include  ../../../components/menuLateral %>
         
                     <section class="mainContainer__cardPrincipal">
                         
-                        <%- include headerMinhaCarteira %>
+                        <%- include ../header/headerMinhaCarteira %>
                     
                         <div class="formulario">
 
