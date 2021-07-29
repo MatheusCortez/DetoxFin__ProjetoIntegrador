@@ -3,224 +3,25 @@
         <html lang="pt-br">
             <head>
                 <meta charset="UTF-8">
-              <link rel="stylesheet" href="/css/partials/indexInterno/index.css">
-              <link rel="stylesheet" href="/css/partials/menuLateral"> 
-              <link rel="stylesheet" href="/css/partials/headerInterno/header.css">
-              <link rel="stylesheet" href= "/css/reset.css">
-              <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/addCarteira.css">
+           
+              <link rel="stylesheet" href="/css/pages/internas/carteira/main/addCarteira/addCarteira.css">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
             </head>
             <body>
-                <%- include("../../../partials/headerinterno.ejs",{
+                <%- include("../../../components/headerInterno.ejs",{
                     usuario
                 })%>
-                <main class="mainContainer">
-                    <%- include  ../../../partials/menuLateral.ejs %>
+                <main class="mainContainer ">
+                    <%- include  ../../../components/menuLateral.ejs %>
         
                     <section class="mainContainer__cardPrincipal">
                         
-                        <%- include headerMinhaCarteira %>
-                    
-                        <div class="formulario">
-
-                            <h1 class="title">Adicionar na wallet</h1>
-
-                            <form class="formInvestment" name="gasto/ganho" action="/user/minhaCarteira/addCarteira" method="POST">
-                                <div class="divisor">
-                                    <div class="first">
-                                        <!--Nome-->
-                                        <div class="field">
-                                            <label class="field-label" for="nome">Nome</label>
-                                            <div class="control">
-                                                <input class="input" type="text" name="nome" autocomplete="off" required/>
-                                            </div>
-                                        </div>
-                                        <!--Data-->
-                                        <div class="field">
-                                            <label class="field-label" for="date">Data</label>
-                                            <div class="control">
-                                                <input class="input" type="date" name="date" autocomplete="off" required/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="second">
-                                        <!--Valor-->
-                                        <div class="field">
-                                            <label class="field-label" for="valor">Valor(R$)</label>
-                                            <div class="control">
-                                                <input class="input" type="number" name="valor" autocomplete="off" required/>
-                                            </div>
-                                        </div>
-                                        <!--Ganho ou Gasto-->
-                                        <div class="field">
-                                            <label class="field-label">Tipo</label>
-                                            <div class="control">
-                                                <select id="tipo" class="input" name="tipo" >
-                                                    <option></option>
-                                                    <option  id="ganho" class="ganho" value="ganho">Ganho</option>
-                                                    <option  id="gasto" class="gasto" value="gasto">Gasto</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="questionarioGanho" class="step step-1 no-display">
-                                    <div class="divisor">
-                                        <div class="primeiro">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="salario" value="salario">
-                                                <label class="form-check-label" for="salario">
-                                                    Salario
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="bonificaçao" value="bonificaçao">
-                                                <label class="form-check-label" for="bonificaçao">
-                                                    Bonificação
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="comissao" value="comissao">
-                                                <label class="form-check-label" for="comissao">
-                                                    Comissão
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="decimoterceiro" value="decimoterceiro" >
-                                                <label class="form-check-label" for="decimoterceiro">
-                                                    Décimo terceiro
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="segundo">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="freelance" value="freelance">
-                                                <label class="form-check-label" for="freelance">
-                                                    Freelance
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="beneficio" value="beneficio">
-                                                <label class="form-check-label" for="beneficio">
-                                                    Beneficio
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="previdencia" value="previdencia">
-                                                <label class="form-check-label" for="previdencia">
-                                                    Previdencia
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="rendapassiva" value="rendapassiva">
-                                                <label class="form-check-label" for="rendapassiva">
-                                                    Renda Passiva
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-check outro">
-                                        <label class="form-text" for="outro">
-                                            Outro
-                                         </label>
-                                        <input class="form-control" type="text" name="descricaoOutro" id="outro">
-                                    </div>
-                                    
-                                </div>
-                            
-                                <div id="questionarioGasto" class="step step-2 no-display">
-                                    
-                                    <div class="divisor">
-                                        <div class="primeiro">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="aluguel" value="aluguel">
-                                                <label class="form-check-label" for="aluguel">
-                                                    Aluguel
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="academia" value="academia">
-                                                <label class="form-check-label" for="academia">
-                                                    Academia
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="planocelular" value="planocelular" >
-                                                <label class="form-check-label" for="planocelular">
-                                                    Plano de Celular
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="prestacao" value="prestacao">
-                                                <label class="form-check-label" for="prestacao">
-                                                    Prestação
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="conta" value="conta">
-                                                <label class="form-check-label" for="conta">
-                                                    Conta
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="segundo">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="combustivel" value="combustivel" >
-                                                <label class="form-check-label" for="combustivel">
-                                                    Combustivel
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="restaurante" value="restaurante">
-                                                <label class="form-check-label" for="restaurante">
-                                                    Restaurante
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="mercado" value="mercado">
-                                                <label class="form-check-label" for="mercado">
-                                                    Mercado
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="beleza" value="beleza">
-                                                <label class="form-check-label" for="beleza">
-                                                    Beleza
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="descricao" id="lazer" value="lazer">
-                                                <label class="form-check-label" for="lazer">
-                                                    Lazer
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-check outro">
-                                        <label class="form-text" for="outro">
-                                            Outro
-                                         </label>
-                                        <input class="form-control" type="text" name="descricaoOutro" id="outro">
-                                    </div>
-                                </div>
-
-
-
-
-                                <input class="button" type="submit" value="Adicionar">
-                            </form>
-                              
-            
-            
-                               
-                       
-
-                 </section>
+                        <%- include ../header/headerMinhaCarteira %>
+                        <%- include components/formulario/formulario %> 
+                    </section>
                  </main>
                 
     </body>
-    <script type="text/javascript" src="/js/addCarteira.js"></script>
 </html>

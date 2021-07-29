@@ -1,8 +1,9 @@
 
+
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 100vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{

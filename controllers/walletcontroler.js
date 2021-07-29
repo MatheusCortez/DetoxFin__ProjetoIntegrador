@@ -3,11 +3,11 @@ const { v4: uuidV4 } = require('uuid')
 
 module.exports.getAddCarteira = function (req, res) {
     const usuario = req.session.usuario
-    res.render('users/user/minhaCarteira/addCarteira', { usuario })
+    res.render('pages/internas/index/main/addCarteira/addCarteira.ejs', { usuario })
 }
 module.exports.criarGanhoGasto = async (req, res) => {
     const usuario = req.session.usuario
-    console.log(usuario)
+
 
     const ganhogasto = req.body
 
@@ -20,7 +20,6 @@ module.exports.criarGanhoGasto = async (req, res) => {
             'carteira'
         ]
     })
-    console.log(carteira)
     await models.ganhogastos.create({
         data: ganhogasto.date,
         descricao: ganhogasto.descricao,
@@ -55,11 +54,9 @@ module.exports.getlistCarteira = async (req, res) => {
             Carteira_idCarteira: user.idCarteira
         },
     })
-
-    console.log(carteira)
     
 
-    res.render('users/user/minhaCarteira/listCarteira', { usuario, carteira })
+    res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira })
 }
 
 
