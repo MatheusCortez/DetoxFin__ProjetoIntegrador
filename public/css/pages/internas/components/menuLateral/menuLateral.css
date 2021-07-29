@@ -48,7 +48,7 @@
     }
     .mainContainer__menuLateral__lista{
         display: flex;
-        margin-left:-2rem;
+      
     }
     li+li{
         margin-left: 40px;
