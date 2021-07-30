@@ -5,7 +5,7 @@ const db= require('../database/db')
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
     const usuarioCadastrado = await db.buscarUsuario(login)
-    const resultadoSenha = await hash.compareHash(login.password,usuarioCadastrado.senha)
+    const resultadoSenha = await hash.compareHash(login.senha,usuarioCadastrado.senha)
     
     if(!usuarioCadastrado || !resultadoSenha){
       res.render('pages/externas/auth',{

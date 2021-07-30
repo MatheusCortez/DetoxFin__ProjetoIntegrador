@@ -1,7 +1,7 @@
 module.exports.showMinhaCarteira =function(req,res,next){
   const usuario = req.session.usuario
   
-    res.render('users/user/minhaCarteira/index',{usuario})
+    res.render('pages/internas/index',{usuario})
 
     
   }
