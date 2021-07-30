@@ -12,6 +12,7 @@
             </head>
             <body>
 
+<<<<<<< HEAD
                 <%- include("../../../components/headerInterno.ejs",{
                     usuario
                 })%>
@@ -23,6 +24,18 @@
               
                         <%- include ../header/headerMinhaCarteira %>
 
+=======
+                <%- include("../../../components/headerInterno",{
+                    usuario
+                })%>
+                <main class="mainContainer">
+
+                    <%- include  ../../../components/menuLateral %>
+
+                    <section class="mainContainer__cardPrincipal">
+       
+                        <%- include ../header/headerMinhaCarteira %>
+>>>>>>> master
 
 
                         <% for (let i = 0; i < carteira.length; i++) { %>
