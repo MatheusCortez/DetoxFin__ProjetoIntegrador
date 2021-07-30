@@ -1,7 +1,7 @@
 const steps = Array.from(document.querySelectorAll("form .step"));
 const nextBtn = document.querySelectorAll("form .next-btn");
 const prevBtn = document.querySelectorAll("form .previous-btn");
-
+console.log('foi')
 
 nextBtn.forEach((button) => {
   button.addEventListener("click", () => {

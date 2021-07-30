@@ -3,7 +3,7 @@ const {v4:uuidV4, stringify} = require('uuid')
 
 module.exports.getPergunta = (req,res) => {
     const usuario = req.session.usuario
-    res.render('users/user/perfilInvestidor/pergunta', {usuario})
+    res.render('pages/internas/perfilInvestidor/components/pergunta/pergunta.ejs', {usuario})
 }
 
 module.exports.postPerfilInvestidor = async (req,res) => {
@@ -73,17 +73,17 @@ module.exports.resultadoConservador = (req,res) => {
 
      const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/conservador', {usuario})
+    res.render('pages/internas/perfilInvestidor/components/tipo/conservador/conservador.ejs', {usuario})
 }
 
 module.exports.resultadoModerado = (req,res) => {
      const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/moderado', {usuario} )
+    res.render('pages/internas/perfilInvestidor/components/tipo/moderado/moderado.ejs', {usuario} )
 }
 
 module.exports.resultadoAgressivo = (req,res) => {
      const usuario = req.session.usuario 
   
-    res.render('users/user/perfilInvestidor/agressivo',  {usuario} )
+    res.render('pages/internas/perfilInvestidor/components/tipo/agressivo/agressivo.ejs',  {usuario} )
 }

@@ -16,28 +16,28 @@ module.exports.showMinhaCarteira =function(req,res,next){
 
   module.exports.showGraficos =function(req,res,next){
     const usuario = req.session.usuario
-    res.render('users/user/graficos/main',{usuario})
+    res.render('pages/internas/graficos/main',{usuario})
   }
 
   module.exports.showPerfilInvestidor = function(req,res,next){
     const usuario = req.session.usuario
  
-    res.render('users/user/perfilInvestidor/main',{usuario})
+    res.render('pages/internas/perfilInvestidor/main.ejs',{usuario})
   }
   module.exports.showCursos = function(req, res, next) {
     const usuario = req.session.usuario   
-    res.render('users/user/cursos/main',{usuario});
+    res.render('pages/internas/cursos/main',{usuario});
   }
 
   module.exports.showDadosConta =function(req,res,next){
     const usuario = req.session.usuario
-    res.render('users/user/dadosDaConta/main',{usuario})
+    res.render('pages/internas/dados/main',{usuario})
   }
 
   module.exports.showDadosContaForm= (req,res,next)=>{
     const usuario = req.session.usuario
    
-    res.render('users/user/dadosDaConta/dadosForm',{usuario})
+    res.render('pages/internas/dados/formulario/dadosForm',{usuario})
   }
 
 

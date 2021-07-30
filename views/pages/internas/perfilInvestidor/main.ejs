@@ -16,12 +16,12 @@
     </head>
     <body class="app">
 
-        <%- include("../../../partials/headerinterno.ejs",{
+        <%- include("../components/headerInterno.ejs",{
             usuario
         })%>
 
         <main class="mainContainer">
-            <%- include  ../../../partials/menuLateral.ejs %>
+            <%- include  ../../../pages/internas/components/menuLateral.ejs %>
 
             <section class="mainContainer__cardPrincipal">
                
@@ -39,7 +39,7 @@
             
         </section>
         </main>
-
+        <script src="/js/perfilInvestidor.js"></script>
       
     </body>
 </html>
