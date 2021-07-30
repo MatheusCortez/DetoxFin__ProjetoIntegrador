@@ -5,7 +5,7 @@ const carteirainvestimentos = require('../database/models/carteirainvestimentos'
 module.exports.getaddInvestment = async (req,res) => {
     const usuario = req.session.usuario 
 
-    res.render('users/user/meusInvestimentos/addInvestment',{usuario})
+    res.render('pages/internas/Investimentos/main/addInvestiment/addInvestment.ejs',{usuario})
 }
 module.exports.criarInvestment = async (req,res) => {
     const usuario = req.session.usuario 
@@ -69,7 +69,7 @@ module.exports.getlistInvestment = async (req,res) => {
     })
 
 
-    res.render('users/user/meusInvestimentos/listInvestment',{usuario , carteira})
+    res.render('/pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira})
 }
 
 module.exports.deletelistInvestment = async (req,res) => {
