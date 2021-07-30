@@ -1,47 +1,10 @@
-
+@import url(../../../../../components/button/button.css);
+@import url(../../../../../components/input/input.css);
 .title {
     text-align: center;
     font-weight: initial;
     
 }   
-.button {
-    margin-top: 5%;
-    margin-left: 30%;
-    width: 20%;
-    height: 40px;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 5px ;
-    outline: none;
-    background-color: #33CC33;
-    font-size: 20px;
-}
-.field-label, .field-option  {
-    font-size: 20px;
-}
 
 
 
-
-
-@media screen and (min-width:0px) {
-    #tipo,#date{
-        width: 90%;
-        height: 30px;
-    }
-
-    .button{
-        width: 40%;
-    }
-
-}
-
-@media screen   and (min-width:750px) {
-    #tipo,#date{
-        width: 50%;
-        height: 30px;
-    }
-    .button{
-        width: 40%;
-    }
-}
