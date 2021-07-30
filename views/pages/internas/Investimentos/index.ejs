@@ -8,15 +8,15 @@
         <title>DetoxFin | Investimentos</title>
     </head>
     <body>
-        <%- include("../../../partials/headerinterno.ejs",{
+        <%- include("../components/headerInterno",{
             usuario
         })%>
         <main class="mainContainer">
-            <%- include  ../../../partials/menuLateral.ejs %>
+            <%- include ../components/menuLateral %>
             
             <section class="mainContainer__cardPrincipal">
                     
-                <%-include headerInvestimentos.ejs %>
+                <%-include main/header/headerInvestimentos.ejs %>
                 <div>
                     
                 </div>

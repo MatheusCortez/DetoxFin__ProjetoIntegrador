@@ -9,7 +9,7 @@ module.exports.showMinhaCarteira =function(req,res,next){
   module.exports.showInvestimentos =function(req, res, next) {
     const usuario = req.session.usuario
     console.log(req.session)
-    res.render('users/user/meusInvestimentos/main',{usuario});
+    res.render('pages/internas/Investimentos/',{usuario});
     
   }
 
