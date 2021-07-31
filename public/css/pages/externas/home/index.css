@@ -1,6 +1,6 @@
-
-@import url(./partials/headerExterno/header.css);
-
+@import url(../../../reset.css);
+@import url(../components/headerExterno/header.css);
+@import url(./components/sections.css);
 .mainContainer{ 
     background-color: #ffff;
     border-radius: 20px;

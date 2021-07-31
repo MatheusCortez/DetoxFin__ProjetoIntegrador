@@ -1,0 +1,15 @@
+@import url(../../../../components/button/button.css);
+@import url(../../../../components/input/input.css);
+
+
+.no-display {
+    display: none;
+}
+
+.title {
+   margin-left: 30%;
+    font-weight: initial;
+    
+}   
+
+
