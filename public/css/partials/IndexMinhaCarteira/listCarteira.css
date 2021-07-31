@@ -59,6 +59,7 @@
         margin-bottom: 20px;
         min-width:30vw;
         margin: 3% 5%;
+        max-width: 60vw;
     }
     .mainContainer__cardPrincipal_carteiraNome{
       font-size:1.5rem;
@@ -70,6 +71,13 @@
     .form_padding {
         margin-left: 5px;
         color: lavenderblush;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .mainContainer {
+        height: 90vh;
     }
 
 }
