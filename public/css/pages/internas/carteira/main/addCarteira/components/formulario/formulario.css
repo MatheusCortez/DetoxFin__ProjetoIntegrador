@@ -1,5 +1,8 @@
 @import url(../../../../../components/button/button.css);
 @import url(../../../../../components/input/input.css);
+@import url(./questionarios/ganho/ganhos.css);
+@import url(./questionarios/gastos/gastos.css);
+
 .title {
     text-align: center;
     font-weight: initial;
