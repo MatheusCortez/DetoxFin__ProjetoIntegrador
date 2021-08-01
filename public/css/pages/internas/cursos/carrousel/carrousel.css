@@ -1,0 +1,25 @@
+
+
+.carousel-img{
+    filter: brightness(60%);
+}
+
+.carousel-caption__title,.carousel-caption__description{
+    color: #ffff;
+}
+   .carousel-caption__description{
+    width: 70%;
+    font-size: 12px;
+    padding-left:20%;
+}
+
+
+
+@media screen and (min-width:700px) {
+    .carousel-img{
+        width: 50%;
+        margin: auto;
+ 
+    }
+  
+} 
