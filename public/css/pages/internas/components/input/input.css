@@ -6,11 +6,11 @@
 
 @media screen and (min-width:0px) {
     #tipo,#date,.input{
-        width: 90%;
+        width: 80%;
         height: 30px;
     }
     .outro{
-        width: 90%;
+        width: 80%;
     }
 }
 
