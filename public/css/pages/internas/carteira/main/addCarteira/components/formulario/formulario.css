@@ -3,11 +3,27 @@
 @import url(./questionarios/ganho/ganhos.css);
 @import url(./questionarios/gastos/gastos.css);
 
-.title {
-    text-align: center;
-    font-weight: initial;
-    
-}   
 
+.title {
+   
+     font-weight: initial;
+     
+ }   
+ 
+
+ @media screen and (min-width:0px) {
+     .title{
+         
+        margin-left: 20%;
+ 
+     }
+ }
+
+ @media screen and (min-width:750px) {
+     .title{
+        margin-left: 30%;
+     }
+
+ }
 
 

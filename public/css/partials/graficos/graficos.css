@@ -2,13 +2,7 @@
 @import url('../headerInterno/header.css');
 @import url('../menuLateral/menuLateral.css');
 
-.mainContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 90vh;
 
-   
-}
  
 /* Card Principal*/
 .mainContainer__cardPrincipal{
