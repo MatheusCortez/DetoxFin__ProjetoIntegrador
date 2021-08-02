@@ -1,7 +1,6 @@
-@import url('../../reset.css');
-@import url('../headerInterno/header.css');
-@import url('../menuLateral/menuLateral.css');
-
+@import url(../../pages/internas/components/menuLateral/menuLateral.css);
+@import url(../../pages/internas/components/header/header.css);
+@import url(../../reset.css);
 .mainContainer{
     display: flex;
     justify-content: space-between;

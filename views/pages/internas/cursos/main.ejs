@@ -1,75 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/minhaCarteira.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/partials/cursos/cursos.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/pages/internas/cursos/index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos | DetoxFin</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <%- include("../components/headerInterno.ejs",{ usuario })%>
+    <main class="mainContainer">
+      <%- include ../components/menuLateral.ejs %>
+      <%- include carrousel/carrousel.ejs %> 
+    </main>
 
-        <%- include("../components/headerInterno.ejs",{
-          usuario
-        })%>
-        <main class="mainContainer">
-            <%- include ../components/menuLateral.ejs %>
-
-          <section class="mainContainer__cardPrincipal">
-            <div class="container mt-5">
-              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="1000">
-                    <img src="/images/mitoseVerdadesimg.png" class="d-block carousel-img " alt="...">
-                    <div class="carousel-caption d-block">
-                      <h5 class="carousel-caption__title">Mitos e verdades sobre investimentos</h5>
-                      <p class="carousel-caption__description">Entenda mais sobre como investir em ações no exterior.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="1000">
-                    <img src="/images/guiaB3.png" class="d-block carousel-img " alt="...">
-                    <div class="carousel-caption d-block">
-                      <h5 class="carousel-caption__title">Guia B3 sobre Ações</h5>
-                      <p class="carousel-caption__description">O Mercado de ações brasileiro é centenário, transparente,bem regulado e oferece boa liquidez.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/crisesMercadoFinanceiroImg.png" class="d-block carousel-img" alt="...">
-                    <div class="carousel-caption d-block">
-                      <h5 class="carousel-caption__title">Histórico de crises do mercado financeiro. </h5>
-                      <p class="carousel-caption__description">Ao nos depararmos em uma crise muito aguda vem sempre uma comparação com as anteriores.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-                  
-          </section>
-
-        </main>
-      
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </body>
-
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

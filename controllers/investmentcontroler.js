@@ -69,13 +69,13 @@ module.exports.getlistInvestment = async (req,res) => {
     })
 
 
-    res.render('/pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira})
+    res.render('pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira})
 }
 
 module.exports.deletelistInvestment = async (req,res) => {
    
 
-    console.log('deletar')
+
     
 
     res.redirect('/user/meusInvestimentos/listInvestimento')

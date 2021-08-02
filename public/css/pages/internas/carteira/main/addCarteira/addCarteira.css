@@ -1,4 +1,5 @@
-
+@import url(./components/formulario/formulario.css);
+@import url(./../../index.css);
 
 .mainContainer{
     display: flex;

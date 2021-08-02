@@ -1,30 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
 
-        <!DOCTYPE html>
-        <html lang="pt-br">
-            <head>
-                <meta charset="UTF-8">
-              <link rel="stylesheet" href="/css/reset.css">
-              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-              <link rel="stylesheet" href="/css/pages/internas/carteira/index.css">
-              
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-            </head>
-            <body>
-                <%- include("../components/headerInterno",{
-                    usuario
-                })%>
-                <main class="mainContainer">
-                    <%- include ../components/menuLateral %>
-                    
-                    <section class="mainContainer__cardPrincipal">
-                        
-                        <%- include  main/header/headerMinhaCarteira %>
-                        <%- include main/components/carteiraGrafico%> 
-                        
-                    </section>
-                </main>
-                
-    </body>
+    <link rel="stylesheet" href="/css/pages/internas/carteira/index.css" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("../components/headerInterno",{ usuario })%>
+    <main class="mainContainer">
+      <%- include ../components/menuLateral %>
+
+      <section class="mainContainer__cardPrincipal">
+        <%- include main/header/headerMinhaCarteira %> <%- include
+        main/components/carteiraGrafico%>
+      </section>
+    </main>
+    <script src="/js/addedClass.js"></script>
+  </body>
 </html>

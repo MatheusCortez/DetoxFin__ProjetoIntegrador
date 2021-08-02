@@ -1,6 +1,5 @@
-@import url('../../../components/buttons/buttons.css');
-@import url('../../../components/inputs/inputs.css');
-
+@import url(../components/buttons/buttons.css);
+@import url(../components/inputs/inputs.css);
 .mainContainer {
     background-color: #33cc33;
 
@@ -19,9 +18,3 @@
   .containerform__form_field {
     width: 60%;
   }
-
-  .btn{
-    width: 60%;    
-    margin-left: 20%;
-  }
-  

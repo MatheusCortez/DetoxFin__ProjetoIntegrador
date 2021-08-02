@@ -22,19 +22,10 @@ a{
     
 }
 
-.app{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-areas: 'header'
-                            'conteudo'
-    
-}
+
+
 
 header{
     grid-area: header;
-    grid-column: 1/ span 12;
-}
-main{
-    grid-area: conteudo;
     grid-column: 1/ span 12;
 }

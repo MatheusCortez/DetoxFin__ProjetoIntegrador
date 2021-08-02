@@ -1,6 +1,6 @@
-@import url('../../../../components/buttons/buttons.css');
-@import url('../../../../components/inputs/inputs.css');
-
+@import url(../../components/buttons/buttons.css);
+@import url(../../components/inputs/inputs.css);
+@import url(../../components/headerExterno/header.css);
 .containerLogin__title{
     color: white;
     text-align: center;
