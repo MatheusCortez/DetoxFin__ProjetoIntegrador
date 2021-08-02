@@ -8,7 +8,7 @@ module.exports.Grafico = function (descricao,valor)  {
       labels: descricao,
       datasets: [
         {
-          label: "# of Votes",
+          label: descricao,
           data: valor,
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
