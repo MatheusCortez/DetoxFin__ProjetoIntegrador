@@ -29,12 +29,7 @@ module.exports.criarGanhoGasto = async (req, res) => {
         entradaSaida:ganhogasto.tipo,
         nome: ganhogasto.nome
 
-    });
-
-
-
-
-    
+    });    
 
     res.redirect('/user/minhaCarteira/listCarteira')
 }
@@ -56,7 +51,35 @@ module.exports.getlistCarteira = async (req, res) => {
     })
     
 
+
     res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira })
 }
 
 
+
+module.exports.deletarlistCarteira = async (req,res) => {
+    const id = parseInt(req.params.id)
+ 
+    const deletar = await models.ganhogastos.destroy({
+        where: {
+            idGanhoGastos: id
+        }
+    })
+    
+
+    res.redirect('/user/minhaCarteira/listCarteira')
+}
+
+module.exports.editarlistCarteira= async (req,res) => {
+    const usuario = req.session.usuario
+
+    const id = parseInt(req.params.id)
+
+    const ganhogasto = await models.ganhogastos.findOne({
+        where: {
+            idGanhoGastos: id
+        }
+    })
+    console.log(JSON.stringify(ganhogasto))
+    res.render('pages/internas/index/main/addCarteira/addCarteira.ejs', { usuario, ganhogasto })
+}
