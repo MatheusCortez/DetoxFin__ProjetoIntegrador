@@ -1,4 +1,5 @@
 const express = require('express');
+const db = require('../database/db')
 const router = express.Router();
 
 const showpages = require('../controllers/showPages/showPagesController')
@@ -17,7 +18,6 @@ router.post('/new',newUser)
 router.get('/auth',showpages.showAuth)
 
 router.post('/auth',Auth)
-
 
 
 

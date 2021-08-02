@@ -39,3 +39,6 @@ module.exports.showIndex = function(req,res){
       res.render('pages/internas/index')
      
   }
+
+
+  
