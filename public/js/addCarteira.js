@@ -5,7 +5,7 @@ var questGanho = document.getElementById('questionarioGanho')
 var questGasto = document.getElementById('questionarioGasto')
 
 option.onchange = function() {
-    console.log(option.value)
+    
     if ( option.value==='ganho') {
         
         questGanho.classList.remove('no-display')

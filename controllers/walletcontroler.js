@@ -81,5 +81,33 @@ module.exports.editarlistCarteira= async (req,res) => {
         }
     })
     console.log(JSON.stringify(ganhogasto))
-    res.render('pages/internas/index/main/addCarteira/addCarteira.ejs', { usuario, ganhogasto })
+    res.render('pages/internas/index/main/editCarteira/editCarteira.ejs', { usuario, ganhogasto })
+}
+
+module.exports.editarUpdatelistCarteira = async (req,res) => {
+    const usuario = req.session.usuario
+
+    const ganhogasto = req.body
+
+
+    const carteira = await models.User.findOne({
+        where: {
+            idUsuario: usuario.idUsuario
+        },
+        include: [
+            'carteira'
+        ]
+    })
+    await models.ganhogastos.update({
+        data: ganhogasto.date,
+        descricao: ganhogasto.descricao,
+        valor: ganhogasto.valor,
+        Carteira_idCarteira: carteira.carteira.idCarteira,
+        Carteira_Usuario_idUsuario: usuario.idUsuario,
+        entradaSaida:ganhogasto.tipo,
+        nome: ganhogasto.nome
+
+    });    
+    
+    res.redirect('/user/minhaCarteira/listCarteira')
 }
