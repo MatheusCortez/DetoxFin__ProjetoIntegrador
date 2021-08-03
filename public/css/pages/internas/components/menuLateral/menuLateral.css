@@ -54,11 +54,10 @@
     }
 }
 
-@media screen and  (min-width: 780px) {
+@media screen and  (min-width: 750px) {
 
 
     .ativo{
-    
         background-color: #fff;
         color: #33cc33;
         width: 100%;

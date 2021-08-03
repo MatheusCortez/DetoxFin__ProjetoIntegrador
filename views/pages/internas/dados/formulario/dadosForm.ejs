@@ -17,19 +17,22 @@
         <%- include  ../../components/menuLateral.ejs %>
 
         <section class="container m-auto">
-           <form action="post" class="box ">
+           <form action="post" class="box" >
                <div class="offset-md-4 col-md-4   col-8">
                 <h1 class="dados__titles">Nome:</h1>
                 <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.nome%></span>
                 <h1 class="dados__titles">E-mail:</h1>
                 <input type="text" class="mb-3" value=<%=usuario.email%> />
                 <h1 class="dados__titles">CPF:</h1>
-                <input type="text" class="mb-3" value=<%=usuario.cpf%> />
+                <input type="text" class="mb-3" value=<%=usuario.cpf%> readonly />
                 <h1 class="dados__titles">Telefone:</h1>
                 <input type="text" class="mb-3" value=<%=usuario.telefone%> />
                </div>
                <div class="butns offset-md-4">
-                <input class="button is-danger" type="submit" value="Cancelar"/>
+               
+                <a href="/user/dadosDaConta">
+                    <input class="button is-danger" type="button" value="Cancelar"/>
+                </a>
                 <input class="button is-link form_padding" type="submit" value="Alterar"/>
                </div>
                

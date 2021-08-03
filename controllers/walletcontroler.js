@@ -48,7 +48,17 @@ module.exports.getlistCarteira = async (req, res) => {
             Carteira_Usuario_idUsuario: usuario.idUsuario,
             Carteira_idCarteira: user.idCarteira
         },
+       
     })
+    const descricao=[];
+    const valor=[];
+
+    for(let i=0;i<carteira.length;i++){
+        descricao.push(carteira[i].dataValues.descricao)
+        valor.push(carteira[i].dataValues.valor)
+    }
+  
+  
     
 
 

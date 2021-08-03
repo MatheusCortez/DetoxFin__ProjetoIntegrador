@@ -20,31 +20,23 @@
     align-content: center;
 
 }
-.mainContainer__dadosContainer{
-    padding-top: 30px;
-}
+
 
 
 .dados__titles{
     color: #8888;
     font-weight: normal;
-    font-size: 20px;
     text-transform: uppercase;
 }
 .mainContainer__dadosContainer__minhasInformacoes__descricao{
-    font-size: 20px;
     text-transform: uppercase;
     padding-bottom: 5px;
     padding-right: 20%;
  
 }
-.mainContainer__dadosContainer__minhaOrganização__title{
-    font-size: 20px;
 
-}
 
 .link-dados{
-    font-size: 20px;
     text-decoration: none;
     color:blue
 
@@ -56,8 +48,11 @@
 
 @media screen and (min-width:0px) {
     .box {
-        height: 50vh;
-        width: vw;
+        height: 70vh;
+        width: 80vw;
+    }
+    .dados__titles,.mainContainer__dadosContainer__minhaOrganização__title,.mainContainer__dadosContainer__minhasInformacoes__descricao{
+        font-size: 15px;
     }
 }
 
@@ -65,5 +60,8 @@
     .box {
         height: 50vh;
         width: 40vw;
+    }
+    .dados__titles,.mainContainer__dadosContainer__minhaOrganização__title{
+        font-size: 20px;
     }
 }

@@ -1,16 +1,14 @@
-const urlExterna = window.location.pathname;
-const urlInterna = window.location.pathname.split('/')[2]
+const interno= window.location.pathname
 const ItemMenu= document.querySelectorAll('.link a ')
-console.log(urlInterna)
+
 function addedClass(){
-
-
-   ItemMenu.forEach((item)=>{
-      const paiItem = item.parentElement
-     if(urlExterna== item.getAttribute('href')|| urlInterna==item.getAttribute('href') ){
+   
+ ItemMenu.forEach((item)=>{
+   const paiItem = item.parentElement
+     if(interno==item.getAttribute('href')){
         paiItem.classList.add('ativo')
      
-     
+  
      }
   
   })

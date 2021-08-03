@@ -7,7 +7,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Minha Carteira Grafico</title>
   </head>
   <body>
     <%- include("../components/headerInterno",{ usuario })%>
@@ -15,10 +15,13 @@
       <%- include ../components/menuLateral %>
 
       <section class="mainContainer__cardPrincipal">
-        <%- include main/header/headerMinhaCarteira %> <%- include
-        main/components/carteiraGrafico%>
+        <%- include main/header/headerMinhaCarteira %> 
+        
+          <%- include main/components/grafico/grafico.ejs %> 
+       
+    
+     
       </section>
     </main>
-    <script src="/js/addedClass.js"></script>
   </body>
 </html>

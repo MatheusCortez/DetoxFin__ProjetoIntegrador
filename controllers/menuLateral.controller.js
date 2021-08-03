@@ -1,7 +1,39 @@
-module.exports.showMinhaCarteira =function(req,res,next){
+const models = require('../database/models')
+
+module.exports.showMinhaCarteira = async function(req,res,next){
   const usuario = req.session.usuario
-  
-    res.render('pages/internas/index',{usuario})
+
+
+    const user = await models.carteira.findOne({
+        where: {
+            Usuario_idUsuario: usuario.idUsuario
+        }
+    })
+    const carteira = await models.ganhogastos.findAll({
+        where: {
+            Carteira_Usuario_idUsuario: usuario.idUsuario,
+            Carteira_idCarteira: user.idCarteira
+        },
+       
+    })
+    const descricao=[];
+    const valor=[];
+
+    for(let i=0;i<carteira.length;i++){
+        descricao.push(carteira[i].dataValues.descricao)
+        valor.push(carteira[i].dataValues.valor)
+    }
+    const descricaoString =JSON.stringify(descricao);
+    const valorString = JSON.stringify(valor) 
+
+    res.render('pages/internas/index',{
+      usuario,
+      graphics:{
+        labels:descricaoString,
+        data:valorString
+      },
+    })
+
 
     
   }
