@@ -4,10 +4,9 @@
 .cabecalho {
   background-color: #3ccc33;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto ;
   padding-top: 30px;
-  padding-left: 50px;
-  height: 250px;
+
 }
 .cabecalho__logo {
   text-transform: uppercase;
@@ -15,9 +14,7 @@
   color: #ffffff;
   text-decoration: none;
 }
-.cabecalho__butons {
-  padding-right: 50px;
-}
+
 .cabecalho__butons_btn {
   border: 1px solid white;
   color: #ffffff;
@@ -45,14 +42,44 @@
   padding-bottom: 2px;
   border-bottom: 1px solid white;
 }
+.cabecalho__moedas{
+  display: flex;
+  margin-bottom: 80px;
 
-
+}
+.cabecalho__moedas__title{
+  font-size: 1.2rem;
+  border:none;
+  color: #fff;
+}
+.cabecalho__moedas__item{
+  margin-left:25px;
+  color: #fff;
+  border:none;
+}
 @media screen  and (min-width:0) {
-  .cabecalho__butons {
-    margin-left: 50px;
+
+
+  .cabecalho__moedas{
+    flex-direction: column
   }
   .cabecalho__butons_btn  + .cabecalho__butons_btn {
     margin-top: 10px;
    
+  }
+  .cabecalho__moedas__item{
+    border-bottom: currentColor 1px solid;
+  }
+}
+@media screen and (min-width:750px) {
+  .cabecalho {
+    padding-left: 50px;
+    height: 250px;
+  }
+  .cabecalho__butons {
+    padding-right: 50px;
+  }
+  .cabecalho__moedas{
+    flex-direction: row
   }
 }
