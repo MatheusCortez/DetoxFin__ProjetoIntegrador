@@ -1,7 +1,5 @@
 const models = require('../database/models')
 
-const Grafico = require('../public/js/grafico/grafico')
-
 module.exports.showMinhaCarteira = async function(req,res,next){
   const usuario = req.session.usuario
 
@@ -25,12 +23,16 @@ module.exports.showMinhaCarteira = async function(req,res,next){
         descricao.push(carteira[i].dataValues.descricao)
         valor.push(carteira[i].dataValues.valor)
     }
-    Grafico(descricao,valor)//esta dando como nao é uma funcao ¬¬
-    console.log(descricao,valor)
-    console.log(Grafico)//type funcao anonima '---'
-    
-  
-    res.render('pages/internas/index',{usuario})
+    const descricaoString =JSON.stringify(descricao);
+    const valorString = JSON.stringify(valor) 
+
+    res.render('pages/internas/index',{
+      usuario,
+      graphics:{
+        labels:descricaoString,
+        data:valorString
+      },
+    })
 
 
     

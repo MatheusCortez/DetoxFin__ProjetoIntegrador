@@ -7,7 +7,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Minha Carteira Grafico</title>
   </head>
   <body>
     <%- include("../components/headerInterno",{ usuario })%>
@@ -16,13 +16,13 @@
 
       <section class="mainContainer__cardPrincipal">
         <%- include main/header/headerMinhaCarteira %> 
-        <div class="container row">
-          <canvas id="grafico" ></canvas>
-        </div>
+        
+          <%- include main/components/grafico/grafico.ejs %> 
+       
+    
      
       </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
     <script src="/js/grafico/grafico.js"></script>
   </body>
 </html>
