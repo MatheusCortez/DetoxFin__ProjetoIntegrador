@@ -71,4 +71,14 @@ module.exports.cadastrar = async function(usuario){
    }
 } 
 
+module.exports.updateUser= async(req,res)=>{
+    const {idUsuario} = req.params;
+    const novasInfos =req.body;
+    await models.User.update(novasInfos,{where:{idUsuario:Number(idUsuario)}})
+    const infoAtualzada= await models.User.findOne({where:{idUsuario:Number(idUsuario)}})
+
+    return res.status(200).json(infoAtualzada)
+
+}
+
 

@@ -1,0 +1,28 @@
+@import url(../../../../components/button/button.css);
+@import url(../../../../components/input/input.css);
+
+
+.no-display {
+    display: none;
+}
+.title {
+   
+    font-weight: initial;
+    
+}   
+
+
+@media screen and (min-width:0px) {
+    .title{
+        
+       margin-left: 20%;
+
+    }
+}
+
+@media screen and (min-width:750px) {
+    .title{
+       margin-left: 30%;
+    }
+
+}

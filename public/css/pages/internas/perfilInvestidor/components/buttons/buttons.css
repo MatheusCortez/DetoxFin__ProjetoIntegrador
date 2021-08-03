@@ -1,0 +1,41 @@
+
+.botaoPerfil {
+    font-size: 30px;
+    width: 40%;
+    background-color: #33CC33 ;
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 3% 30%;
+    color: white;
+    border: none; 
+   
+}
+
+.next-btn,.previous-btn,.submit-btn {
+    float: right;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid #33CC33;
+    border-radius: 5px ;
+    outline: none;
+    background-color: #33CC33;
+    font-size: 20px;
+    cursor: pointer;
+    /* text-align: right; */
+  }
+  button.previous-btn {
+    float: left;
+  }
+
+  @media (max-width: 600px) {
+
+    button.next-btn, button.previous-btn, button.submit-btn {
+        float: none;
+        padding: 10px 8px;
+}
+}

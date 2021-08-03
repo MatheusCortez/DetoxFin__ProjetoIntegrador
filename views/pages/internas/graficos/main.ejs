@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <!--CSS Imports -->
-        <link rel="stylesheet" href="/css/reset.css">
-        <link rel="stylesheet" href="/css/partials/graficos/graficos.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <!--Font Awsome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        
-        
-     
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Graficos | DetoxFin</title>
-    </head>
-    <body class="app">
-        <%- include("../components/headerInterno",{
-            usuario
-        })%>
-        <main class="mainContainer">
-            <%- include ../components/menuLateral %>
-
-            <section class="mainContainer__cardPrincipal">
-          
-
-
-            <section class="mainContainer__cardPrincipal__carteira ">
-                  
-              <h1 class="cardPrincipalh1">Minha Carteira</h1>           
-                <section class="row container__imagem ">     
-                    <section class="mainContainer__dadosContainer col-md-2  col-sm-4">
-                        <img class= "mainContainer__dadosContainer__img1" src="/images/grafico1.PNG"/>
-                    </section>
-
-                    <section class="mainContainer__dadosContainer col-md-2 offset-2 col-sm-4">
-                        <img class= "mainContainer__dadosContainer__img1" src="/images/grafico2.PNG"/>
-                    </section>
-                </section>
-            </section>
+  <head>
+    <meta charset="UTF-8" />
+    <!--CSS Imports -->
+    <link rel="stylesheet" href="/css/pages/internas/graficos/index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graficos | DetoxFin</title>
+  </head>
+  <body class="app">
+    <%- include("../components/headerInterno",{ usuario })%>
+    <main class="mainContainer">
+      <%- include ../components/menuLateral %>
+      <section class="mainContainer__cardPrincipal">
+        <section class="cardPrincipal__carteira row">
+          <h1 class="cardPrincipalh1 offset-4 col-md-4">Graficos</h1>
+          <%- include components/graficos/graficos.ejs %>
         </section>
+      </section>
     </main>
-
-      
-    </body>
+  </body>
 </html>

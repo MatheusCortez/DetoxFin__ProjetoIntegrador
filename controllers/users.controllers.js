@@ -28,7 +28,6 @@ const db= require('../database/db')
   
   module.exports.newUser =   async  (req,res)=>{
     const usuario = req.body
-    
     const usuarioCadastrado = await db.buscarUsuario(usuario);
     console.log(usuarioCadastrado)
     const CPFcadastrado = await db.buscarCPF(usuario); 
@@ -68,11 +67,9 @@ const db= require('../database/db')
   }
   
   
+module.exports.updateUser = async(req,res)=>{
 
-  module.exports.update= async(req,res)=>{
-    const usuario = req.body;
-    const {id} = usuarioCadastrado
-  }
+}
 
 
 

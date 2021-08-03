@@ -22,7 +22,7 @@ const {showMinhaCarteira,
 
   router.get('/dadosDaConta',showDadosConta)
   
-  router.get('/dadosDaConta/form',showDadosContaForm)
+  router.get('/dadosDaConta/:id',showDadosContaForm)
 
 
   router.get('/sair',logout);

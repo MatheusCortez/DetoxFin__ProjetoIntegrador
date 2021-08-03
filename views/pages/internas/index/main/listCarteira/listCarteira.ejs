@@ -2,10 +2,9 @@
         <!DOCTYPE html>
         <html lang="pt-br">
             <head>
-                <meta charset="UTF-8">
-              <link rel="stylesheet" href="/css/partials/indexInterno/index.css">
-              <link rel="stylesheet" href="/css/partials/IndexMinhaCarteira/listCarteira.css">
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-v4-rtl/4.6.0-2/js/bootstrap.min.js">
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+              <link rel="stylesheet" href="/css/pages/internas/carteira/main/listCarteira/listCarteira.css">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
@@ -36,15 +35,15 @@
                                         <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
                                         <ul class='mainContainer__cardPrincipal_carteira_ul'>
                                             <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].descricao %></p></li>
-                                            <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valor %></p></li>
+                                            <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].idGanhoGastos %></p></li>
                                         </ul>
                                     </div>
-                                    <div class="box_second offset-1 col">
-                                        <form method="POST" action="">
-                                            <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
+                                    <div class="box_second">
+                                        <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
+                                            <input class="button is-danger" type="submit" value="Deletar"/>
                                         </form>
-                                        <form method="POST" action="">
-                                            <input class="button is-link form_padding col" type="submit" value="Editar"/>
+                                        <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
+                                            <input class="button is-link form_padding" type="submit" value="Editar"/>
                                         </form>
                                     </div>
                                 </div>
@@ -57,6 +56,6 @@
                  </section>
                  </main>
 
-
+                 <script src="/js/addedClass.js"></script>
     </body>
 </html>

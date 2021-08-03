@@ -1,5 +1,5 @@
-
-
+@import url(./components/form.css);
+@import url(../../../reset.css);
 .mainContainer{
     background-color: #33cc33;
     display: flex;
