@@ -37,6 +37,7 @@
         </div>
       </div>
     </div>
+    <% console.log(ganhogasto.data)%>
     <div class="offset-1 col">
       <!--Valor-->
       <div class="field">
@@ -57,9 +58,9 @@
         <label class="field-label">Tipo</label>
         <div class="control">
           <select id="tipo" class="input" name="tipo">
-            <option value="">Ganho/Gasto</option>
-            <option id="ganho" class="ganho" value="ganho">Ganho</option>
-            <option id="gasto" class="gasto" value="gasto">Gasto</option>
+            <option value="">Selecione aqui</option>
+            <option id="ganho" class="ganho" value="ganho" <%= ganhogasto.entradaSaida == "ganho" ? "selected": "" %> >Ganho</option>
+            <option id="gasto" class="gasto" value="gasto" <%= ganhogasto.entradaSaida == "gasto" ? "selected": ""%> >Gasto</option>
           </select>
         </div>
       </div>

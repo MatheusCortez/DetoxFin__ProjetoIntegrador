@@ -90,6 +90,8 @@ module.exports.editarlistCarteira= async (req,res) => {
             idGanhoGastos: id
         }
     })
+    ganhogasto.data = ganhogasto.data.toISOString().slice(0,10)
+
     console.log(JSON.stringify(ganhogasto))
     res.render('pages/internas/index/main/editCarteira/editCarteira.ejs', { usuario, ganhogasto })
 }

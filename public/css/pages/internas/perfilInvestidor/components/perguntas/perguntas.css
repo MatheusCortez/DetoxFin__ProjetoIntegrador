@@ -55,7 +55,10 @@
 .step.active {
     display: block;
 }
-
+.form-check-label {
+    width: 100%;
+    color: red;
+}
 
 
 .custom-radio {
@@ -75,6 +78,8 @@
     }
     .form-check-label {
         text-align: initial;
+        
+        
     }
     .resposta {
         width: 100%;
