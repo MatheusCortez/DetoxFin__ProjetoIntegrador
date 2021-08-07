@@ -57,9 +57,25 @@
   color: #fff;
   border:none;
 }
+
+.title_logo {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-right: 10%;
+  font-weight: bold;
+}
+.title_logo:hover {
+  color: white;
+}
+.cabecalho__logo{
+  width: 100px;
+  margin: 0 auto;
+  margin-top: -25px;
+  vertical-align: middle;
+}
 @media screen  and (min-width:0) {
-
-
+  
   .cabecalho__moedas{
     flex-direction: column
   }

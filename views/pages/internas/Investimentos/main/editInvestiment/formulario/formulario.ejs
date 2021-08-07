@@ -1,0 +1,94 @@
+<form
+  class="container"
+  method="POST"
+  action="/user/meusInvestimentos/addInvestimento"
+>
+  <h1 class="title mt-4">Adicionar Investimento</h1>
+  <div class="row">
+    <div class="offset-1 col">
+      <!--Pergunta nome do Investimento-->
+      <div class="field">
+        <label class="formInvestment_field_label" for="nome"
+          >Nome do Investimento</label
+        >
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="nome"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </div>
+      <!--Pergunta Valor-->
+      <div class="field">
+        <label class="formInvestment_field_label" for="valor">Valor(R$)</label>
+        <div class="control">
+          <input
+            class="input"
+            type="number"
+            name="valor"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="offset-1 col">
+      <!--Pergunta data inicial-->
+      <div class="field">
+        <label class="formInvestment_field_label" for="date"
+          >Data Inicial do Investimento</label
+        >
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            name="inicialDate"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </div>
+
+      <!--Pergunta Renda Fixa ou Variavel-->
+      <div class="field">
+        <label class="formInvestment_field_label">Renda</label>
+        <div class="control">
+          <select
+            id="renda"
+            name="renda"
+            class="input"
+            onchange="gerarTipos(this.value)"
+          >
+            <option></option>
+            <option value="fixa">Renda Fixa</option>
+            <option value="variavel">Renda Variavel</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Pergunta tipo de investimento-->
+  <div class="offset-1 mt-2 offset-md-3">
+    <div class="field">
+      <label class="formInvestment_field_label">Tipo de Investimento</label>
+      <div class="control">
+        <select id="tipo" name="tipo" class="input"></select>
+      </div>
+    </div>
+  </div>
+
+  <!--formulario muda depende da opção tipo-->
+  <%- include tiposDeInvestimentos/rendaFixa/tesouroDireto/tesouroDireto.ejs %>
+  <%- include tiposDeInvestimentos/rendaFixa/titulosPrivados/titulosPrivados.ejs
+  %> <%- include
+  tiposDeInvestimentos/rendaFixa/fundoDeInvestimento/fundoDeInvestimento.ejs %>
+  <%- include
+  tiposDeInvestimentos/rendaVariavel/fundoDeInvestimento/fundoDeInvestimento.ejs
+  %>
+
+  <input class="button" type="submit" value="Adicionar" />
+</form>

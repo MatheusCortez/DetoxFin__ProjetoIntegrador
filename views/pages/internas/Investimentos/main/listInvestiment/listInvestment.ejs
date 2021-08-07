@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="/css/partials/meusInvestimentos/listInvestment.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/pages/internas/investimentos/main/listInvestment/listInvestment.css">
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
         <meta charset="UTF-8">
@@ -11,25 +12,35 @@
         <title>DetoxFin | Investimentos</title>
     </head>
     <body>
-        <%- include("../../../partials/headerinterno.ejs",{
+        <%- include("../../../components/headerInterno.ejs",{
             usuario
         })%>
         <main class="mainContainer">
-            
-            <%- include  ../../../partials/menuLateral.ejs %>
+
+            <%- include  ../../../components/menuLateral.ejs %>
             
             <section class="mainContainer__cardPrincipal">
                     
-                <%-include headerInvestimentos.ejs %>
+                <%-include ../header/headerInvestimentos.ejs %>
                 
                 <% for (let i = 0; i < carteira.length; i++) { %>
-                    <% console.log(carteira)%>
-                    <h1><%= carteira[i].nome %></h1>
-                    <h1><%= carteira[i].idTipodeInvestimento %></h1>
-                    <form method="POST" action="/listInvestimento/deletar/<%= carteira.idTipodeInvestimento %>">
-                        <input class="button is-danger" type="submit" value="Deletar"/>
-                    </form>
-                  
+                        <div class="investment">
+                            <div class="box_first">
+                                <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
+                                <ul class='mainContainer__cardPrincipal_carteira_ul'>
+                                    <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valorTotal %></p></li>
+                                </ul>
+                            </div>
+                            <div class="box_second">
+                                <form method="POST" action="listInvestment/deletar/<%= carteira[i].idTipoDeInvestimento %>">
+                                    <input class="button is-danger" type="submit" value="Deletar"/>
+                                </form>
+                                <form method="POST" action="listInvestment/editar/<%= carteira[i].idTipoDeInvestimento %>">
+                                    <input class="button is-link form_padding" type="submit" value="Editar"/>
+                                </form>
+                            </div>
+                        </div>
+                        
                 <% } %>
              
                 
