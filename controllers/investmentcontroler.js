@@ -72,11 +72,29 @@ module.exports.getlistInvestment = async (req,res) => {
     res.render('pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira})
 }
 
-module.exports.deletelistInvestment = async (req,res) => {
-   
 
-
+module.exports.deletarlistInvestment = async (req,res) => {
+    const id = parseInt(req.params.id)
+ 
+    const deletar = await models.tiposdeInvestimento.destroy({
+        where: {
+            idTipoDeInvestimento: id
+        }
+    })
     
 
     res.redirect('/user/meusInvestimentos/listInvestimento')
+}
+module.exports.editarlistInvestment = async (req,res) => {
+    const usuario = req.session.usuario
+
+    const id = parseInt(req.params.id)
+
+    const investimento = await models.tiposdeInvestimento.findOne({
+        where: {
+            idTipoDeInvestimento: id
+        }
+    })
+    console.log(JSON.stringify(investimento))
+    res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento })
 }
