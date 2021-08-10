@@ -1,0 +1,58 @@
+     
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas  id="graficoIdealInvestimento"></canvas>
+
+<script >
+    var ctx = document.getElementById('graficoIdealInvestimento');
+    
+  var Grafico2 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['CDB', 'Fundo de Investimento', 'Selic', 'Titulos Internacionais'], // passando os valores da legenda que veio do controllers
+      datasets: [{
+        data: [100,100,100,100] , // passando os valores que veio do controllers
+        backgroundColor: [
+        '#c8f4d5',
+          '#bde0ff',
+          '	#ffbdfd',
+          '	#ffbdd6',
+          '	#bde0ff',
+          '	#c4f8ef',
+          '	#ffbdfd',
+          '	#bdf7ff',
+          '	#bdf1ff',
+          '#dbbdff',
+          '#e4f1cb',
+          '#ffddbd',
+          '#bde0ff'
+        ],
+        borderColor: [
+        '#c8f4d5',
+          '#bde0ff',
+          '	#ffbdfd',
+          '	#ffbdd6',
+          '	#bde0ff',
+          '	#c4f8ef',
+          '	#ffbdfd',
+          '	#bdf7ff',
+          '	#bdf1ff',
+          '#dbbdff',
+          '#e4f1cb',
+          '#ffddbd',
+          '#bde0ff'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+        legend: {
+              display: false
+        },
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+      }
+    }
+  });
+</script>
