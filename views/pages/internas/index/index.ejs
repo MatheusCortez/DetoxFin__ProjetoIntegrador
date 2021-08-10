@@ -16,11 +16,24 @@
 
       <section class="mainContainer__cardPrincipal">
         <%- include main/header/headerMinhaCarteira %> 
+        <div class="graficos">
+
         
-          <%- include main/components/grafico/graficoGanho.ejs %> 
-          <%- include main/components/grafico/graficoGasto.ejs %> 
+          <div class="graficoGanho">
+            <h1 class="titleGanho">Ganho</h1>
+            <%- include main/components/grafico/graficoGanho.ejs %> 
+          </div>
+          <div class="graficoGasto">
+            <h1 class="titleGasto">Gasto</h1>
+            <%- include main/components/grafico/graficoGasto.ejs %> 
+          </div>
+     
+        </div>
+        <div class="graficoBar">
           <%- include main/components/grafico/graficoBarChart.ejs %> 
-       
+        </div>
+          
+      
         
      
       </section>

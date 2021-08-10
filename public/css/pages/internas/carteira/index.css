@@ -7,7 +7,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 140vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -18,7 +18,37 @@
     align-content: center;
 
 }
+.graficos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
 
-.grafic {
-    box-sizing: border-box small;
+.titleGanho, .titleGasto {
+    font-size: 30px;
+    font-weight: initial;
+    margin-left: 5%;
+    text-align: center;
+
+}
+
+
+.graficoGanho, .graficoGasto {
+    margin-top: 2%;
+    width: 35%;
+    height: 35%;
+}
+.graficoGanho {
+   padding-right: 5%;
+}
+.graficoGasto {
+    padding-right: 5%;
+}
+.graficoBar {
+    width: 80%;
+    height: 80%;
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
