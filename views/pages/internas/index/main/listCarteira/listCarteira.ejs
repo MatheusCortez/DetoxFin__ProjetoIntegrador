@@ -39,9 +39,9 @@
                                             <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].data %></p></li>
                                         </ul>
                                     </div>
-                                    <div class="box_second">
+                                    <div class="box_second offset-1 col">
                                         <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
-                                            <input class="button is-danger" type="submit" value="Deletar"/>
+                                            <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
                                         </form>
                                         <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
                                             <input class="button form_padding button-color" type="submit" value="Editar"/>
