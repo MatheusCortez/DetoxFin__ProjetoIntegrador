@@ -26,12 +26,12 @@
 
                         <% for (let i = 0; i < carteira.length; i++) { %>
                             <% if (carteira[i].entradaSaida == 'ganho'){ %>
-                                <div class ='box ganho'>
+                                <div class ='box ganho ml-5 row'>
                             <% }else if (carteira[i].entradaSaida == 'gasto'){ %>
-                                <div class ='box gasto'>
+                                <div class ='box gasto ml-5'>
                                     
                             <%}%>
-                                    <div class="box_first">
+                                    <div class="box_first col">
                                         <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
                                         <ul class='mainContainer__cardPrincipal_carteira_ul'>
                                             <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].descricao %></p></li>
