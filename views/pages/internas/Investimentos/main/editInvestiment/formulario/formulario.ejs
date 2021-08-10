@@ -1,7 +1,7 @@
 <form
   class="container"
   method="POST"
-  action="/user/meusInvestimentos/addInvestimento"
+  action="/user/meusInvestimentos/editInvestment"
 >
   <h1 class="title mt-4">Adicionar Investimento</h1>
   <div class="row">
@@ -17,6 +17,7 @@
             type="text"
             name="nome"
             autocomplete="off"
+            value="<%= investimento.nome%>"
             required
           />
         </div>
@@ -30,6 +31,7 @@
             type="number"
             name="valor"
             autocomplete="off"
+            value="<%= investimento.valorTotal%>"
             required
           />
         </div>
@@ -47,6 +49,7 @@
             type="date"
             name="inicialDate"
             autocomplete="off"
+            value="<%= investimento.dateInicial%>"
             required
           />
         </div>
@@ -63,8 +66,8 @@
             onchange="gerarTipos(this.value)"
           >
             <option></option>
-            <option value="fixa">Renda Fixa</option>
-            <option value="variavel">Renda Variavel</option>
+            <option value="fixa" <%= investimento.renda == "fixa" ? "selected": "" %> >Renda Fixa</option>
+            <option value="variavel" <%= investimento.renda == "variavel" ? "selected": "" %>>Renda Variavel</option>
           </select>
         </div>
       </div>
@@ -90,5 +93,5 @@
   tiposDeInvestimentos/rendaVariavel/fundoDeInvestimento/fundoDeInvestimento.ejs
   %>
 
-  <input class="button" type="submit" value="Adicionar" />
+  <input class="button" type="submit" value="Editar" />
 </form>

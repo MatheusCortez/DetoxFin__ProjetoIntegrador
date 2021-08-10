@@ -1,15 +1,15 @@
-      
+     
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<canvas id="grafico"></canvas>
+<canvas  id="graficoGasto"></canvas>
 
-<script>
-    var ctx = document.getElementById('grafico');
-  var Grafico1 = new Chart(ctx, {
+<script >
+    var ctx = document.getElementById('graficoGasto');
+  var Grafico2 = new Chart(ctx, {
     type: 'pie',
     data: {
-      labels: JSON.parse('<%- graphics.labels %>'), // passando os valores da legenda que veio do controllers
+      labels: JSON.parse('<%- graphicsGasto.labels %>'), // passando os valores da legenda que veio do controllers
       datasets: [{
-        data: JSON.parse('<%- graphics.data %>'), // passando os valores que veio do controllers
+        data: JSON.parse('<%- graphicsGasto.data %>'), // passando os valores que veio do controllers
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -38,6 +38,7 @@
     }
   });
 </script>
+
 
 
 

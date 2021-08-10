@@ -36,6 +36,9 @@
     flex-direction: row;
     margin: 2%;
 }
+.button-color {
+    background-color: #33CC33 ;
+}
 
 @media screen and (min-width:0px) {
 

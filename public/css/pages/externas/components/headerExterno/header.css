@@ -23,6 +23,10 @@
   margin-left: 30px;
   background: transparent;
 }
+
+.cabecalho__butons_btn:hover{
+  color: #fff;
+}
 .cabecalho__butons_btn >a{
   text-decoration: none;
   color: #ffffff;
@@ -42,6 +46,7 @@
   padding-bottom: 2px;
   border-bottom: 1px solid white;
 }
+
 .cabecalho__moedas{
   display: flex;
   margin-bottom: 80px;

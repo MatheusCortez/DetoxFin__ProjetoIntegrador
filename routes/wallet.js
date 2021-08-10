@@ -16,6 +16,6 @@ router.post('/listCarteira/deletar/:id', walletControler.deletarlistCarteira);
 
 router.post('/listCarteira/editar/:id', walletControler.editarlistCarteira);
 
-router.post('/editCarteira', walletControler.editarUpdatelistCarteira);
+router.post('/editCarteira/:id', walletControler.editarUpdatelistCarteira);
 
 module.exports = router;
