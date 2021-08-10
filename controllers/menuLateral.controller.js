@@ -38,14 +38,114 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
     for(let i=0;i<gasto.length;i++){
       nomeGasto.push(gasto[i].dataValues.nome)
-      valorGasto .push(gasto[i].dataValues.valor)
+      valorGasto.push(gasto[i].dataValues.valor)
   }
+
     const nomeGanhoString =JSON.stringify(nomeGanho);
     const valorGanhoString = JSON.stringify(valorGanho) 
 
     const nomeGastoString =JSON.stringify(nomeGasto);
-    const valorGastoString = JSON.stringify(valorGasto) 
+    const valorGastoString = JSON.stringify(valorGasto);
+    
 
+
+   var JanGasto = 0
+   var FevGasto = 0
+   var MarGasto = 0
+   var AbrilGasto = 0
+   var MaioGasto = 0 
+   var JunGasto = 0
+   var JulGasto = 0
+   var AgoGasto = 0
+   var SetGasto = 0
+   var OutGasto = 0
+   var NovGasto = 0 
+   var DezGasto = 0
+
+   for (let i=0; i < gasto.length; i ++ ){
+     var data = await gasto[i].dataValues.data.toISOString().slice(5,7)
+     if (data == '01'){
+       JanGasto = JanGasto + gasto[i].dataValues.valor
+     } else if (data == '02'){
+      FevGasto = FevGasto + gasto[i].dataValues.valor
+    } else if (data == '03'){
+      MarGasto = MarGasto + gasto[i].dataValues.valor
+    } else if (data == '04'){
+      AbrilGasto = AbrilGasto + gasto[i].dataValues.valor
+    }else if (data == '05'){
+      MaioGasto = MaioGasto + gasto[i].dataValues.valor
+    }else if (data == '06'){
+      JunGasto = JunGasto + gasto[i].dataValues.valor
+    }else if (data == '07'){
+      JulGasto = JulGasto + gasto[i].dataValues.valor
+    }else if (data == '08'){
+      AgoGasto = AgoGasto + gasto[i].dataValues.valor
+    }else if (data == '09'){
+      SetGasto = SetGasto + gasto[i].dataValues.valor
+    }else if (data == '10'){
+      OutGasto = OutGasto + gasto[i].dataValues.valor
+    }else if (data == '11'){
+      NovGasto = NovGasto + gasto[i].dataValues.valor
+    }else if (data == '12'){
+      DezGasto = DezGasto + gasto[i].dataValues.valor
+    }
+   }
+
+   const AnoGasto = [JanGasto, FevGasto, MarGasto, AbrilGasto, MaioGasto, JunGasto, JulGasto, AgoGasto, SetGasto, OutGasto, NovGasto, DezGasto]
+
+   const AnoGastoString = JSON.stringify(AnoGasto);
+
+   var JanGanho = 0
+   var FevGanho = 0
+   var MarGanho = 0
+   var AbrilGanho = 0
+   var MaioGanho = 0 
+   var JunGanho = 0
+   var JulGanho = 0
+   var AgoGanho = 0
+   var SetGanho = 0
+   var OutGanho = 0
+   var NovGanho = 0 
+   var DezGanho = 0
+
+   for (let i=0; i < ganho.length; i ++ ){
+     var data = await ganho[i].dataValues.data.toISOString().slice(5,7)
+     if (data == '01'){
+       JanGanho = JanGanho + ganho[i].dataValues.valor
+     } else if (data == '02'){
+      FevGanho = FevGanho + ganho[i].dataValues.valor
+    } else if (data == '03'){
+      MarGanho = MarGanho + ganho[i].dataValues.valor
+    } else if (data == '04'){
+      AbrilGanho = AbrilGanho + ganho[i].dataValues.valor
+    }else if (data == '05'){
+      MaioGanho = MaioGanho + ganho[i].dataValues.valor
+    }else if (data == '06'){
+      JunGanho = JunGanho + ganho[i].dataValues.valor
+    }else if (data == '07'){
+      JulGanho = JulGanho + ganho[i].dataValues.valor
+    }else if (data == '08'){
+      AgoGanho = AgoGanho + ganho[i].dataValues.valor
+    }else if (data == '09'){
+      SetGanho = SetGanho + ganho[i].dataValues.valor
+    }else if (data == '10'){
+      OutGanho = OutGanho + ganho[i].dataValues.valor
+    }else if (data == '11'){
+      NovGanho = NovGanho + ganho[i].dataValues.valor
+    }else if (data == '12'){
+      DezGanho = DezGanho + ganho[i].dataValues.valor
+    }
+   }
+
+   const AnoGanho = [JanGanho, FevGanho, MarGanho, AbrilGanho, MaioGanho, JunGanho, JulGanho, AgoGanho, SetGanho, OutGanho, NovGanho, DezGanho]
+
+   const AnoGanhoString = JSON.stringify(AnoGanho);
+
+   console.log(AnoGanhoString)
+
+
+
+   
     res.render('pages/internas/index',{
       usuario,
       graphicsGanho:{
@@ -56,10 +156,20 @@ module.exports.showMinhaCarteira = async function(req,res,next){
         labels:nomeGastoString,
         data:valorGastoString
       },
+      graphicsBarGasto:{
+        data:AnoGastoString
+      },
+      graphicsBarGanho:{
+        data:AnoGanhoString
+      },
     })
 
 
     
+
+
+
+
   }
 
   module.exports.showInvestimentos = async function(req, res, next) {
@@ -108,6 +218,11 @@ module.exports.showMinhaCarteira = async function(req,res,next){
   module.exports.showPerfilInvestidor = function(req,res,next){
     const usuario = req.session.usuario
     
+    const tentar = req.session.regenerate(function(usuario) {
+        
+    })
+
+    console.log(tentar)
     if ( usuario.perfilInvestidor == ''){
       res.render('pages/internas/perfilInvestidor/main.ejs',{usuario})
     } else if (usuario.perfilInvestidor == 'Conservador'){

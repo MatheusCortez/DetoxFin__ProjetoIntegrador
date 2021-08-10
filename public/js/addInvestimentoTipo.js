@@ -65,3 +65,55 @@ option.onchange = function() {
 }
 
 
+window.addEventListener('load', function () {
+    if ( option.value == 'tesouroDireto') {
+        
+        QtesouroDireto.classList.remove('no-display')
+        QtitulosPrivados.classList.add('no-display')
+        QfundoInvestimentoFixa.classList.add('no-display')
+        QfundoInvestimentoVariavel.classList.add('no-display')
+        
+
+        
+
+          
+    } else if ( option.value == 'titulosPrivados'){
+        
+
+        QtesouroDireto.classList.add('no-display')
+        QtitulosPrivados.classList.remove('no-display')
+        QfundoInvestimentoFixa.classList.add('no-display')
+        QfundoInvestimentoVariavel.classList.add('no-display')
+        
+
+
+    } else if ( option.value == 'fundoInvestimentoFixa'){
+        
+
+        QtesouroDireto.classList.add('no-display')
+        QtitulosPrivados.classList.add('no-display')
+        QfundoInvestimentoFixa.classList.remove('no-display')
+        QfundoInvestimentoVariavel.classList.add('no-display')
+    
+
+
+    }else if ( option.value == 'fundoInvestimentoVariavel'){
+        
+
+        QtesouroDireto.classList.add('no-display')
+        QtitulosPrivados.classList.add('no-display')
+        QfundoInvestimentoFixa.classList.add('no-display')
+        QfundoInvestimentoVariavel.classList.remove('no-display')
+      
+
+
+    } else {
+        
+        QtesouroDireto.classList.add('no-display')
+        QtitulosPrivados.classList.add('no-display')
+        QfundoInvestimentoFixa.classList.add('no-display')
+        QfundoInvestimentoVariavel.classList.add('no-display')
+    
+    }
+  })
+  

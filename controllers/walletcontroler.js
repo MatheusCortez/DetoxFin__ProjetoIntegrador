@@ -104,7 +104,7 @@ module.exports.editarUpdatelistCarteira = async (req,res) => {
 
     const id = parseInt(req.params.id)
     
-  
+
 
     const carteira = await models.User.findOne({
         where: {
@@ -128,7 +128,7 @@ module.exports.editarUpdatelistCarteira = async (req,res) => {
             nome: ganhogasto.nome,
         },
         {
-            where:{idGanhoGastos:18}
+            where:{idGanhoGastos:id}
         });    
     
     res.redirect('/user/minhaCarteira/listCarteira')

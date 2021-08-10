@@ -1,0 +1,33 @@
+      
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas  id="graficoBar"></canvas>
+
+<script >
+    var ctx = document.getElementById('graficoBar');
+  var Grafico1 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [ 'Jan', 'Fev', 'Março', 'Abril', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], // passando os valores da legenda que veio do controllers
+      datasets: [
+      {
+        label: 'Gasto',
+        borderColor: 'red',
+        backgroundColor: '#ffc1c1',
+        borderWidth: 2,
+        data: JSON.parse('<%- graphicsBarGasto.data %>'), // passando os valores que veio do controllers
+      },
+      {
+        label: 'Ganho',
+        borderColor: '#33cc33',
+        backgroundColor: '#90ee90',
+        borderWidth: 2,
+        data: JSON.parse('<%- graphicsBarGanho.data %>'), // passando os valores que veio do controllers
+      },
+     
+    ]
+    },
+   
+  })
+</script>
+
+ 
