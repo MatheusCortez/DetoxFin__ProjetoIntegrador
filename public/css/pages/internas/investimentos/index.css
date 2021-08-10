@@ -6,7 +6,7 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
-    height: 90vh;
+    height: 100vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
@@ -16,4 +16,12 @@
     border-radius: 20px;
     align-content: center;
 
+}
+
+.grafico {
+    width: 60%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
 }
