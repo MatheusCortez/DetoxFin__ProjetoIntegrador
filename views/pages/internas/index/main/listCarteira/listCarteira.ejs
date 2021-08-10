@@ -38,12 +38,12 @@
                                             <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valor %></p></li>
                                         </ul>
                                     </div>
-                                    <div class="box_second">
+                                    <div class="box_second offset-1 col">
                                         <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
-                                            <input class="button is-danger" type="submit" value="Deletar"/>
+                                            <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
                                         </form>
                                         <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
-                                            <input class="button is-link form_padding" type="submit" value="Editar"/>
+                                            <input class="button is-link form_padding col" type="submit" value="Editar"/>
                                         </form>
                                     </div>
                                 </div>
