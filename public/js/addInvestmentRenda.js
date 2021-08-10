@@ -54,7 +54,8 @@ function gerarTipos(value) {
     }
 }
 
-function limparOpcoes() {
+
+  function limparOpcoes() {
     var opcoesTipos = document.getElementById('tipo')
 
     while ( opcoesTipos.length ) {

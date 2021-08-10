@@ -1,7 +1,7 @@
 <form
   class="container"
   name="gasto/ganho"
-  action="/user/minhaCarteira/editCarteira"
+  action="/user/minhaCarteira/editCarteira/<%=id%>"
   method="POST"
 >
   <h1 class="title">Adicionar na wallet</h1>
@@ -37,7 +37,6 @@
         </div>
       </div>
     </div>
-    <% console.log(ganhogasto.data)%>
     <div class="offset-1 col">
       <!--Valor-->
       <div class="field">

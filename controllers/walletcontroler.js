@@ -90,17 +90,21 @@ module.exports.editarlistCarteira= async (req,res) => {
             idGanhoGastos: id
         }
     })
+    
     ganhogasto.data = ganhogasto.data.toISOString().slice(0,10)
 
-    console.log(JSON.stringify(ganhogasto))
-    res.render('pages/internas/index/main/editCarteira/editCarteira.ejs', { usuario, ganhogasto })
+    
+    res.render('pages/internas/index/main/editCarteira/editCarteira.ejs', { usuario, ganhogasto, id })
 }
 
 module.exports.editarUpdatelistCarteira = async (req,res) => {
     const usuario = req.session.usuario
-
+    
     const ganhogasto = req.body
 
+    const id = parseInt(req.params.id)
+    
+  
 
     const carteira = await models.User.findOne({
         where: {
@@ -110,16 +114,22 @@ module.exports.editarUpdatelistCarteira = async (req,res) => {
             'carteira'
         ]
     })
-    await models.ganhogastos.update({
-        data: ganhogasto.date,
-        descricao: ganhogasto.descricao,
-        valor: ganhogasto.valor,
-        Carteira_idCarteira: carteira.carteira.idCarteira,
-        Carteira_Usuario_idUsuario: usuario.idUsuario,
-        entradaSaida:ganhogasto.tipo,
-        nome: ganhogasto.nome
 
-    });    
+   
+
+    await models.ganhogastos.update(
+        {
+            data: ganhogasto.date,
+            descricao: ganhogasto.descricao,
+            valor: ganhogasto.valor,
+            Carteira_idCarteira: carteira.idCarteira,
+            Carteira_Usuario_idUsuario: carteira.idUsuario,
+            entradaSaida:ganhogasto.tipo,
+            nome: ganhogasto.nome,
+        },
+        {
+            where:{idGanhoGastos:18}
+        });    
     
     res.redirect('/user/minhaCarteira/listCarteira')
 }

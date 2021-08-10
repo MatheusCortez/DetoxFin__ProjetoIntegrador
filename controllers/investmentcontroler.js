@@ -95,6 +95,13 @@ module.exports.editarlistInvestment = async (req,res) => {
             idTipoDeInvestimento: id
         }
     })
-    console.log(JSON.stringify(investimento))
+
+    investimento.dateInicial= investimento.dateInicial.toISOString().slice(0,10)
+    
     res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento })
+}
+
+module.exports.editarUpdatelistInvestment = async (req,res) => {
+    const usuario = req.session.usuario
+
 }
