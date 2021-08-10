@@ -62,10 +62,40 @@ module.exports.showMinhaCarteira = async function(req,res,next){
     
   }
 
-  module.exports.showInvestimentos =function(req, res, next) {
+  module.exports.showInvestimentos = async function(req, res, next) {
     const usuario = req.session.usuario
-    console.log(req.session)
-    res.render('pages/internas/Investimentos/',{usuario});
+
+    const user = await models.carteirainvestimentos.findOne({
+      where: {
+          Usuario_idUsuario: usuario.idUsuario
+      }
+    })
+    const investimento = await models.tiposdeInvestimento.findAll({
+      where: {
+          carteirainvestimentos_usuario_idUsuario: usuario.idUsuario,
+          carteiraInvestimentos_idInvestimentos: user.idInvestimentos
+        },
+    })
+
+      
+    const nomeInvestimento=[];
+    const valorInvestimento=[];
+
+    for(let i=0;i<investimento.length;i++){
+        nomeInvestimento.push(investimento[i].dataValues.nome)
+        valorInvestimento.push(investimento[i].dataValues.valorTotal)
+    }
+    const nomeInvestimentoString =JSON.stringify(nomeInvestimento);
+    const valorInvestimentoString = JSON.stringify(valorInvestimento) 
+
+    
+    res.render('pages/internas/Investimentos/',{
+      usuario,
+      graphicsInvestimento:{
+        labels:nomeInvestimentoString,
+        data:valorInvestimentoString
+      }
+    });
     
   }
 
