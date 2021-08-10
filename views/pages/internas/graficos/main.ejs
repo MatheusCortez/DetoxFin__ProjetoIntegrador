@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <!--CSS Imports -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/pages/internas/graficos/index.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +20,25 @@
       <%- include ../components/menuLateral %>
       <section class="mainContainer__cardPrincipal">
         <section class="cardPrincipal__carteira row">
-          <h1 class="cardPrincipalh1 offset-4 col-md-4">Graficos</h1>
-          <div>
-            <%-include components/graficos/graficoIdealCarteira.ejs %>
-          </div>
-          <div>
-            <%-include components/graficos/graficosIdealInvestimento.ejs %>
-          </div>
 
+          <%- include components/header/header.ejs %>
+          <div class="grafico_div_h4h5">
+            <h4 class="grafico_div_h4">Esses graficos mostram sugestões de como planejar sua vida financeira e conquistar a independencia financeira.</h4>
+            <h5 class="grafico_div_h5">*esses graficos são baseados no seu perfil investidor. Caso não o tenha feito, faça agora! Super rapido, somente 11 perguntas!</h5>
+          </div>
+          <div class="graficos">
+
+            <div class="graficoCarteira">
+              <h1 class="titleCarteira">Carteira</h1>
+              <%-include components/graficos/graficoIdealCarteira.ejs %>
+            </div>
+
+            <div class="graficoInvestimento">
+              <h1 class="titleInvestimento">Investimento</h1>
+              <%-include components/graficos/graficosIdealInvestimento.ejs %>
+            </div>
+
+          </div>
 
         </section>
       </section>

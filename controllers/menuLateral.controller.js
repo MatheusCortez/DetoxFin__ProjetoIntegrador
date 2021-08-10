@@ -212,7 +212,34 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
   module.exports.showGraficos =function(req,res,next){
     const usuario = req.session.usuario
-    res.render('pages/internas/graficos/main',{usuario})
+
+    var label = [];
+    var dados = [];
+    if (usuario.perfilInvestidor == ''){
+      label = ['Renda Fixa', 'Renda Variável']
+      dados = [50,50]
+    } else if ( usuario.perfilInvestidor == 'Conservador'){
+      label = ['Renda Fixa', 'Renda Variável']
+      dados = [60,40]
+    }else if( usuario.perfilInvestidor == 'Moderado'){
+      label = ['Renda Fixa', 'Renda Variável']
+      dados = [40,60]
+    }else if( usuario.perfilInvestidor == 'Agressivo'){
+      label = ['Renda Fixa', 'Renda Variável']
+      dados = [10,90]
+    }
+  
+    console.log(label, dados)
+    const labelString = JSON.stringify(label);
+    const dadosString = JSON.stringify(dados)
+    console.log(labelString, dadosString)
+    res.render('pages/internas/graficos/main',{
+      usuario,
+      graphics: {
+        labels:labelString,
+        data:dadosString
+      }
+    })
   }
 
   module.exports.showPerfilInvestidor = function(req,res,next){
