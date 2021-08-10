@@ -68,3 +68,9 @@
     }
 
 }
+
+@media (max-width: 600px) {
+    .mainContainer {
+        height: 90vh;
+    }
+}
