@@ -281,6 +281,10 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
 
   module.exports.logout =function(req,res,next){
-    
-    res.render('index')
+    console.log('--------------')
+    req.session.destroy((error)=>{
+      console.log(error)
+      res.redirect('/')
+    });
+   
   }

@@ -5,16 +5,20 @@ const db= require('../database/db')
   module.exports.Auth =  async (req,res)=>{
     const login = req.body;
     const usuarioCadastrado = await db.buscarUsuario(login)
-    const resultadoSenha = await hash.compareHash(login.senha,usuarioCadastrado.senha)
-    
+    let resultadoSenha = null
+    if(usuarioCadastrado){
+       resultadoSenha = await hash.compareHash(login.senha,usuarioCadastrado.senha)
+    }
+    console.log(resultadoSenha,usuarioCadastrado )
     if(!usuarioCadastrado || !resultadoSenha){
+      console.log('entrou 0101')
       res.render('pages/externas/auth',{
         error:{
           email:'email ou senha invalido'
         },
         content:req.body
       })
-    
+      return 
     }else{
       req.session.usuario = usuarioCadastrado
       req.session.id=usuarioCadastrado.id
