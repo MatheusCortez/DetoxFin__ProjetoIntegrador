@@ -13,6 +13,10 @@
     font-weight: 700;
    
   }
+
+  .mainContainer__frase__fraseButton__btn__link:hover {
+    color: black;
+  }
   
   .frase-button :nth-child(1) {
     color: black;
@@ -33,6 +37,7 @@
   }
   .mainContainer__frase__fraseButton__btn__link{
     color :white;
+    width: 100%;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;

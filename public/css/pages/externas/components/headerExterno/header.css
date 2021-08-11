@@ -24,8 +24,8 @@
   background: transparent;
 }
 
-.cabecalho__butons_btn:hover{
-  color: #fff;
+.cabecalho__butons_btn >a:hover{
+  color: black;
 }
 .cabecalho__butons_btn >a{
   text-decoration: none;
