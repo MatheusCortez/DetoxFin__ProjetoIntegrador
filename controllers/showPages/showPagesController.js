@@ -23,9 +23,7 @@ module.exports.showIndex = function(req,res){
 
   
 
-  module.exports.showRecoveryPass =function(req,res){
-    res.render('pages/externas/recoverypass',)
-  }
+
   
      
 
