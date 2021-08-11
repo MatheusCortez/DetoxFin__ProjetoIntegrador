@@ -9,8 +9,6 @@ router.get('/',showpages.showIndex)
 
 router.get('/user/index',showpages.showInternalIndex)
 
-router.get('/recoverypass',showpages.showRecoveryPass)
-
 router.get('/new',showpages.showNew)
 
 router.post('/new',newUser)
