@@ -1,16 +1,43 @@
 .mainContainer__frase{
-    padding-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 3%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 3%;
 }
 
 
-.mainContainer__frase__fraseButton {
-    padding-left: 10%;
+.logoPI {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+.logoPI img {
+  width: 150px; 
+}
+.logoPI_h1 {
+  padding-top: 0.5%;
+  font-weight: 600;
+  font-size: 45px; 
+  font-weight: 700;
+  padding-bottom: 3%;
+}
+  .mainContainer__frase__fraseButton {
+    width: 65%;
+    padding-left: 7%;
+    padding-top: 3%;
   }
-  
+  .mainContainer__frase__fraseButton__phrase_big {
+    font-size: 40px;
+    font-weight: 700;
+  }
   .mainContainer__frase__fraseButton__phrase  {
     font-weight: 700;
+    font-size: 20px;
    
   }
 
@@ -33,12 +60,12 @@
     height: 50px;
     border: none;
     border-radius: 10px;
-    ;
+    margin-top: 2%;
   }
   .mainContainer__frase__fraseButton__btn__link{
     color :white;
     width: 100%;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     text-decoration: none;
   }
