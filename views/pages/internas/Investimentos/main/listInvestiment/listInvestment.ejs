@@ -25,14 +25,14 @@
                 <%-include ../header/headerInvestimentos.ejs %>
                 
                 <% for (let i = 0; i < carteira.length; i++) { %>
-                        <div class="box investment col-md-8 ml-5">
-                            <div class="box_first col">
+                        <div class="box investment col-md-8 ml-5 row">
+                            <div class="box_first col-sm-2">
                                 <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
-                                <ul class='mainContainer__cardPrincipal_carteira_ul'>
+                                <ul class='mainContainer__cardPrincipal_carteira_ul row'>
                                     <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valorTotal %></p></li>
                                 </ul>
                             </div>
-                            <div class="box_second offset-1 col">
+                            <div class="box_second offset-1 col justify-content-center">
                                 <form method="POST" action="listInvestment/deletar/<%= carteira[i].idTipoDeInvestimento %>">
                                     <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
                                 </form>
