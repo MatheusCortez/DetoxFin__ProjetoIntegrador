@@ -8,7 +8,9 @@
  width: 60%; 
  margin-left: 20%;   
 }
-.btn:hover{
+.btn:focus,
+.btn:hover{ 
+    outline: none;
     background: white;
     color: black;
     cursor: pointer;

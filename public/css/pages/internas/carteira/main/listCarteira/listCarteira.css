@@ -1,58 +1,50 @@
-@import url(../../index.css);
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
-.mainContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 120vh;
-}
-/* Card Principal*/
-.mainContainer__cardPrincipal{
-    background-color: white;
-    width: 85vw;
-    height: 70vh;
-    border-radius: 20px;
-    align-content: center;
 
-}
 .card {
     width: 60%;
     margin-top: 2%;
     display: flex;
 }
 
+.ganho,.gasto{
+    border-radius: 10px;
+    max-width: 60vw;
+    padding: 3% 0;
+    margin: 3%  0;
+}
 
-.mainContainer__cardPrincipal_carteira_ul {
-    display: flex;   
-}
-.box {
-    display: flex;
-}
+
 .ganho {
     border: solid 3px #33CC33;
+   
 }
 .gasto {
     border: solid 3px red;
-}
-.box_first {
-    width: 80%;
-}
-.box_second {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    margin: 2%;
+ 
 }
 
-.button-color {
+
+
+
+.button-color{
     background-color: #33CC33 ;
+    color:#ffff;
 }
 
 .pagination {
     justify-content:inherit;
 }
 @media screen and (min-width:0px) {
-
+    .gasto,.ganho {
+ 
+        max-width: 80vw;
+    }
+      
+    .cardPrincipal_carteira__descricao{
+        padding-left: 20%                                                                                                                                            ;
+    }
 }
 
 
@@ -67,20 +59,20 @@
     .box{
         margin-bottom: 20px;
         min-width:30vw;
-        margin: 3% 5%;
         max-width: 60vw;
     }
-    .mainContainer__cardPrincipal_carteiraNome{
-      font-size:1.5rem;
+    .cardPrincipal_carteiraNome{
+      font-size:1.75rem;
     }
-    .mainContainer__cardPrincipal_carteira{
+    .cardPrincipal_carteira{
         font-size:1rem;
-        padding-right: 20px;
     }
-    .form_padding {
-        margin-left: 5px;
-        color: lavenderblush;
+    .cardPrincipal_carteira__descricao{
+        padding-left: 0px;                                                                                                                                            ;
     }
+ 
+    
+   
 
 }
 
@@ -88,5 +80,5 @@
     .mainContainer {
         height: 90vh;
     }
-
+  
 }

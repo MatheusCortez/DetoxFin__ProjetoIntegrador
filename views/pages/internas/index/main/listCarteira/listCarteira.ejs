@@ -4,7 +4,7 @@
             <head>
             <meta charset="UTF-8">
             
-              <link rel="stylesheet" href="/css/pages/internas/carteira/main/listCarteira/listCarteira.css">
+                <link rel="stylesheet" href="/css/pages/internas/carteira/index.css">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Document</title>
@@ -19,10 +19,9 @@
 
                     <section class="mainContainer__cardPrincipal">
 
-              
                         <%- include ../header/headerMinhaCarteira %>
 
-                        <div class="field">
+                        <div class="field container">
                             <div class="control">
                               <select id="tipo" class="input" name="tipo">
                                 <option value="">Adicionar Filtro</option>
@@ -36,29 +35,29 @@
                             <div class="list">
                                 <% for (let i = 0; i < carteira.length; i++) { %>
                                     <% if (carteira[i].entradaSaida == 'ganho'){ %>
-                                        <div class ='box ganho ml-5 row item'>
+                              <div class =' ganho ml-5 row item'>
                                     <% }else if (carteira[i].entradaSaida == 'gasto'){ %>
-                                        <div class ='box gasto ml-5 item'>
-                                            
+                             <div class =' gasto ml-5 row'>          
                                     <%}%>
-                                            <div class="box_first col">
-                                                <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
-                                                <ul class='mainContainer__cardPrincipal_carteira_ul'>
-                                                    <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].descricao %></p></li>
-                                                    <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valor %></p></li>
-                                                    <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].data %></p></li>
+                                            <div class="box_first col-md-6">
+                                                <h1 class='cardPrincipal_carteiraNome offset-md-5 offset-2'><%= carteira[i].nome %></h1>
+                                                <ul class='cardPrincipal_carteira_ul ml-2 '>
+                                                    <li><p class='cardPrincipal_carteira__descricao'><%= carteira[i].descricao %></p></li>
+                                                    <li><p class='cardPrincipal_carteira '>R$<%= carteira[i].valor %></p></li>
+                                                    <li><p class='cardPrincipal_carteira '><%= carteira[i].data %></p></li>
                                                 </ul>
                                             </div>
-                                            <div class="box_second offset-1 col">
-                                                <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
+                                            <div class="box_second mt-5 offset-md-2 col-md-4 row ml-1">
+                                                <form class="col-md-4  col-5 mr-3" method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
                                                     <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
                                                 </form>
-                                                <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
-                                                    <input class="button form_padding button-color" type="submit" value="Editar"/>
+                                                <form class="col-md-4 col"method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
+                                                    <input class="button  button-color" type="submit" value="Editar"/>
                                                 </form>
                                             </div>
-                                        </div>
+                              </div>
                                     <% } %>     
+                            </div>
                             </div>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
