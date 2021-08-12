@@ -50,17 +50,18 @@ module.exports.getlistCarteira = async (req, res) => {
         },
        
     })
-    const descricao=[];
-    const valor=[];
 
-    for(let i=0;i<carteira.length;i++){
-        descricao.push(carteira[i].dataValues.descricao)
-        valor.push(carteira[i].dataValues.valor)
-    }
-  
-  
     
+    for (var i = 0; i < carteira.length; i++){
 
+        const descricao = carteira[i].descricao
+
+        carteira[i].descricao = descricao.slice(0,1).toUpperCase() + descricao.slice(1,100).toLowerCase()
+
+        
+    }
+
+ 
 
     res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira })
 }

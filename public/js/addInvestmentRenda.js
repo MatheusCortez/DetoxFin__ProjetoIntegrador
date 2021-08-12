@@ -66,10 +66,7 @@ function gerarTipos(value) {
     while ( opcoesTipos.length ) {
         opcoesTipos.remove(0)
     }
-    QtesouroDireto.classList.add('no-display')
-    QtitulosPrivados.classList.add('no-display')
-    QfundoInvestimentoFixa.classList.add('no-display')
-     QfundoInvestimentoVariavel.classList.add('no-display')
+ 
 }
 
 const type = document.querySelector('#renda').value

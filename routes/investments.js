@@ -15,6 +15,6 @@ router.post('/listInvestment/deletar/:id', investmentControler.deletarlistInvest
 
 router.post('/listInvestment/editar/:id', investmentControler.editarlistInvestment);
 
-router.post('/editInvestment', investmentControler.editarUpdatelistInvestment);
+router.post('/editInvestment/:id', investmentControler.editarUpdatelistInvestment);
 
 module.exports = router;

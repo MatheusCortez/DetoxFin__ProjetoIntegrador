@@ -24,9 +24,6 @@ module.exports.criarInvestment = async (req,res) => {
         ]
     })
     
-    const finalDate = array.finalDate.join('')
-    const cnpj = array.cnpj.join('')
-    const orgaoEmissor = array.emissor.join('')
 
     await models.tiposdeInvestimento.create({
         aplicacaoInicial:array.valor,
@@ -35,13 +32,13 @@ module.exports.criarInvestment = async (req,res) => {
         aporte:0,
         previsaoDeLucros:0,
         lucro:0,
-        dataFinalPrevista:finalDate,
-        CNPJ:cnpj,
+        dataFinalPrevista:0,
+        CNPJ:0,
         carteiraInvestimentos_idInvestimentos:user.carteirainvestimentos.idInvestimentos ,
         renda:array.renda,
-        orgaoEmissor:orgaoEmissor,
-        juros:array.juros,
-        descricao:array.descricao,
+        orgaoEmissor:0,
+        juros:' ',
+        descricao:' ',
         nome:array.nome,
         carteirainvestimentos_usuario_idUsuario:usuario.idUsuario,
         tipo:array.tipo,
@@ -98,10 +95,48 @@ module.exports.editarlistInvestment = async (req,res) => {
 
     investimento.dateInicial= investimento.dateInicial.toISOString().slice(0,10)
     
-    res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento, tipo:JSON.stringify(investimento.tipo)})
+    res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento, id})
 }
 
 module.exports.editarUpdatelistInvestment = async (req,res) => {
     const usuario = req.session.usuario
+
+    const editar = req.body
+
+    const id = parseInt(req.params.id)
+
+    const investimento = await models.User.findOne({
+        where: {
+            idUsuario: usuario.idUsuario
+        },
+        include: [
+            'carteirainvestimentos'
+        ]
+    })
+
+    console.log(id)
+    console.log(editar)
+
+    await models.tiposdeInvestimento.update({
+
+        aplicacaoInicial:editar.valor,
+        dateInicial:editar.inicialDate,
+        valorTotal:editar.valor,
+        carteiraInvestimentos_idInvestimentos:investimento.idInvestimentos ,
+        renda:editar.renda,
+        nome:editar.nome,
+        carteirainvestimentos_usuario_idUsuario:usuario.idUsuario,
+        tipo:editar.tipo,
+    },
+    {
+        where:{
+            idTipoDeInvestimento:id
+        }
+        
+    });
+
+
+    
+    res.redirect('/user/meusInvestimentos/listInvestimento')
 
 }
