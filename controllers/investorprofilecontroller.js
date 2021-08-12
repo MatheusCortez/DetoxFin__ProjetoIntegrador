@@ -49,8 +49,6 @@ module.exports.postPerfilInvestidor = async (req,res) => {
        perfilInvestidor = 'Agressivo'
         
     }
-
-    console.log(perfilInvestidor)
    
     await models.User.update({
         perfilInvestidor:perfilInvestidor,
@@ -61,9 +59,18 @@ module.exports.postPerfilInvestidor = async (req,res) => {
         }
     });
 
+    const user = await models.User.findOne({
+        where: {
+            idUsuario: usuario.idUsuario
+        }
+    })
 
-
-    res.redirect('/user/perfilInvestidor/resultado' + perfilInvestidor)
+    req.session.save(() => {
+        req.session.usuario = user
+        
+        res.redirect('/user/perfilInvestidor/resultado' + perfilInvestidor)
+    })
+    
 
     
 
@@ -72,7 +79,7 @@ module.exports.postPerfilInvestidor = async (req,res) => {
 module.exports.resultadoConservador = (req,res) => {
 
      const usuario = req.session.usuario 
-  
+    
     res.render('pages/internas/perfilInvestidor/components/tipo/conservador/conservador.ejs', {usuario})
 }
 

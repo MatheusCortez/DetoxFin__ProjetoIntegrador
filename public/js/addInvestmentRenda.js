@@ -66,3 +66,14 @@ function gerarTipos(value) {
     QfundoInvestimentoFixa.classList.add('no-display')
      QfundoInvestimentoVariavel.classList.add('no-display')
 }
+
+const type = document.querySelector('#renda').value
+
+console.log(type)
+
+window.addEventListener('load', function () {
+    
+    gerarTipos(type)
+    
+})
+  

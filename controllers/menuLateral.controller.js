@@ -141,7 +141,6 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
    const AnoGanhoString = JSON.stringify(AnoGanho);
 
-   console.log(AnoGanhoString)
 
 
 

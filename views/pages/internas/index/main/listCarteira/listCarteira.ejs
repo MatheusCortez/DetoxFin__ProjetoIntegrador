@@ -22,41 +22,44 @@
               
                         <%- include ../header/headerMinhaCarteira %>
 
-
-
-                        <% for (let i = 0; i < carteira.length; i++) { %>
-                            <% if (carteira[i].entradaSaida == 'ganho'){ %>
-                                <div class ='box ganho ml-5 row'>
-                            <% }else if (carteira[i].entradaSaida == 'gasto'){ %>
-                                <div class ='box gasto ml-5'>
-                                    
-                            <%}%>
-                                    <div class="box_first col">
-                                        <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
-                                        <ul class='mainContainer__cardPrincipal_carteira_ul'>
-                                            <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].descricao %></p></li>
-                                            <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valor %></p></li>
-                                            <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].data %></p></li>
-                                        </ul>
-                                    </div>
-                                    <div class="box_second offset-1 col">
-                                        <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
-                                            <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
-                                        </form>
-                                        <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
-                                            <input class="button form_padding button-color" type="submit" value="Editar"/>
-                                        </form>
-                                    </div>
-                                </div>
+                       
+                        <section id="paginate">
+                            <div class="list">
+                                <% for (let i = 0; i < carteira.length; i++) { %>
+                                    <% if (carteira[i].entradaSaida == 'ganho'){ %>
+                                        <div class ='box ganho ml-5 row item'>
+                                    <% }else if (carteira[i].entradaSaida == 'gasto'){ %>
+                                        <div class ='box gasto ml-5 item'>
+                                            
+                                    <%}%>
+                                            <div class="box_first col">
+                                                <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
+                                                <ul class='mainContainer__cardPrincipal_carteira_ul'>
+                                                    <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].descricao %></p></li>
+                                                    <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valor %></p></li>
+                                                    <li><p class='mainContainer__cardPrincipal_carteira'><%= carteira[i].data %></p></li>
+                                                </ul>
+                                            </div>
+                                            <div class="box_second offset-1 col">
+                                                <form method="POST" action="listCarteira/deletar/<%= carteira[i].idGanhoGastos %>">
+                                                    <input class="button is-danger col mr-4" type="submit" value="Deletar"/>
+                                                </form>
+                                                <form method="POST" action="listCarteira/editar/<%= carteira[i].idGanhoGastos %>">
+                                                    <input class="button form_padding button-color" type="submit" value="Editar"/>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    <% } %>     
+                            </div>
                             
-                        <% } %>
+                        </section>
 
 
 
 
                  </section>
                  </main>
-
+                 <script src="/js/paginationListCarteira.js"></script>
                  <script src="/js/addedClass.js"></script>
     </body>
 </html>
