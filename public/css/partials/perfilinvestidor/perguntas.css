@@ -45,11 +45,14 @@
     border-radius: 15px;
     cursor: pointer;
 }
-.resposta:hover {
+.selecionado, .resposta:hover {
     color: white;
     background-color: #33CC33;
 }
 
+.resposta input[type='radio'] {
+    display: none;
+}
 
 .step {
     display: none;

@@ -98,7 +98,7 @@ module.exports.editarlistInvestment = async (req,res) => {
 
     investimento.dateInicial= investimento.dateInicial.toISOString().slice(0,10)
     
-    res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento })
+    res.render('pages/internas/Investimentos/main/editInvestiment/editInvestment.ejs', { usuario, investimento, tipo:JSON.stringify(investimento.tipo)})
 }
 
 module.exports.editarUpdatelistInvestment = async (req,res) => {

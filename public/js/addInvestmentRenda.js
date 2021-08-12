@@ -48,10 +48,15 @@ function gerarTipos(value) {
         option = document.createElement('option');
         option.value = 'fundoInvestimentoVariavel'
         option.text = 'Fundo de Investimento'
-        option.vid = 'fundoInvestimentoVariavel'
+        option.id = 'fundoInvestimentoVariavel'
         tipo.add(option)
 
     }
+
+    console.log(tipo)
+    tipo.value = option.value
+    console.log(JSON.parse('<%- tipo %>'))
+
 }
 
 

@@ -26,3 +26,18 @@ function changeStep(btn) {
   }
   steps[index].classList.add("active");
 }
+
+const radioBtn = document.querySelectorAll('[type = "radio"]')
+
+for ( var i = 0; i < radioBtn.length; i++ ) {
+  radioBtn[i].addEventListener('change', (e) => {
+    for ( var j = 0; j < radioBtn.length; j++){
+      if (!radioBtn[j].checked) {
+        radioBtn[j].parentNode.classList.remove('selecionado')
+      }
+     
+    }
+    e.target.parentNode.classList.add('selecionado')
+  })
+}
+
