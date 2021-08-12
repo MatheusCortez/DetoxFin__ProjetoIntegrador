@@ -55,9 +55,17 @@ module.exports.getlistCarteira = async (req, res) => {
     for (var i = 0; i < carteira.length; i++){
 
         const descricao = carteira[i].descricao
-
+        const data = carteira[i].data
+        const dia = data.toISOString().slice(8,10)
+        const diaData = parseInt(dia) + 1
+        if (diaData < 10 ){
+            carteira[i].data =  '0' + JSON.stringify(diaData) + '/' + data.toISOString().slice(5,7) + '/' + data.toISOString().slice(0,4) 
+        }else {
+            carteira[i].data =  JSON.stringify(diaData) + '/' + data.toISOString().slice(5,7) + '/' + data.toISOString().slice(0,4) 
+        }
+        
         carteira[i].descricao = descricao.slice(0,1).toUpperCase() + descricao.slice(1,100).toLowerCase()
-
+   
         
     }
 
