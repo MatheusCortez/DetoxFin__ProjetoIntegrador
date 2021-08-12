@@ -16,9 +16,7 @@
 }
 
 .mainContainer__cardPrincipal_carteira_ul {
-    display: flex;
-    flex-direction: row;
-    
+    display: flex;   
 }
 .box {
     display: flex;
@@ -76,7 +74,7 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .mainContainer {
         height: 90vh;
     }

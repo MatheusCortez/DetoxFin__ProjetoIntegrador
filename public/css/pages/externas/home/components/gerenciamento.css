@@ -23,17 +23,11 @@
 
 .gerenciamento_img {
     max-width: 900px;
-    display: none;
 
     
 }
 
-.gerenciamento_divImg {
-    display: flex;
-    justify-content: center;
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
+
 
 .img_left {
     padding-right: 10% ;

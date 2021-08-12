@@ -32,3 +32,15 @@
         font-size: 30px;
     }
 }
+
+@media (max-width: 768px) {
+    .titleDoHeader{
+        font-size: 27px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    .menuInvestiment {
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+}

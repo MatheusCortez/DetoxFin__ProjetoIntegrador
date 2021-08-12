@@ -8,8 +8,11 @@ const {showMinhaCarteira,
       showDadosConta,
       showDadosContaForm,
       logout
-      } = require('../controllers/menuLateral.controller')
+      } = require('../controllers/menuLateral.controller');
+const session = require('../controllers/session/session');
 /* GET users listing. */
+
+      router.use(session)
   router.get('/minhaCarteira',showMinhaCarteira)
 
   router.get('/meusInvestimentos',showInvestimentos);
