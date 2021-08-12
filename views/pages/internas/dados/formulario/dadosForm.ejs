@@ -18,17 +18,17 @@
 
         <section class="container m-auto">
            <form action="post" class="box" >
-               <div class="offset-md-4 col-md-4   col-8">
+               <div class="offset-md-3 col-md-7   col-12">
                 <h1 class="dados__titles">Nome:</h1>
                 <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.nome%></span>
                 <h1 class="dados__titles">E-mail:</h1>
-                <input type="text" class="mb-3" value=<%=usuario.email%> />
+                <input type="text" class="mb-3 input" value=<%=usuario.email%> />
                 <h1 class="dados__titles">CPF:</h1>
-                <input type="text" class="mb-3" value=<%=usuario.cpf%> readonly />
+                <input type="text" class="mb-3 input" value=<%=usuario.cpf%> readonly />
                 <h1 class="dados__titles">Telefone:</h1>
-                <input type="text" class="mb-3" value=<%=usuario.telefone%> />
+                <input type="text" class="mb-3 input" value=<%=usuario.telefone%> />
                </div>
-               <div class="butns offset-md-4">
+               <div class=" offset-md-4 pb-5">
                
                 <a href="/user/dadosDaConta">
                     <input class="button is-danger" type="button" value="Cancelar"/>
