@@ -1,24 +1,37 @@
-var state = {
-    'querySet': JSON.stringify(carteira),
+var option = document.getElementById('tipo');
+var gasto = document.getElementById('gasto')
+var ganho = document.getElementById('ganho')
 
-    'page':1,
 
-    'rows':1,
-}
 
-function pagination (querySet, page, rows) {
-    var trimStart = (page -1)* rows
-    var trimEnd = trimStart + rows
+option.onchange = function() {
 
-    var trimmedData = querySet.slice(trimStart, trimEnd)
-    
-    var pages = Math.ceil(querySet.length / rows)
-
-    return{
-        'querySet':trimmedData,
-        'pages':pages
+    if (option.value === ''){
+        for ( var i = 0; i < carteira.length; i ++){
+            if ( carteira[i].entradaSaida == ' '){
+                carteira[i] 
+            }
+        }
     }
+    else if ( option.value==='ganho') {
+        for ( var i = 0; i < carteira.length; i ++){
+            if ( carteira[i].entradaSaida == 'ganho'){
+                carteira[i] 
+            }
+        }
+        
+        
 
+          
+    } else if (option.value==='gasto'){
+    
+        for ( var i = 0; i < carteira.length; i ++){
+            if ( carteira[i].entradaSaida == 'gasto '){
+                carteira[i] 
+            }
+        }
+
+    }
 }
 
-function buildTable()
+  

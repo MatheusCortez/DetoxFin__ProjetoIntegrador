@@ -53,6 +53,9 @@ function gerarTipos(value) {
 
     }
 
+    console.log(tipo)
+    tipo.value = option.value
+    console.log(JSON.parse('<%- tipo %>'))
 
 }
 
