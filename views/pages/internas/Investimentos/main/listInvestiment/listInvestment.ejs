@@ -26,9 +26,9 @@
                 
                 <% for (let i = 0; i < carteira.length; i++) { %>
                         <div class="box investment col-md-8 ml-5 row">
-                            <div class="box_first col-sm-2">
-                                <h1 class='mainContainer__cardPrincipal_carteiraNome'><%= carteira[i].nome %></h1>
-                                <ul class='mainContainer__cardPrincipal_carteira_ul row'>
+                            <div class="box_first col-md-6">
+                                <h1 class='mainContainer__cardPrincipal_carteiraNome offset-md-5 offset-2'><%= carteira[i].nome %></h1>
+                                <ul class='mainContainer__cardPrincipal_carteira_ul ml-2'>
                                     <li><p class='mainContainer__cardPrincipal_carteira'>R$<%= carteira[i].valorTotal %></p></li>
                                 </ul>
                             </div>
