@@ -37,21 +37,32 @@ module.exports.criarGanhoGasto = async (req, res) => {
 module.exports.getlistCarteira = async (req, res) => {
     const usuario = req.session.usuario
 
+    const pagina = req.query.pagination
+
+    let pulo = 5 * (parseInt(pagina) - 1)
+
+    
 
     const user = await models.carteira.findOne({
         where: {
             Usuario_idUsuario: usuario.idUsuario
         }
     })
+    if ( isNaN(pulo)){
+
+        pulo = 0
+
+    }
+
     const carteira = await models.ganhogastos.findAll({
         where: {
             Carteira_Usuario_idUsuario: usuario.idUsuario,
             Carteira_idCarteira: user.idCarteira
         },
-       
+        offset:pulo,
+        limit:5
     })
 
-    
     for (var i = 0; i < carteira.length; i++){
 
         const descricao = carteira[i].descricao
@@ -142,3 +153,4 @@ module.exports.editarUpdatelistCarteira = async (req,res) => {
     
     res.redirect('/user/minhaCarteira/listCarteira')
 }
+
