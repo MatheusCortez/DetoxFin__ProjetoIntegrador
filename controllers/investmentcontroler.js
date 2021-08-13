@@ -12,8 +12,6 @@ module.exports.criarInvestment = async (req,res) => {
 
     const array = req.body
 
-    console.log(array)
-
 
     const user = await models.User.findOne({
         where: {
@@ -25,7 +23,7 @@ module.exports.criarInvestment = async (req,res) => {
     })
     
 
-    await models.tiposdeInvestimento.create({
+    await models.tiposdeinvestimento.create({
         aplicacaoInicial:array.valor,
         dateInicial:array.inicialDate,
         valorTotal:array.valor,
@@ -58,7 +56,7 @@ module.exports.getlistInvestment = async (req,res) => {
             Usuario_idUsuario: usuario.idUsuario
         }
     })
-    const carteira = await models.tiposdeInvestimento.findAll({
+    const carteira = await models.tiposdeinvestimento.findAll({
         where: {
             carteirainvestimentos_usuario_idUsuario: usuario.idUsuario,
             carteiraInvestimentos_idInvestimentos: user.idInvestimentos
@@ -73,7 +71,7 @@ module.exports.getlistInvestment = async (req,res) => {
 module.exports.deletarlistInvestment = async (req,res) => {
     const id = parseInt(req.params.id)
  
-    const deletar = await models.tiposdeInvestimento.destroy({
+    const deletar = await models.tiposdeinvestimento.destroy({
         where: {
             idTipoDeInvestimento: id
         }
@@ -87,7 +85,7 @@ module.exports.editarlistInvestment = async (req,res) => {
 
     const id = parseInt(req.params.id)
 
-    const investimento = await models.tiposdeInvestimento.findOne({
+    const investimento = await models.tiposdeinvestimento.findOne({
         where: {
             idTipoDeInvestimento: id
         }
@@ -114,10 +112,9 @@ module.exports.editarUpdatelistInvestment = async (req,res) => {
         ]
     })
 
-    console.log(id)
-    console.log(editar)
+  
 
-    await models.tiposdeInvestimento.update({
+    await models.tiposdeinvestimento.update({
 
         aplicacaoInicial:editar.valor,
         dateInicial:editar.inicialDate,
