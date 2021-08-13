@@ -1,6 +1,6 @@
 
 .titleDoHeader {
-   
+    font-size: 30px;
     font-weight: initial;
 }
 
@@ -21,26 +21,18 @@
 
 
 @media screen and (min-width:0) {
-    .titleDoHeader{
-        font-size: 20px;
+    .header_meusInvestimentos{
+        display: block;
+        
     }
 }
 
 
 @media screen and (min-width:750px) {
-    .titleDoHeader{
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .titleDoHeader{
-        font-size: 27px;
-        margin-left: 25px;
-        margin-bottom: 20px;
-    }
-    .menuInvestiment {
-        margin-bottom: 20px;
-        margin-left: 50px;
+    .header_meusInvestimentos {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }

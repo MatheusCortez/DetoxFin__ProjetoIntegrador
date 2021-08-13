@@ -1,0 +1,42 @@
+@import url(../components/headerExterno/header.css);
+@import url(../../../reset.css);
+.mainContainer{
+    background-color: #33cc33;
+    display: flex;
+    flex-direction: column;
+    
+    height: 75vh;
+    margin-left: 30%;
+}
+.title,.subtitle{
+    color:#ffff;
+    padding-bottom: 3%;
+}
+
+.logo{
+    width: 20%;
+    margin-left: 20%;
+}
+.btn{
+    background-color: black;
+    color:white;   
+    margin-top: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    width: 60%; 
+  
+   }
+   .btn:focus,
+   .btn:hover{ 
+       outline: none;
+       background: white;
+       color: black;
+       cursor: pointer;
+   }
+   
+   
+   
+body{
+    background-color: #33cc33;
+}

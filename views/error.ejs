@@ -1,3 +1,16 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<link rel="stylesheet" href="/css/pages/externas/404/404.css">
+
+<body>
+    <%- include pages/externas/components/header %>     
+
+    <main class="mainContainer">
+        <h1 class="title">Pagina não encontrada </h1>
+        <h2 class="subtitle">Clique no botão abaixo para voltar a nossa tela inicial </h2>
+        <img class="logo" src="/images/logoBranco.png" />
+
+        <a href="/">
+        <button class="btn">
+            
+            Volte a nossa pagina inicial</button></a>
+    </main>
+</body>

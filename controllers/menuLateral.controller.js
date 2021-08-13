@@ -179,7 +179,7 @@ module.exports.showMinhaCarteira = async function(req,res,next){
           Usuario_idUsuario: usuario.idUsuario
       }
     })
-    const investimento = await models.tiposdeInvestimento.findAll({
+    const investimento = await models.tiposdeinvestimento.findAll({
       where: {
           carteirainvestimentos_usuario_idUsuario: usuario.idUsuario,
           carteiraInvestimentos_idInvestimentos: user.idInvestimentos
@@ -206,7 +206,7 @@ module.exports.showMinhaCarteira = async function(req,res,next){
       }
     });
     
-  }
+  } 
 
 
   module.exports.showGraficos =function(req,res,next){
@@ -227,7 +227,7 @@ module.exports.showMinhaCarteira = async function(req,res,next){
       label = ['Renda Fixa', 'Renda Variável']
       dados = [10,90]
     }
-  
+
     console.log(label, dados)
     const labelString = JSON.stringify(label);
     const dadosString = JSON.stringify(dados)
@@ -248,7 +248,6 @@ module.exports.showMinhaCarteira = async function(req,res,next){
         
     })
 
-    console.log(tentar)
     if ( usuario.perfilInvestidor == ''){
       res.render('pages/internas/perfilInvestidor/main.ejs',{usuario})
     } else if (usuario.perfilInvestidor == 'Conservador'){
