@@ -1,19 +1,7 @@
 @import url(../../pages/internas/components/menuLateral/menuLateral.css);
 @import url(../../pages/internas/components/header/header.css);
 @import url(../../reset.css);
-.mainContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 90vh;
-}
-/* Card Principal*/
-.mainContainer__cardPrincipal{
-    background-color: white;
-    width: 85vw;
-    height: 70vh;
-    border-radius: 20px;
-    align-content: center;
-}
+
 
 .logoPI {
     display: flex;
