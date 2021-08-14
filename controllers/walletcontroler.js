@@ -41,7 +41,7 @@ module.exports.getlistCarteira = async (req, res) => {
 
     let pulo = 5 * (parseInt(pagina) - 1)
 
-    
+    const filtro = req.query.filtro
 
     const user = await models.carteira.findOne({
         where: {
@@ -65,6 +65,7 @@ module.exports.getlistCarteira = async (req, res) => {
 
     for (var i = 0; i < carteira.length; i++){
 
+
         const descricao = carteira[i].descricao
         const data = carteira[i].data
         const dia = data.toISOString().slice(8,10)
@@ -82,7 +83,7 @@ module.exports.getlistCarteira = async (req, res) => {
 
  
 
-    res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira })
+    res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira, filtro })
 }
 
 
