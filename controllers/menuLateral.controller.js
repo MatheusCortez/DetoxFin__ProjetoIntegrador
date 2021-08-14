@@ -266,6 +266,7 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
   module.exports.showDadosConta =function(req,res,next){
     const usuario = req.session.usuario
+
     res.render('pages/internas/dados/main',{usuario})
   }
 
@@ -273,6 +274,29 @@ module.exports.showMinhaCarteira = async function(req,res,next){
     const usuario = req.session.usuario
    
     res.render('pages/internas/dados/formulario/dadosForm',{usuario})
+  }
+
+  module.exports.editDadosDaConta  = async (req,res) => {
+    const usuario = req.session.usuario
+    
+
+    const id = parseInt(req.params.id)
+    
+    const edicaoUsuario = req.body
+
+    
+    await models.User.update(
+      {
+          nome:edicaoUsuario.nome,
+          telefone:edicaoUsuario.telefone
+      },
+      {
+          where:{idUsuario:id}
+      }); 
+
+      
+    res.redirect('/user/dadosDaConta')
+   
   }
 
 
