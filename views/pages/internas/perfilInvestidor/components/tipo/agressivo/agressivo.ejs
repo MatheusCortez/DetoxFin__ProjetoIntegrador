@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="/css/partials/perfilinvestidor/resultado.css">
+        <link rel="stylesheet" href="/css/pages/internas/perfilInvestidor/index.css">
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
         <meta charset="UTF-8">
@@ -18,9 +18,9 @@
         <main class="mainContainer">
             <%- include  ../../../../components/menuLateral.ejs %>
             
-            <section class="mainContainer__cardPrincipal">
+            <section class="mainContainer__cardPrincipal container ">
                     
-                <h3 class="resultado_h3">
+                <h3 class="resultado_h3 mt-5 col">
                     Parabéns <%= usuario.nome %> você completou o questionario de perfil investidor!
                 </h3>
 
@@ -34,7 +34,7 @@
 
                 <p class="resultado_p">Você preza pelo dinheiro que tem e por isso gosta de aproveitar as oportunidades do mercado para fazê-lo render ainda mais. É importante que você busque conhecer as mais diversas modalidades de investimento, mas não se esqueça de manter segura a maior parte do seu patrimônio. A orientação é que você estabeleça os sonhos que deseja realizar com seu dinheiro. Não perca de vista a principal vantagem que você pode obter com a sua performance na administração de seus recursos: realizar sonhos constantemente. Tenha sempre em mente quais irá realizar em curto prazo (até um ano), em médio prazo (entre um e 10 anos) e em longo prazo (a partir de dez anos). Não se esqueça de garantir a sua aposentadoria sustentável.</p>
             
-                <a href="/user/perfilInvestidor/pergunta1"><button type="button" class="button">Refaça seu teste de perfil Investidor</button>
+                <a href="/user/perfilInvestidor/pergunta1"><button class="botaoResultado" type="button" class="button">Refaça seu teste de perfil Investidor</button>
             </section>
         </main>
  
