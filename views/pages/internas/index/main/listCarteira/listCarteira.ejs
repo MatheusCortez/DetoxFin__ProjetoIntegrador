@@ -21,12 +21,12 @@
 
                         <%- include ../header/headerMinhaCarteira %>
 
-                        <div class="card">
-                            <footer class="card-footer">
-                              <a href="?filtro=todos" class="card-footer-item" <%= filtro == "todos" ? "class:'selecionado'": "" %>>Todos</a>
-                              <a href="?filtro=ganho" class="card-footer-item" <%= filtro == "ganho" ? "class:'selecionado'": "" %>>Somente Ganhos</a>
-                              <a href="?filtro=gasto" class="card-footer-item" <%= filtro == "gasto" ? "class:'selecionado'": "" %>>Somente Gastos</a>
-                            </footer>
+                        <div class="card ml-5 mr-5 row ">
+                            <section class="card-footer row">
+                              <a href="?filtro=todos" class="card-footer-item col-sm-4" <%= filtro == "todos" ? "class:'selecionado'": "" %>>Todos</a>
+                              <a href="?filtro=ganho" class="card-footer-item col-sm-4" <%= filtro == "ganho" ? "class:'selecionado'": "" %>>Somente Ganhos</a>
+                              <a href="?filtro=gasto" class="card-footer-item col-sm-4" <%= filtro == "gasto" ? "class:'selecionado'": "" %>>Somente Gastos</a>
+                            </section>
                           </div>
 
                         <section id="paginate">

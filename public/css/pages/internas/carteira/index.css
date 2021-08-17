@@ -9,12 +9,13 @@
 .mainContainer{
     display: flex;
     justify-content: space-between;
+    height: 100vh;
 }
 /* Card Principal*/
 .mainContainer__cardPrincipal{
     background-color: white;
     width: 85vw;
-    height: 70vh;
+    height: 100vh;
     border-radius: 20px;
     align-content: center;
 
@@ -79,4 +80,5 @@
     .title__responsivo{
         display: none;
     }
+   
 }
