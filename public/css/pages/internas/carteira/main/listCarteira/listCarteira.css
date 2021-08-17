@@ -25,7 +25,19 @@
  
 }
 
+.card-footer-item {
+    color: black;
+}
 
+.card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-footer-item:hover, .selecionado {
+    background-color: #33CC33 ;
+    color:#ffff;
+}
 
 
 .button-color{

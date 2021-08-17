@@ -17,17 +17,62 @@
         <%- include  ../../components/menuLateral.ejs %>
 
         <section class="container m-auto">
-           <form action="post" class="box" >
-               <div class="offset-md-3 col-md-7   col-12">
-                <h1 class="dados__titles">Nome:</h1>
-                <span class= "mainContainer__dadosContainer__minhasInformacoes__descricao"><%=usuario.nome%></span>
-                <h1 class="dados__titles">E-mail:</h1>
-                <input type="text" class="mb-3 input" value=<%=usuario.email%> />
-                <h1 class="dados__titles">CPF:</h1>
-                <input type="text" class="mb-3 input" value=<%=usuario.cpf%> readonly />
-                <h1 class="dados__titles">Telefone:</h1>
-                <input type="text" class="mb-3 input" value=<%=usuario.telefone%> />
-               </div>
+           <form action="/user/dadosDaConta/editarDados/<%= usuario.idUsuario %>" class="box" method="post"  >
+            <div class="field">
+                <label class="field-label" for="nome">Nome</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    name="nome"
+                    autocomplete="off"
+                    value="<%= usuario.nome%>"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="field-label" for="nome">Email:</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    autocomplete="off"
+                    value="<%= usuario.email%>"
+                    readonly
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="field-label" for="nome">CPF:</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="number"
+                    name="cpf"
+                    autocomplete="off"
+                    value="<%= usuario.cpf%>"
+                    readonly
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="field-label" for="nome">Telefone:</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="number"
+                    name="telefone"
+                    autocomplete="off"
+                    value="<%= usuario.telefone%>"
+                    required
+                  />
+                </div>
+              </div>
+              
                <div class=" offset-md-4 pb-5">
                
                 <a href="/user/dadosDaConta">

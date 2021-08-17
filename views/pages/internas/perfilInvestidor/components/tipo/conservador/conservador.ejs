@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="/css/partials/perfilinvestidor/resultado.css">
+        <link rel="stylesheet" href="/css/pages/internas/perfilInvestidor/index.css">
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
         <meta charset="UTF-8">
@@ -17,9 +17,9 @@
             
             <%- include  ../../../../components/menuLateral.ejs %>
             
-            <section class="mainContainer__cardPrincipal">
+            <section class="mainContainer__cardPrincipal container">
                     
-                <h3 class="resultado_h3">
+                <h3 class="resultado_h3  mt-5 col ">
                     Parabéns <%= usuario.nome %> você completou o questionario de perfil investidor!
                 </h3>
 
@@ -35,7 +35,7 @@
 
                 </p>
 
-                <a href="/user/perfilInvestidor/pergunta1"><button type="button" class="button">Refaça seu teste de perfil Investidor</button>
+                <a href="/user/perfilInvestidor/pergunta1"><button type="button" class="botaoResultado">Refaça seu teste de perfil Investidor</button>
             </section>
         </main>
  

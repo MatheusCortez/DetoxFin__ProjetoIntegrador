@@ -7,6 +7,7 @@ const {showMinhaCarteira,
       showCursos,
       showDadosConta,
       showDadosContaForm,
+      editDadosDaConta,
       logout
       } = require('../controllers/menuLateral.controller');
 const session = require('../controllers/session/session');
@@ -27,6 +28,7 @@ const session = require('../controllers/session/session');
   
   router.get('/dadosDaConta/:id',showDadosContaForm)
 
+  router.post('/dadosDaConta/editarDados/:id', editDadosDaConta)
 
   router.get('/sair',logout);
 

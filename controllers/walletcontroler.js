@@ -1,4 +1,5 @@
 const models = require('../database/models')
+const {Op} = require('sequelize')
 const { v4: uuidV4 } = require('uuid')
 
 module.exports.getAddCarteira = function (req, res) {
@@ -36,34 +37,40 @@ module.exports.criarGanhoGasto = async (req, res) => {
 
 module.exports.getlistCarteira = async (req, res) => {
     const usuario = req.session.usuario
-
-    const pagina = req.query.pagination
-
-    let pulo = 5 * (parseInt(pagina) - 1)
-
-    
-
+    //filtro
+    const filtro = req.query.filtro
+    let filtroInicial = ['ganho','gasto']
+    if(filtro != 'todos'){
+        filtroInicial = filtroInicial.filter((f)=>{
+            return filtro == f
+        })
+    }
+   //busca pela carteira
     const user = await models.carteira.findOne({
         where: {
             Usuario_idUsuario: usuario.idUsuario
         }
     })
-    if ( isNaN(pulo)){
-
-        pulo = 0
-
-    }
-
-    const carteira = await models.ganhogastos.findAll({
+    //paginação
+    let { pagination = 1 } = req.query
+    //busca pelo ganho ou gasto
+    let {count:total, rows:carteira } = await models.ganhogastos.findAndCountAll({
         where: {
             Carteira_Usuario_idUsuario: usuario.idUsuario,
-            Carteira_idCarteira: user.idCarteira
+            Carteira_idCarteira: user.idCarteira,
+            entradaSaida:{
+               [Op.or]:filtroInicial
+            }
         },
-        offset:pulo,
-        limit:5
+        offset:(pagination - 1) * 4,
+        limit:4
     })
+    
+    let totalPagina = Math.round(total/4)
 
+    
     for (var i = 0; i < carteira.length; i++){
+
 
         const descricao = carteira[i].descricao
         const data = carteira[i].data
@@ -82,7 +89,7 @@ module.exports.getlistCarteira = async (req, res) => {
 
  
 
-    res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira })
+    res.render('pages/internas/index/main/listCarteira/listCarteira', { usuario, carteira, filtro , totalPagina })
 }
 
 
@@ -125,7 +132,7 @@ module.exports.editarUpdatelistCarteira = async (req,res) => {
     const id = parseInt(req.params.id)
     
 
-
+    console.log(ganhogasto)
     const carteira = await models.User.findOne({
         where: {
             idUsuario: usuario.idUsuario
