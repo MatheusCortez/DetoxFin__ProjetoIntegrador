@@ -56,15 +56,20 @@ module.exports.getlistInvestment = async (req,res) => {
             Usuario_idUsuario: usuario.idUsuario
         }
     })
-    const carteira = await models.tiposdeinvestimento.findAll({
+    let { pagination = 1 } = req.query
+    let {count:total, rows:carteira } = await models.tiposdeinvestimento.findAndCountAll({
         where: {
             carteirainvestimentos_usuario_idUsuario: usuario.idUsuario,
             carteiraInvestimentos_idInvestimentos: user.idInvestimentos
         },
+        offset:(pagination - 1) * 4,
+        limit:4
     })
+    
+    let totalPagina = Math.round(total/4)
 
 
-    res.render('pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira})
+    res.render('pages/internas/Investimentos/main/listInvestiment/listInvestment.ejs',{usuario , carteira, totalPagina})
 }
 
 

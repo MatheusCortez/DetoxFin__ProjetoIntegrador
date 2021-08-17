@@ -51,11 +51,18 @@ function gerarTipos(value) {
         option.id = 'fundoInvestimentoVariavel'
         tipo.add(option)
 
-    }
+        option = document.createElement('option');
+        option.value = 'acoes'
+        option.text = 'Ações'
+        option.id = 'acoes'
+        tipo.add(option)
 
-    console.log(tipo)
-    tipo.value = option.value
-    console.log(JSON.parse('<%- tipo %>'))
+        option = document.createElement('option');
+        option.value = 'fundoImobiliario'
+        option.text = 'Fundo Imobiliario'
+        option.id = 'fundoImobiliario'
+        tipo.add(option)
+    }
 
 }
 
@@ -71,7 +78,6 @@ function gerarTipos(value) {
 
 const type = document.querySelector('#renda').value
 
-console.log(type)
 
 window.addEventListener('load', function () {
     

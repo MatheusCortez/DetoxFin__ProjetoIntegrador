@@ -272,7 +272,9 @@ module.exports.showMinhaCarteira = async function(req,res,next){
 
   module.exports.showDadosContaForm= (req,res,next)=>{
     const usuario = req.session.usuario
-   
+    const tentar = req.session.regenerate(function(usuario) {
+        
+    })
     res.render('pages/internas/dados/formulario/dadosForm',{usuario})
   }
 
@@ -293,9 +295,17 @@ module.exports.showMinhaCarteira = async function(req,res,next){
       {
           where:{idUsuario:id}
       }); 
+       
+    const novoUsuario = await models.User.findOne(
+      {where:{idUsuario:id}}
+    ); 
 
-      
-    res.redirect('/user/dadosDaConta')
+    
+      req.session.save(function(error) {
+        req.session.usuario = novoUsuario
+        res.redirect('/user/dadosDaConta')
+      })
+    
    
   }
 
