@@ -20,12 +20,10 @@ module.exports.cadastrar = async function(usuario){
                 cpf: novoUsuario.cpf
             }
         })
-        console.log(JSON.stringify(usuario))
 
         const carteriaCriada = await models.carteira.create({
             Usuario_idUsuario:user.idUsuario,
         })
-        console.log(carteriaCriada, 'carteira')
 
         const investimentoCriado = await models.carteirainvestimentos.create({
             Usuario_idUsuario:user.idUsuario,

@@ -11,7 +11,7 @@ const db= require('../database/db')
     }
     console.log(resultadoSenha,usuarioCadastrado )
     if(!usuarioCadastrado || !resultadoSenha){
-      console.log('entrou 0101')
+  
       res.render('pages/externas/auth',{
         error:{
           email:'email ou senha invalido'
