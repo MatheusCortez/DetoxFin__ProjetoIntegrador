@@ -30,20 +30,20 @@
 -----------------------------
 ## 🚀 Como Executar
 
+Clone a aplicação
 ```bash
-#Clone a aplicação
+
 $ git clone git@github.com:MatheusCortez/DetoxFin__ProjetoIntegrador.git
 ```
-
+Instale as dependencias 
 ```bash
-# Instale as dependencias 
+
 $ npm install
 ```
 
 
-
+Use o seguinte comando para inicializar a aplicação
 ```bash
-# Use o seguinte comando para inicializar a aplicação
 $ npm start 
 ```
 Por fim, a aplicação estará disponível em `http://localhost:3000`
