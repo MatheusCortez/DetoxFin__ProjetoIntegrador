@@ -1,6 +1,7 @@
 .gerenciamento {
     padding-top: 3%;
     padding-bottom: 3%;
+    
 }
 
 
@@ -22,7 +23,7 @@
 }
 .gerenciamento2_article_title {
     text-align: end;
-    padding-right: 7%;
+    
 }
 
 .gerenciamento_img {
@@ -33,9 +34,3 @@
 
 
 
-.img_left {
-    padding-right: 10% ;
-}
-.img_right {
-    padding-left: 10%;
-}

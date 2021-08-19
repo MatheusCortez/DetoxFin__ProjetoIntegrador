@@ -15,7 +15,9 @@
 
 }
 
-
+.pagination {
+    justify-content: center;
+}
 .investment {
     border: solid 3px black;
 }
@@ -29,6 +31,7 @@
 @media screen and (min-width:0px) {
 
 }
+
 
 
 @media screen and (min-width:700px) {

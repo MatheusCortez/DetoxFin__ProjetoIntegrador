@@ -33,19 +33,19 @@
     margin-right: auto;
 }
 
-.card-footer-item:hover, .selecionado {
+.card-footer-item:hover {
     background-color: #33CC33 ;
     color:#ffff;
 }
 
 
-.button-color{
+.button-color, .selecionado{
     background-color: #33CC33 ;
     color:#ffff;
 }
 
 .pagination {
-    justify-content:inherit;
+    justify-content:center;
 }
 @media screen and (min-width:0px) {
     .gasto,.ganho {
