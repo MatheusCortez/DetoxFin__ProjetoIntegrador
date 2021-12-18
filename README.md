@@ -37,7 +37,7 @@
 
 <div align="center">
   <img  style="width:80%"
-   src="public\images\gifs\criacaoDeUsuarioGif.gif" >
+   src="public\images\criacaoDeUsuarioGif.gif" >
 </div>
 
 - ### Inserção,edição e exclusão de ganhos e gastos na carteira e investimentos;
@@ -46,14 +46,14 @@
 
     <div align="center">
     <img  style="width:80%"
-    src="public\images\gifs\inclusaoGanhoGastoGIF.gif" >
+    src="public\images\inclusaoGanhoGastoGIF.gif" >
     </div>
 
 - ### Formulario para a verificação do perfil de investidor e ao final do formulario informações sobre o perfil resultante.
 
     <div align="center">
     <img  style="width:80%"
-    src="public\images\gifs\perfilInvestidorGif.gif" >
+    src="public\images\perfilInvestidorGif.gif" >
     </div>
 
 ---
