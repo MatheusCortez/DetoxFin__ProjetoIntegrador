@@ -1,5 +1,5 @@
 <div align="center">
-    <img  style="width:80%" src="public/images/logoBranco.png">
+    <img  style="width:80%" src="public/images/logoBranco.png" />
     <h1>DetoxFin Organize suas Finanças </h1>
 </div>
 
@@ -29,13 +29,42 @@
 
 ---
 
-## ⚠️ Pré Requisitos
+## 📝 Funcionalidades:
+
+- ### Criação de usuario e persistencia em banco de dados;
+
+- ### Login de usuarios cadastrados no banco de dados;
+
+<div align="center">
+  <img  style="width:80%"
+   src="public\images\gifs\criacaoDeUsuarioGif.gif" >
+</div>
+
+- ### Inserção,edição e exclusão de ganhos e gastos na carteira e investimentos;
+
+- ### Criação de um grafico de pizza e grafico em barra baseado na inserção dos dados para a verificação de forma intuitiva os ganhos e gastos inseridos na carteira e investimentos;
+
+    <div align="center">
+    <img  style="width:80%"
+    src="public\images\gifs\inclusaoGanhoGastoGIF.gif" >
+    </div>
+
+- ### Formulario para a verificação do perfil de investidor e ao final do formulario informações sobre o perfil resultante.
+
+    <div align="center">
+    <img  style="width:80%"
+    src="public\images\gifs\perfilInvestidorGif.gif" >
+    </div>
+
+---
+
+## ⚠️ Pré Requisitos para rodar o Projeto
 
 ### - Ter instalado e devidamente configurado o MYSQL - [Link para tutorial de instalação](https://www.youtube.com/watch?v=fmerTu7dWk8)
 
 ### - Rodar as querys do arquivo "Banco.sql" para a criação do banco de dados dentro do Workbench
 
-### - Inserir os valores das variaveis de ambiente do DataBase no arquivo .env já fornecido.
+### - Criacao do arquivo .env com os valores das variaveis de configuração de banco de dados baseado no documento env.txt
 
 ---
 
